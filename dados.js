@@ -206,7 +206,7 @@ Trabalhar com ele é buscar a agilidade mental. Ele ajuda a encontrar soluções
     // POMBOGIRAS
     "maria-padilha": {
         titulo: "Pombogira Maria Padilha | Rainha das Encruzilhadas",
-        imagem: "https://i.imgur.com/kqN9VlM.png",
+        imagem: "maria-padilha.jpg",
         frase: "Com rosas e espadas eu abro seus caminhos. Mulher que chora por homem não merece minhas saias. Seja dona de si, que o resto a gente resolve na ginga.",
   texto: `🌹 Quem é Maria Padilha?
 

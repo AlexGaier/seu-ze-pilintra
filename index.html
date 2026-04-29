@@ -26,17 +26,19 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+    
     body { 
-  background-image: url('fundo-ze-pilintra.jpeg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: #faf7f2;
-  color: #2c1810; 
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; 
-  line-height: 1.7;
-}
+      background-image: url('fundo-ze-pilintra.jpeg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-color: #faf7f2;
+      color: #2c1810; 
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; 
+      line-height: 1.7;
+    }
+    
     @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap');
     
     .domain-banner {
@@ -62,9 +64,11 @@
       position: relative;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
+    
     .motivation-banner .frase-motivacao {
       animation: fadeInOut 1s ease-in-out;
     }
+    
     @keyframes fadeInOut {
       0% { opacity: 0; transform: translateY(-5px); }
       20% { opacity: 1; transform: translateY(0); }
@@ -79,6 +83,7 @@
       z-index: 1001; box-shadow: 0 4px 20px rgba(0,0,0,0.15);
       border: 1px solid rgba(255,255,255,0.2);
     }
+    
     .menu-btn span { font-size: 26px; color: white; }
     
     .sidebar { 
@@ -87,12 +92,16 @@
       z-index: 1000; transition: 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1); 
       overflow-y: auto; box-shadow: 8px 0 30px rgba(0,0,0,0.08);
     }
+    
     .sidebar.open { left: 0; }
+    
     .sidebar-header { 
       background: linear-gradient(135deg, #8B0000 0%, #a52a2a 100%);
       padding: 32px 24px; text-align: center; color: white;
     }
+    
     .sidebar-header h3 { color: #FFD966; margin-bottom: 8px; font-size: 1.6rem; }
+    
     .sidebar-menu { list-style: none; padding: 16px 0; }
     .sidebar-menu li { border-bottom: 1px solid #f0e0d0; }
     .sidebar-menu li a { display: block; padding: 14px 24px; color: #2c1810; text-decoration: none; font-weight: 500; transition: 0.2s; cursor: pointer; }
@@ -101,6 +110,7 @@
     .submenu { list-style: none; padding-left: 32px; background-color: #fef8f0; display: none; }
     .submenu.show { display: block; }
     .submenu li a { padding: 10px 24px !important; font-size: 0.9rem; }
+    
     .menu-toggle-item { cursor: pointer; }
     .menu-toggle-item > a { display: flex; justify-content: space-between; }
     .arrow { font-size: 12px; transition: 0.2s; color: #8B0000; }
@@ -115,6 +125,7 @@
       text-align: center;
       position: relative;
     }
+    
     h1 { color: #FFD966; font-size: 3.2rem; letter-spacing: -1px; }
     .subtitle { font-size: 1.2rem; color: #ffccaa; margin-top: 12px; }
     
@@ -126,65 +137,46 @@
       margin-bottom: 40px;
       flex-wrap: wrap;
     }
-    .artigos-container {
-  display: flex;
-  gap: 25px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.artigo-card {
-  flex: 1;
-  min-width: 250px;
-  background: rgba(0, 0, 0, 0.5);  /* fundo preto transparente para contraste */
-  border-radius: 32px;
-  padding: 22px 25px;
-  border-left: 6px solid #FFD966;  /* borda dourada */
-  transition: transform 0.2s;
-}
-
-.artigo-card:hover {
-  transform: translateY(-3px);
-}
-
-.artigo-card .badge {
-  background: #8B0000;
-  color: #FFD966;
-  padding: 4px 12px;
-  border-radius: 50px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  display: inline-block;
-  margin-bottom: 12px;
-}
-
-.artigo-card h3 {
-  color: white;  /* ← título branco */
-  margin: 0 0 5px;
-  font-size: 1.2rem;
-}
-
-.artigo-card p {
-  color: white;  /* ← texto branco */
-  margin: 0 0 12px;
-  font-size: 0.9rem;
-}
-
-.artigo-card a {
-  background: #8B0000;
-  color: white;
-  text-decoration: none;
-  padding: 8px 18px;
-  border-radius: 40px;
-  font-weight: 600;
-  font-size: 0.85rem;
-  display: inline-block;
-  transition: 0.2s;
-}
-
-.artigo-card a:hover {
-  background: #5a1e1e;
-}
+    
+    .artigo-card {
+      flex: 1;
+      min-width: 250px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 32px;
+      padding: 22px 25px;
+      border-left: 6px solid #FFD966;
+      transition: transform 0.2s;
+    }
+    
+    .artigo-card:hover { transform: translateY(-3px); }
+    
+    .artigo-card .badge {
+      background: #8B0000;
+      color: #FFD966;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    
+    .artigo-card h3 { color: white; margin: 0 0 5px; font-size: 1.2rem; }
+    .artigo-card p { color: white; margin: 0 0 12px; font-size: 0.9rem; }
+    
+    .artigo-card a {
+      background: #8B0000;
+      color: white;
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: inline-block;
+      transition: 0.2s;
+    }
+    
+    .artigo-card a:hover { background: #5a1e1e; }
     
     .dynamic-content {
       background: rgba(255, 255, 255, 0.95);
@@ -195,6 +187,7 @@
       box-shadow: 0 25px 45px -12px rgba(0,0,0,0.15);
       transition: all 0.3s;
     }
+    
     .dynamic-content h2 {
       color: #8B0000;
       font-size: 2.2rem;
@@ -202,15 +195,18 @@
       border-left: 6px solid #8B0000;
       padding-left: 20px;
     }
+    
     .dynamic-content h3 {
       color: #a52a2a;
       margin: 30px 0 15px;
       font-size: 1.6rem;
     }
+    
     .dynamic-content p {
       margin-bottom: 16px;
       text-align: justify;
     }
+    
     .dynamic-content img {
       max-width: 280px;
       width: 100%;
@@ -219,6 +215,7 @@
       display: block;
       border: 3px solid #8B0000;
     }
+    
     .entity-badge {
       display: inline-block;
       background: #8B0000;
@@ -228,6 +225,7 @@
       font-size: 0.8rem;
       margin-bottom: 20px;
     }
+    
     .frase-entidade {
       background: linear-gradient(115deg, #8B0000 0%, #a6120f 100%);
       color: #FFE0B5;
@@ -236,6 +234,7 @@
       margin: 35px 0;
       text-align: center;
     }
+    
     .back-to-ze {
       display: inline-block;
       background: #2c1810;
@@ -247,31 +246,31 @@
       font-weight: 600;
       transition: 0.2s;
     }
+    
     .back-to-ze:hover { background: #8B0000; color: white; }
     
     .comments-area {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 48px;
-  padding: 32px;
-  margin-top: 30px;
-  border: 1px solid #FFD966;
-}
-
-.comments-area h4 {
-  color: white;  /* título branco */
-}
-
-.comment-input-group input {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid #ddd;
-  color: #2c1810;
-}
-
-#commentText {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid #ddd;
-  color: #2c1810;
-}
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 48px;
+      padding: 32px;
+      margin-top: 30px;
+      border: 1px solid #FFD966;
+    }
+    
+    .comments-area h4 { color: white; }
+    
+    .comment-input-group input {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #ddd;
+      color: #2c1810;
+    }
+    
+    #commentText {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #ddd;
+      color: #2c1810;
+    }
+    
     .comment-btn-submit {
       background: #8B0000;
       color: white;
@@ -285,20 +284,25 @@
       align-items: center;
       gap: 8px;
     }
+    
     .comment-btn-submit:hover {
       background: #a52a2a;
       transform: scale(1.02);
     }
+    
     .comment-btn-submit i, .social-btn i {
       transition: transform 0.2s;
     }
+    
     .comment-btn-submit:hover i, .social-btn:hover i {
       transform: translateX(3px);
     }
+    
     .comment-list {
       margin-top: 28px;
       list-style: none;
     }
+    
     .comment-list li {
       background: #fefaf5;
       padding: 16px 20px;
@@ -310,23 +314,25 @@
       align-items: flex-start;
       transition: transform 0.2s, box-shadow 0.2s;
     }
+    
     .comment-list li:hover {
       transform: translateX(5px);
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
+    
     .comment-name {
       font-weight: 700;
       color: #8B0000;
     }
+    
     .comment-date { 
       font-size: 0.7rem; 
       color: #a1816b; 
       display: block; 
       margin-top: 8px;
     }
-    .comment-date i {
-      margin-right: 4px;
-    }
+    
+    .comment-date i { margin-right: 4px; }
     
     .social-bar {
       display: flex;
@@ -337,6 +343,7 @@
       border-top: 1px solid #ffe0ce;
       padding-top: 25px;
     }
+    
     .social-btn {
       border: none;
       padding: 12px 26px;
@@ -351,6 +358,7 @@
       align-items: center;
       gap: 8px;
     }
+    
     .social-btn.like-btn.liked { background: #8B0000; color: white; }
     .social-btn.like-btn.liked i { color: #ff9999; }
     .social-btn.share-btn { background: #1DA462; color: white; }
@@ -359,6 +367,7 @@
     #likeButton.liked i {
       animation: heartBeat 0.3s ease;
     }
+    
     @keyframes heartBeat {
       0% { transform: scale(1); }
       50% { transform: scale(1.3); }
@@ -366,118 +375,118 @@
     }
     
     .support-section {
-  background: rgba(0, 0, 0, 0.5);  /* mesmo fundo transparente dos cards */
-  border-radius: 40px;
-  padding: 40px 32px;
-  margin: 40px 0 30px;
-  text-align: center;
-  border: 2px solid #FFD966;  /* borda dourada */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.support-section h3 {
-  color: white;  /* título branco */
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-.support-section .heart-icon {
-  font-size: 2rem;
-  color: #FFD966;  /* ícone dourado */
-  margin-bottom: 10px;
-}
-
-.support-section p {
-  color: white;  /* texto branco */
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-}
-
-.pix-card {
-  background: rgba(255, 255, 255, 0.15);  /* fundo semi-transparente */
-  backdrop-filter: blur(5px);
-  border-radius: 30px;
-  padding: 25px;
-  max-width: 400px;
-  margin: 0 auto;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  border: 1px solid rgba(255,255,255,0.3);
-}
-
-.pix-card .pix-label {
-  background: #32BCAD;
-  color: white;
-  display: inline-block;
-  padding: 5px 15px;
-  border-radius: 50px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.pix-card .pix-key {
-  background: rgba(0, 0, 0, 0.6);
-  color: #FFD966;
-  padding: 15px;
-  border-radius: 20px;
-  font-family: monospace;
-  font-size: 1.1rem;
-  word-break: break-all;
-  margin: 15px 0;
-  border: 1px dashed #FFD966;
-}
-
-.pix-card .pix-key i {
-  color: #FFD966;
-}
-
-.btn-copy-pix {
-  background: #8B0000;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 40px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.2s;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.btn-copy-pix:hover {
-  background: #5a1e1e;
-  transform: scale(1.02);
-}
-
-.support-note {
-  font-size: 0.85rem;
-  color: #FFD966;
-  margin-top: 20px;
-}
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 40px;
+      padding: 40px 32px;
+      margin: 40px 0 30px;
+      text-align: center;
+      border: 2px solid #FFD966;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .support-section h3 {
+      color: white;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+    
+    .support-section .heart-icon {
+      font-size: 2rem;
+      color: #FFD966;
+      margin-bottom: 10px;
+    }
+    
+    .support-section p {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+    
+    .pix-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(5px);
+      border-radius: 30px;
+      padding: 25px;
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    
+    .pix-card .pix-label {
+      background: #32BCAD;
+      color: white;
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .pix-card .pix-key {
+      background: rgba(0, 0, 0, 0.6);
+      color: #FFD966;
+      padding: 15px;
+      border-radius: 20px;
+      font-family: monospace;
+      font-size: 1.1rem;
+      word-break: break-all;
+      margin: 15px 0;
+      border: 1px dashed #FFD966;
+    }
+    
+    .pix-card .pix-key i { color: #FFD966; }
+    
+    .btn-copy-pix {
+      background: #8B0000;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 40px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .btn-copy-pix:hover {
+      background: #5a1e1e;
+      transform: scale(1.02);
+    }
+    
+    .support-note {
+      font-size: 0.85rem;
+      color: #FFD966;
+      margin-top: 20px;
+    }
     
     footer {
-  background: rgba(0, 0, 0, 0.7);  ·/* fundo escuro transparente */
-  padding: 50px 20px;
-  margin-top: 60px;
-  text-align: center;
-  color: #FFD966;
-  border-radius: 40px 40px 0 0;
-  backdrop-filter: blur(5px);
-}
-
-footer a {
-  color: #FFD966;
-  text-decoration: none;
-}
-
-footer .copyright {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 0.8rem;
-  color: #ddd;
-}
+      background: rgba(0, 0, 0, 0.7);
+      padding: 50px 20px;
+      margin-top: 60px;
+      text-align: center;
+      color: #FFD966;
+      border-radius: 40px 40px 0 0;
+      backdrop-filter: blur(5px);
+    }
+    
+    footer a {
+      color: #FFD966;
+      text-decoration: none;
+    }
+    
+    footer a:hover { text-decoration: underline; }
+    
+    footer .copyright {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.8rem;
+      color: #ddd;
+    }
     
     @media (max-width: 800px) {
       .dynamic-content { padding: 28px; }
@@ -495,54 +504,56 @@ footer .copyright {
       width: 52px; height: 52px; border-radius: 30px; display: flex; align-items: center;
       justify-content: center; text-decoration: none; font-size: 24px; z-index: 998;
     }
+    
     .security-badge {
       position: fixed; bottom: 20px; left: 20px; background: rgba(0,0,0,0.6);
       color: #4caf50; font-size: 0.7rem; padding: 5px 12px; border-radius: 50px;
       z-index: 999; font-family: monospace;
     }
+    
     /* Estilos da busca */
-.search-container input::placeholder {
-  color: rgba(255,255,255,0.7);
-}
-
-.search-container input:focus {
-  border-color: #FFD966;
-}
-
-#resultsList .result-card {
-  background: rgba(0,0,0,0.6);
-  border-radius: 24px;
-  padding: 15px 20px;
-  flex: 1;
-  min-width: 200px;
-  border-left: 4px solid #FFD966;
-  transition: transform 0.2s;
-}
-
-#resultsList .result-card:hover {
-  transform: translateY(-3px);
-}
-
-#resultsList .result-card h4 {
-  color: #FFD966;
-  margin-bottom: 8px;
-}
-
-#resultsList .result-card p {
-  color: white;
-  font-size: 0.85rem;
-  margin-bottom: 12px;
-}
-
-#resultsList .result-card a {
-  color: #FFD966;
-  text-decoration: none;
-  font-size: 0.8rem;
-}
-
-#resultsList .result-card a:hover {
-  text-decoration: underline;
-}
+    .search-container input::placeholder {
+      color: rgba(255,255,255,0.7);
+    }
+    
+    .search-container input:focus {
+      border-color: #FFD966;
+    }
+    
+    #resultsList .result-card {
+      background: rgba(0,0,0,0.6);
+      border-radius: 24px;
+      padding: 15px 20px;
+      flex: 1;
+      min-width: 200px;
+      border-left: 4px solid #FFD966;
+      transition: transform 0.2s;
+    }
+    
+    #resultsList .result-card:hover {
+      transform: translateY(-3px);
+    }
+    
+    #resultsList .result-card h4 {
+      color: #FFD966;
+      margin-bottom: 8px;
+    }
+    
+    #resultsList .result-card p {
+      color: white;
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+    }
+    
+    #resultsList .result-card a {
+      color: #FFD966;
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+    
+    #resultsList .result-card a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -580,20 +591,21 @@ footer .copyright {
 
 <div class="container">
   <!-- BARRA DE PESQUISA -->
-<div class="search-container" style="margin-bottom: 30px; text-align: center;">
-  <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.5); border-radius: 50px; padding: 5px 15px; border: 1px solid #FFD966;">
-    <i class="fas fa-search" style="color: #FFD966;"></i>
-    <input type="text" id="searchInput" placeholder="Buscar... Ex: Zé Pilintra, Maria Padilha, oração" style="background: transparent; border: none; color: white; padding: 12px; width: 250px; outline: none;">
-    <button id="searchButton" style="background: #8B0000; color: white; border: none; border-radius: 40px; padding: 8px 20px; cursor: pointer;">Buscar</button>
+  <div class="search-container" style="margin-bottom: 30px; text-align: center;">
+    <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.5); border-radius: 50px; padding: 5px 15px; border: 1px solid #FFD966;">
+      <i class="fas fa-search" style="color: #FFD966;"></i>
+      <input type="text" id="searchInput" placeholder="Buscar... Ex: Zé Pilintra, Maria Padilha, oração" style="background: transparent; border: none; color: white; padding: 12px; width: 250px; outline: none;">
+      <button id="searchButton" style="background: #8B0000; color: white; border: none; border-radius: 40px; padding: 8px 20px; cursor: pointer;">Buscar</button>
+    </div>
   </div>
-</div>
 
-<!-- RESULTADOS DA PESQUISA (inicialmente escondido) -->
-<div id="searchResults" style="display: none; margin-bottom: 30px;">
-  <h4 style="color: white; border-left: 4px solid #FFD966; padding-left: 15px;">🔍 Resultados da busca:</h4>
-  <div id="resultsList" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px;"></div>
-  <hr style="border-color: rgba(255,255,255,0.2); margin: 20px 0;">
-</div>
+  <!-- RESULTADOS DA PESQUISA (inicialmente escondido) -->
+  <div id="searchResults" style="display: none; margin-bottom: 30px;">
+    <h4 style="color: white; border-left: 4px solid #FFD966; padding-left: 15px;">🔍 Resultados da busca:</h4>
+    <div id="resultsList" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px;"></div>
+    <hr style="border-color: rgba(255,255,255,0.2); margin: 20px 0;">
+  </div>
+
   <!-- ARTIGOS LADO A LADO -->
   <div class="artigos-container">
     <div class="artigo-card">
@@ -616,7 +628,7 @@ footer .copyright {
       <p style="margin-top: 20px;">Carregando histórias... Selecione uma entidade no menu ao lado ☰</p>
     </div>
   </div>
-  
+
   <div class="support-section">
     <div class="heart-icon">🙏✨</div>
     <h3>Ajude a manter este portal!</h3>
@@ -632,44 +644,20 @@ footer .copyright {
   </div>
 
   <div class="comments-area" id="commentsArea">
-  <h4 style="display: flex; align-items: center; gap: 12px; margin-bottom: 25px; color: #8B0000;">
-    <i class="fas fa-comment-dots" style="font-size: 1.8rem;"></i> 
-    💬 Comentários
-  </h4>
-  
-  <script src="https://utteranc.es/client.js"
-          repo="AlexGaier/seu-ze-pilintra"
-          issue-term="pathname"
-          theme="github-light"
-          crossorigin="anonymous"
-          async>
-  </script>
-</div>
-    
-    <h4 style="margin-top: 35px; display: flex; align-items: center; gap: 10px;">
-      <i class="fas fa-users" style="color: #8B0000;"></i> 
-      🙏 Mensagens da comunidade:
+    <h4 style="display: flex; align-items: center; gap: 12px; margin-bottom: 25px; color: #8B0000;">
+      <i class="fas fa-comment-dots" style="font-size: 1.8rem;"></i> 
+      💬 Comentários
     </h4>
-    <ul class="comment-list" id="commentList">
-      <li>
-        <i class="fas fa-user-circle" style="font-size: 2rem; color: #8B0000;"></i>
-        <div style="flex: 1;">
-          <span class="comment-name">🌹 Maria da Fé</span> <span style="color: #a1816b;">(São Paulo)</span>
-          <p>Salve Seu Zé! Sempre me ajudou a abrir caminhos.</p>
-          <span class="comment-date"><i class="far fa-clock"></i> há 2 dias</span>
-        </div>
-      </li>
-      <li>
-        <i class="fas fa-user-circle" style="font-size: 2rem; color: #8B0000;"></i>
-        <div style="flex: 1;">
-          <span class="comment-name">🃏 João de Exu</span> <span style="color: #a1816b;">(Rio de Janeiro)</span>
-          <p>Guardião da lei, obrigado pelas proteções!</p>
-          <span class="comment-date"><i class="far fa-clock"></i> há 5 dias</span>
-        </div>
-      </li>
-    </ul>
+    
+    <script src="https://utteranc.es/client.js"
+            repo="AlexGaier/seu-ze-pilintra"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
   </div>
-  
+
   <footer id="contato">
     <p>🌹 Axé a todos os guardiões! Salve Seu Zé Pilintra! 🌹</p>
     <div><strong>Alex Gaier</strong> - São Pedro do Sul, RS</div>
@@ -679,32 +667,6 @@ footer .copyright {
       © 2024-2026 Alex Gaier · seuzepilintra.com · <strong>Todos os direitos reservados</strong><br>
       É proibida a reprodução total ou parcial sem autorização prévia do autor.
     </div>
-    footer {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 40px 20px;
-  margin-top: 50px;
-  text-align: center;
-  color: #FFD966;
-  border-radius: 40px 40px 0 0;
-  backdrop-filter: blur(5px);
-}
-
-footer a {
-  color: #FFD966;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer .copyright {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 0.8rem;
-  color: #ddd;
-}
   </footer>
 </div>
 
@@ -846,7 +808,7 @@ Laroyê!"</p>
 <p>🌹 <strong>Salve Maria Padilha! Que suas rosas abram todos os caminhos e que suas saias rodadas varram para longe o que não presta! 🌹</strong></p>
 `
     },
-    "sete-saias": { titulo: "Pombogira Sete Saias | A Dança dos Ventos", badge: "Ciclos da vida", frase: "Com cada saia que levanto, um segredo revelo. Dance comigo e descubra sua verdade.", texto: `Sete Saias dança com os sete ventos e traz transformação. Salve Sete Saias!` },
+    "sete-saias": { titulo: "Pombogira Sete Saias | A Dança dos Ventos", badge: "Ciclos da vida", frase: "Com cada saia que levanto, um segredo revelo. Dance comigo e descobrir sua verdade.", texto: `Sete Saias dança com os sete ventos e traz transformação. Salve Sete Saias!` },
     "maria-mulambo": { titulo: "Pombogira Maria Mulambo", badge: "Mãe dos excluídos", frase: "Onde o mundo te jogou, eu te busco e te mostro que o lixo pode virar luxo nas mãos de quem tem fé.", texto: `Maria Mulambo é a prova viva de que a nobreza não reside nas roupas que se veste, mas na força indomável da alma. Laroyê, Maria Mulambo!` },
     "dama-da-noite": { titulo: "Pombogira Dama da Noite", badge: "Elegância e mistério", frase: "A noite é um véu que só se levanta para quem tem a coragem e a elegância de caminhar no escuro.", texto: `A Pombogira Dama da Noite é a personificação da elegância, do mistério profundo e do poder feminino que floresce sob a luz da lua. Laroyê, Dama da Noite!` },
     "rosa-caveira": { titulo: "Pombogira Rosa Caveira", badge: "Justiça implacável", frase: "Toda rosa tem seu espinho, e toda beleza um dia se encontra com a verdade do osso.", texto: `A Pombogira Rosa Caveira é uma das entidades mais singulares e respeitadas dentro da falange das Caveiras. Laroyê, Rosa Caveira!` },
@@ -1099,72 +1061,72 @@ Laroyê!"</p>
   carregarMenu();
   loadStory('ze-pilintra');
   loadComments();
-</script>
+
   // ==================== SISTEMA DE BUSCA ====================
-const searchInput = document.getElementById('searchInput');
-const searchButton = document.getElementById('searchButton');
-const searchResults = document.getElementById('searchResults');
-const resultsList = document.getElementById('resultsList');
+  const searchInput = document.getElementById('searchInput');
+  const searchButton = document.getElementById('searchButton');
+  const searchResults = document.getElementById('searchResults');
+  const resultsList = document.getElementById('resultsList');
 
-// Lista de conteúdos para buscar (artigos + entidades do menu)
-const conteudosBusca = [
-  { titulo: "⚡ Diferença entre Zé Pilintra e Exu", descricao: "Entenda as diferenças entre o Malandro de Luz e os Guardiões da Lei.", link: "diferenca-ze-pilintra-exu.html" },
-  { titulo: "🙏 Orações para Seu Zé Pilintra", descricao: "Orações poderosas para abrir caminhos, amor, dinheiro, saúde e proteção.", link: "oracao-ze-pilintra-diversos-pedidos.html" },
-  { titulo: "⚡ Seu Zé Pilintra", descricao: "A história e os ensinamentos do Guardião da Lei, o Malandro de Luz.", link: "#", tipo: "entidade", id: "ze-pilintra" },
-  { titulo: "🌹 Maria Padilha", descricao: "Rainha das Encruzilhadas, protetora das mulheres e advogada das causas amorosas.", link: "#", tipo: "entidade", id: "maria-padilha" },
-  { titulo: "🔥 Exu Tranca Rua", descricao: "Fechador de demandas, engenheiro da ordem espiritual.", link: "#", tipo: "entidade", id: "tranca-rua" },
-  { titulo: "🔥 Exu Marabô", descricao: "Senhor das folhas, guardião das matas.", link: "#", tipo: "entidade", id: "marabo" },
-  { titulo: "🔥 Exu Caveira", descricao: "Senhor das almas, regente dos cemitérios.", link: "#", tipo: "entidade", id: "caveira" },
-  { titulo: "🌹 Pombogira Maria Mulambo", descricao: "Mãe dos excluídos, acolhe os desesperados.", link: "#", tipo: "entidade", id: "maria-mulambo" },
-  { titulo: "🌹 Pombogira Sete Saias", descricao: "Ciclos da vida, dança com os sete ventos.", link: "#", tipo: "entidade", id: "sete-saias" }
-];
+  const conteudosBusca = [
+    { titulo: "⚡ Diferença entre Zé Pilintra e Exu", descricao: "Entenda as diferenças entre o Malandro de Luz e os Guardiões da Lei.", link: "diferenca-ze-pilintra-exu.html" },
+    { titulo: "🙏 Orações para Seu Zé Pilintra", descricao: "Orações poderosas para abrir caminhos, amor, dinheiro, saúde e proteção.", link: "oracao-ze-pilintra-diversos-pedidos.html" },
+    { titulo: "⚡ Seu Zé Pilintra", descricao: "A história e os ensinamentos do Guardião da Lei, o Malandro de Luz.", link: "#", tipo: "entidade", id: "ze-pilintra" },
+    { titulo: "🌹 Maria Padilha", descricao: "Rainha das Encruzilhadas, protetora das mulheres e advogada das causas amorosas.", link: "#", tipo: "entidade", id: "maria-padilha" },
+    { titulo: "🔥 Exu Tranca Rua", descricao: "Fechador de demandas, engenheiro da ordem espiritual.", link: "#", tipo: "entidade", id: "tranca-rua" },
+    { titulo: "🔥 Exu Marabô", descricao: "Senhor das folhas, guardião das matas.", link: "#", tipo: "entidade", id: "marabo" },
+    { titulo: "🔥 Exu Caveira", descricao: "Senhor das almas, regente dos cemitérios.", link: "#", tipo: "entidade", id: "caveira" },
+    { titulo: "🌹 Pombogira Maria Mulambo", descricao: "Mãe dos excluídos, acolhe os desesperados.", link: "#", tipo: "entidade", id: "maria-mulambo" },
+    { titulo: "🌹 Pombogira Sete Saias", descricao: "Ciclos da vida, dança com os sete ventos.", link: "#", tipo: "entidade", id: "sete-saias" }
+  ];
 
-function realizarBusca() {
-  const termo = searchInput.value.toLowerCase().trim();
-  
-  if (termo === '') {
-    searchResults.style.display = 'none';
-    return;
-  }
-  
-  const resultados = conteudosBusca.filter(item => 
-    item.titulo.toLowerCase().includes(termo) || 
-    item.descricao.toLowerCase().includes(termo)
-  );
-  
-  if (resultados.length === 0) {
-    resultsList.innerHTML = '<div style="color: white;">Nenhum resultado encontrado para "' + termo + '". Tente outra palavra.</div>';
-    searchResults.style.display = 'block';
-    return;
-  }
-  
-  resultsList.innerHTML = resultados.map(item => {
-    if (item.link && item.link !== '#') {
-      return `
-        <div class="result-card">
-          <h4>${item.titulo}</h4>
-          <p>${item.descricao}</p>
-          <a href="${item.link}">Ler mais →</a>
-        </div>
-      `;
-    } else if (item.tipo === 'entidade') {
-      return `
-        <div class="result-card">
-          <h4>${item.titulo}</h4>
-          <p>${item.descricao}</p>
-          <a href="#" onclick="loadStory('${item.id}'); closeMenu(); window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Ver história →</a>
-        </div>
-      `;
+  function realizarBusca() {
+    const termo = searchInput.value.toLowerCase().trim();
+    
+    if (termo === '') {
+      searchResults.style.display = 'none';
+      return;
     }
-    return '';
-  }).join('');
-  
-  searchResults.style.display = 'block';
-}
+    
+    const resultados = conteudosBusca.filter(item => 
+      item.titulo.toLowerCase().includes(termo) || 
+      item.descricao.toLowerCase().includes(termo)
+    );
+    
+    if (resultados.length === 0) {
+      resultsList.innerHTML = '<div style="color: white;">Nenhum resultado encontrado para "' + termo + '". Tente outra palavra.</div>';
+      searchResults.style.display = 'block';
+      return;
+    }
+    
+    resultsList.innerHTML = resultados.map(item => {
+      if (item.link && item.link !== '#') {
+        return `
+          <div class="result-card">
+            <h4>${item.titulo}</h4>
+            <p>${item.descricao}</p>
+            <a href="${item.link}">Ler mais →</a>
+          </div>
+        `;
+      } else if (item.tipo === 'entidade') {
+        return `
+          <div class="result-card">
+            <h4>${item.titulo}</h4>
+            <p>${item.descricao}</p>
+            <a href="#" onclick="loadStory('${item.id}'); closeMenu(); window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Ver história →</a>
+          </div>
+        `;
+      }
+      return '';
+    }).join('');
+    
+    searchResults.style.display = 'block';
+  }
 
-searchButton.addEventListener('click', realizarBusca);
-searchInput.addEventListener('keypress', (e) => {
-  if (e.key === 'Enter') realizarBusca();
-});
+  searchButton.addEventListener('click', realizarBusca);
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') realizarBusca();
+  });
+</script>
 </body>
 </html>

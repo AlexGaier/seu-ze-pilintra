@@ -127,15 +127,12 @@
       flex-wrap: wrap;
     }
     .artigo-card {
-      flex: 1;
-      min-width: 250px;
-      background: linear-gradient(135deg, #fff5e8 0%, #ffe8d8 100%);
-      border-radius: 32px;
-      padding: 22px 25px;
-      border-left: 6px solid #8B0000;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: transform 0.2s;
-    }
+  background: transparent;  /* ← remove o fundo */
+  border-radius: 32px;
+  padding: 22px 25px;
+  border-left: 6px solid #8B0000;
+  /* box-shadow: 0 5px 15px rgba(0,0,0,0.05);  opcional: remove ou comenta */
+}
     .artigo-card:hover {
       transform: translateY(-3px);
     }

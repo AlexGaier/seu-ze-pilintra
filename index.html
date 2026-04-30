@@ -571,13 +571,26 @@
     <p>Seu Zé Pilintra • Exus • Pombogiras</p>
   </div>
   <ul class="sidebar-menu">
-    <li><a href="#" id="menuZe">🏠 Seu Zé Pilintra (História Principal)</a></li>
-    <li class="menu-toggle-item" id="exusToggle"><a href="#">🔴 EXUS (15) <span class="arrow">▶</span></a></li>
-    <ul class="submenu" id="exusSubmenu"></ul>
-    <li class="menu-toggle-item" id="pomboToggle"><a href="#">🌹 POMBOGIRAS (15) <span class="arrow">▶</span></a></li>
-    <ul class="submenu" id="pomboSubmenu"></ul>
-    <li><a href="#contato">📞 Contato</a></li>
-  </ul>
+  <li><a href="#" id="menuZe">🏠 Seu Zé Pilintra (História Principal)</a></li>
+  <li class="menu-toggle-item" id="exusToggle"><a href="#">🔴 EXUS (15) <span class="arrow">▶</span></a></li>
+  <ul class="submenu" id="exusSubmenu"></ul>
+  <li class="menu-toggle-item" id="pomboToggle"><a href="#">🌹 POMBOGIRAS (15) <span class="arrow">▶</span></a></li>
+  <ul class="submenu" id="pomboSubmenu"></ul>
+  <li class="menu-toggle-item" id="umbandaToggle"><a href="#">🌿 UMBANDA <span class="arrow">▶</span></a></li>
+  <ul class="submenu" id="umbandaSubmenu">
+  <li class="menu-toggle-item" id="pretosVelhosToggle"><a href="#">🙏 PRETOS-VELHOS <span class="arrow">▶</span></a></li>
+  <ul class="submenu" id="pretosVelhosSubmenu"></ul>
+  <li class="menu-toggle-item" id="caboclosToggle"><a href="#">🏹 CABOCLOS <span class="arrow">▶</span></a></li>
+  <ul class="submenu" id="caboclosSubmenu"></ul>
+  <li class="menu-toggle-item" id="eresToggle"><a href="#">🌿 ERÊS <span class="arrow">▶</span></a></li>
+  <ul class="submenu" id="eresSubmenu"></ul>
+  <li class="menu-toggle-item" id="boiadeirosToggle"><a href="#">🤠 BOIADEIROS <span class="arrow">▶</span></a></li>
+  <ul class="submenu" id="boiadeirosSubmenu"></ul>
+  <li class="menu-toggle-item" id="marinheirosToggle"><a href="#">⚓ MARINHEIROS <span class="arrow">▶</span></a></li>
+  <ul class="submenu" id="marinheirosSubmenu"></ul>
+</ul>
+  <li><a href="#contato">📞 Contato</a></li>
+</ul>
 </div>
 
 <header>
@@ -2704,6 +2717,73 @@ Salve Pombogira Cigana das Almas! Laroyê!"</p>
   searchInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') realizarBusca();
   });
+  // ========== SUBMENU UMBANDA ==========
+const umbandaToggle = document.getElementById('umbandaToggle');
+const umbandaSubmenu = document.getElementById('umbandaSubmenu');
+if (umbandaToggle && umbandaSubmenu) {
+  const umbandaArrow = umbandaToggle.querySelector('.arrow');
+  umbandaToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    umbandaSubmenu.classList.toggle('show');
+    if (umbandaArrow) umbandaArrow.classList.toggle('rotated');
+  });
+}
+
+// Controles dos submenus das categorias
+const pretosVelhosToggle = document.getElementById('pretosVelhosToggle');
+const pretosVelhosSubmenu = document.getElementById('pretosVelhosSubmenu');
+if (pretosVelhosToggle && pretosVelhosSubmenu) {
+  const arrow = pretosVelhosToggle.querySelector('.arrow');
+  pretosVelhosToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    pretosVelhosSubmenu.classList.toggle('show');
+    if (arrow) arrow.classList.toggle('rotated');
+  });
+}
+
+const caboclosToggle = document.getElementById('caboclosToggle');
+const caboclosSubmenu = document.getElementById('caboclosSubmenu');
+if (caboclosToggle && caboclosSubmenu) {
+  const arrow = caboclosToggle.querySelector('.arrow');
+  caboclosToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    caboclosSubmenu.classList.toggle('show');
+    if (arrow) arrow.classList.toggle('rotated');
+  });
+}
+
+const eresToggle = document.getElementById('eresToggle');
+const eresSubmenu = document.getElementById('eresSubmenu');
+if (eresToggle && eresSubmenu) {
+  const arrow = eresToggle.querySelector('.arrow');
+  eresToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    eresSubmenu.classList.toggle('show');
+    if (arrow) arrow.classList.toggle('rotated');
+  });
+}
+
+const boiadeirosToggle = document.getElementById('boiadeirosToggle');
+const boiadeirosSubmenu = document.getElementById('boiadeirosSubmenu');
+if (boiadeirosToggle && boiadeirosSubmenu) {
+  const arrow = boiadeirosToggle.querySelector('.arrow');
+  boiadeirosToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    boiadeirosSubmenu.classList.toggle('show');
+    if (arrow) arrow.classList.toggle('rotated');
+  });
+}
+
+const marinheirosToggle = document.getElementById('marinheirosToggle');
+const marinheirosSubmenu = document.getElementById('marinheirosSubmenu');
+if (marinheirosToggle && marinheirosSubmenu) {
+  const arrow = marinheirosToggle.querySelector('.arrow');
+  marinheirosToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    marinheirosSubmenu.classList.toggle('show');
+    if (arrow) arrow.classList.toggle('rotated');
+  });
+}
 </script>
 </body>
 </html>

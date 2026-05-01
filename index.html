@@ -4317,16 +4317,98 @@ Salve Pombogira Cigana das Almas! Laroyê!"</p>
   const resultsList = document.getElementById('resultsList');
 
   const conteudosBusca = [
-    { titulo: "⚡ Diferença entre Zé Pilintra e Exu", descricao: "Entenda as diferenças entre o Malandro de Luz e os Guardiões da Lei.", link: "diferenca-ze-pilintra-exu.html" },
-    { titulo: "🙏 Orações para Seu Zé Pilintra", descricao: "Orações poderosas para abrir caminhos, amor, dinheiro, saúde e proteção.", link: "oracao-ze-pilintra-diversos-pedidos.html" },
-    { titulo: "⚡ Seu Zé Pilintra", descricao: "A história e os ensinamentos do Guardião da Lei, o Malandro de Luz.", link: "#", tipo: "entidade", id: "ze-pilintra" },
-    { titulo: "🌹 Maria Padilha", descricao: "Rainha das Encruzilhadas, protetora das mulheres e advogada das causas amorosas.", link: "#", tipo: "entidade", id: "maria-padilha" },
-    { titulo: "🔥 Exu Tranca Rua", descricao: "Fechador de demandas, engenheiro da ordem espiritual.", link: "#", tipo: "entidade", id: "tranca-rua" },
-    { titulo: "🔥 Exu Marabô", descricao: "Senhor das folhas, guardião das matas.", link: "#", tipo: "entidade", id: "marabo" },
-    { titulo: "🔥 Exu Caveira", descricao: "Senhor das almas, regente dos cemitérios.", link: "#", tipo: "entidade", id: "caveira" },
-    { titulo: "🌹 Pombogira Maria Mulambo", descricao: "Mãe dos excluídos, acolhe os desesperados.", link: "#", tipo: "entidade", id: "maria-mulambo" },
-    { titulo: "🌹 Pombogira Sete Saias", descricao: "Ciclos da vida, dança com os sete ventos.", link: "#", tipo: "entidade", id: "sete-saias" }
-  ];
+  // Artigos
+  { titulo: "⚡ Diferença entre Zé Pilintra e Exu", descricao: "Entenda as diferenças entre o Malandro de Luz e os Guardiões da Lei.", link: "diferenca-ze-pilintra-exu.html" },
+  { titulo: "🙏 Orações para Seu Zé Pilintra", descricao: "Orações poderosas para abrir caminhos, amor, dinheiro, saúde e proteção.", link: "oracao-ze-pilintra-diversos-pedidos.html" },
+  
+  // Entidade principal
+  { titulo: "⚡ Seu Zé Pilintra", descricao: "A história e os ensinamentos do Guardião da Lei, o Malandro de Luz.", link: "#", tipo: "entidade", id: "ze-pilintra" },
+  
+  // Exus
+  { titulo: "🔥 Exu Tranca Rua", descricao: "Fechador de demandas, engenheiro da ordem espiritual.", link: "#", tipo: "entidade", id: "tranca-rua" },
+  { titulo: "🔥 Exu Marabô", descricao: "Senhor das folhas, guardião das matas.", link: "#", tipo: "entidade", id: "marabo" },
+  { titulo: "🔥 Exu Caveira", descricao: "Senhor das almas, regente dos cemitérios.", link: "#", tipo: "entidade", id: "caveira" },
+  { titulo: "🔥 Exu Capa Preta", descricao: "Senhor do ocultismo, guardião da magia.", link: "#", tipo: "entidade", id: "capa-preta" },
+  { titulo: "🔥 Exu Morcego", descricao: "Senhor dos portais, guardião das sombras.", link: "#", tipo: "entidade", id: "morcego" },
+  { titulo: "🔥 Exu Sete Encruzilhadas", descricao: "Senhor dos caminhos e das escolhas.", link: "#", tipo: "entidade", id: "sete-encruzilhadas" },
+  { titulo: "🔥 Exu Veludo", descricao: "Cavalheiro da diplomacia, senhor das causas justas.", link: "#", tipo: "entidade", id: "veludo" },
+  { titulo: "🔥 Exu Meia-Noite", descricao: "Senhor do tempo e dos portais da noite.", link: "#", tipo: "entidade", id: "meia-noite" },
+  { titulo: "🔥 Exu do Lodo", descricao: "Purificador das águas paradas, senhor das profundezas.", link: "#", tipo: "entidade", id: "do-lodo" },
+  { titulo: "🔥 Exu Tiriri", descricao: "Senhor do discernimento, guardião da verdade.", link: "#", tipo: "entidade", id: "tiriri" },
+  { titulo: "🔥 Exu Gira Mundo", descricao: "Senhor das mudanças, guardião da lei do retorno.", link: "#", tipo: "entidade", id: "gira-mundo" },
+  { titulo: "🔥 Exu Brasa", descricao: "Purificador pelo fogo, senhor da transmutação.", link: "#", tipo: "entidade", id: "brasa" },
+  { titulo: "🔥 Exu Pimenta", descricao: "Guardião da defesa ativa, senhor da virada de mesa.", link: "#", tipo: "entidade", id: "pimenta" },
+  { titulo: "🔥 Exu Sete Facas", descricao: "Executor da justiça, senhor dos cortes precisos.", link: "#", tipo: "entidade", id: "7-facas" },
+  { titulo: "🔥 Exu Pingue-Fogo", descricao: "Mensageiro veloz, senhor das respostas rápidas.", link: "#", tipo: "entidade", id: "pingue-fogo" },
+  
+  // Pombogiras
+  { titulo: "🌹 Maria Padilha", descricao: "Rainha das Encruzilhadas, protetora das mulheres.", link: "#", tipo: "entidade", id: "maria-padilha" },
+  { titulo: "🌹 Sete Saias", descricao: "A dança dos ventos, senhora das transformações.", link: "#", tipo: "entidade", id: "sete-saias" },
+  { titulo: "🌹 Maria Mulambo", descricao: "Mãe dos excluídos, advogada dos desesperados.", link: "#", tipo: "entidade", id: "maria-mulambo" },
+  { titulo: "🌹 Dama da Noite", descricao: "Elegância do mistério, senhora da intuição.", link: "#", tipo: "entidade", id: "dama-da-noite" },
+  { titulo: "🌹 Rosa Caveira", descricao: "Beleza da transição, força dos ciclos.", link: "#", tipo: "entidade", id: "rosa-caveira" },
+  { titulo: "🌹 Menina", descricao: "Alegria da renovação, esperança dos novos começos.", link: "#", tipo: "entidade", id: "menina" },
+  { titulo: "🌹 Figueira", descricao: "Sabedoria ancestral, força das raízes.", link: "#", tipo: "entidade", id: "figueira" },
+  { titulo: "🌹 Cigana", descricao: "Liberdade que caminha, sorte que dança.", link: "#", tipo: "entidade", id: "cigana" },
+  { titulo: "🌹 Maria Quitéria", descricao: "Guerreira espiritual, força da mulher que luta.", link: "#", tipo: "entidade", id: "maria-quiteria" },
+  { titulo: "🌹 Navalha", descricao: "Corte preciso, proteção contra a falsidade.", link: "#", tipo: "entidade", id: "navalha" },
+  { titulo: "🌹 do Cemitério", descricao: "Guardiã da passagem, senhora do silêncio.", link: "#", tipo: "entidade", id: "do-cemiterio" },
+  { titulo: "🌹 das Almas", descricao: "Socorrista espiritual, mãe dos espíritos sofredores.", link: "#", tipo: "entidade", id: "das-almas" },
+  { titulo: "🌹 7 Cravos", descricao: "Senhora da fortuna, mestra do sucesso.", link: "#", tipo: "entidade", id: "7-cravos" },
+  { titulo: "🌹 Rosa Vermelha", descricao: "Paixão ardente, força do amor verdadeiro.", link: "#", tipo: "entidade", id: "rosa-vermelha" },
+  { titulo: "🌹 Cigana das Almas", descricao: "Vidente dos destinos, curandeira das dores da alma.", link: "#", tipo: "entidade", id: "cigana-das-almas" },
+  
+  // PRETOS-VELHOS (15)
+  { titulo: "🙏 Pai João de Aruanda", descricao: "A sabedoria da humildade e da caridade.", link: "#", tipo: "entidade", id: "pai-joao" },
+  { titulo: "🙏 Pai Benedito de Aruanda", descricao: "O manso curador das dores da alma.", link: "#", tipo: "entidade", id: "pai-benedito" },
+  { titulo: "🙏 Pai José de Aruanda", descricao: "Conselheiro da paz e da harmonia familiar.", link: "#", tipo: "entidade", id: "pai-jose" },
+  { titulo: "🙏 Pai Tomé de Aruanda", descricao: "Trabalhador da fé e da perseverança.", link: "#", tipo: "entidade", id: "pai-tome" },
+  { titulo: "🙏 Pai Antônio de Aruanda", descricao: "Curador das águas e das emoções profundas.", link: "#", tipo: "entidade", id: "pai-antonio" },
+  { titulo: "🙏 Pai Francisco de Aruanda", descricao: "O humilde que ensina a simplicidade.", link: "#", tipo: "entidade", id: "pai-francisco" },
+  { titulo: "🙏 Pai Manuel de Aruanda", descricao: "Protetor das crianças e dos inocentes.", link: "#", tipo: "entidade", id: "pai-manuel" },
+  { titulo: "🙏 Pai Joaquim de Aruanda", descricao: "Orientador dos caminhos da vida.", link: "#", tipo: "entidade", id: "pai-joaquim" },
+  { titulo: "🙏 Pai Sebastião de Aruanda", descricao: "Curador das doenças do corpo e do espírito.", link: "#", tipo: "entidade", id: "pai-sebastiao" },
+  { titulo: "🙏 Pai Gerônimo de Aruanda", descricao: "Libertador das amarras e dos vícios.", link: "#", tipo: "entidade", id: "pai-geronimo" },
+  { titulo: "🙏 Pai Luiz de Aruanda", descricao: "Senhor da misericórdia e do perdão.", link: "#", tipo: "entidade", id: "pai-luiz" },
+  { titulo: "🙏 Pai Carlos de Aruanda", descricao: "Mestre da justiça e da verdade.", link: "#", tipo: "entidade", id: "pai-carlos" },
+  { titulo: "🙏 Pai Miguel de Aruanda", descricao: "Guardião das almas e protetor espiritual.", link: "#", tipo: "entidade", id: "pai-miguel" },
+  { titulo: "🙏 Pai Pedro de Aruanda", descricao: "Mestre da paciência e da calma.", link: "#", tipo: "entidade", id: "pai-pedro" },
+  { titulo: "🙏 Pai André de Aruanda", descricao: "Amigo espiritual, conselheiro das horas difíceis.", link: "#", tipo: "entidade", id: "pai-andre" },
+  
+  // PRETAS-VELHAS (15)
+  { titulo: "🙏 Vovó Maria Conga", descricao: "Mansidão que cura, sabedoria que acolhe.", link: "#", tipo: "entidade", id: "vovo-maria-conga" },
+  { titulo: "🙏 Vovó Cambina", descricao: "Fortaleza que suporta, esperança que renasce.", link: "#", tipo: "entidade", id: "vovo-cambina" },
+  { titulo: "🙏 Vovó Maria Redonda", descricao: "Doçura que cura, alegria que contagia.", link: "#", tipo: "entidade", id: "vovo-maria-redonda" },
+  { titulo: "🙏 Vovó Benedita", descricao: "Benzedeira das dores do corpo e da alma.", link: "#", tipo: "entidade", id: "vovo-benedita" },
+  { titulo: "🙏 Vovó Maria Joaquina", descricao: "Guardiã dos lares e das famílias.", link: "#", tipo: "entidade", id: "vovo-maria-joaquina" },
+  { titulo: "🙏 Vovó Catarina", descricao: "Curandeira das ervas e da simplicidade.", link: "#", tipo: "entidade", id: "vovo-catarina" },
+  { titulo: "🙏 Vovó Rita", descricao: "Fortaleza das mulheres, proteção das mães.", link: "#", tipo: "entidade", id: "vovo-rita" },
+  { titulo: "🙏 Vovó Joana", descricao: "Pacificadora de conflitos, diplomata da família.", link: "#", tipo: "entidade", id: "vovo-joana" },
+  { titulo: "🙏 Vovó Clara", descricao: "Iluminadora dos caminhos, clareza nas decisões.", link: "#", tipo: "entidade", id: "vovo-clara" },
+  { titulo: "🙏 Vovó Beatriz", descricao: "Bem-aventurada das almas que partem.", link: "#", tipo: "entidade", id: "vovo-beatriz" },
+  { titulo: "🙏 Vovó Luzia", descricao: "Luz na matéria, clareza nas pequenas coisas.", link: "#", tipo: "entidade", id: "vovo-luzia" },
+  { titulo: "🙏 Vovó Marta", descricao: "Trabalhadora incansável, prosperidade na simplicidade.", link: "#", tipo: "entidade", id: "vovo-marta" },
+  { titulo: "🙏 Vovó Tereza", descricao: "Mansidão que acalma, palavra que conforta.", link: "#", tipo: "entidade", id: "vovo-tereza" },
+  { titulo: "🙏 Vovó Ana", descricao: "Mãe dos enjeitados, avó dos sem-família.", link: "#", tipo: "entidade", id: "vovo-ana" },
+  { titulo: "🙏 Vovó Sofia", descricao: "Sabedoria que envelhece, experiência que ensina.", link: "#", tipo: "entidade", id: "vovo-sofia" },
+  
+  // CABOCLOS (15)
+  { titulo: "🏹 Caboclo das Sete Flechas", descricao: "Guerreiro da luz, protege com precisão.", link: "#", tipo: "entidade", id: "caboclo-sete-flechas" },
+  { titulo: "🏹 Caboclo Pena Branca", descricao: "Pacificador, sabedoria da simplicidade.", link: "#", tipo: "entidade", id: "caboclo-pena-branca" },
+  { titulo: "🏹 Caboclo Tupinambá", descricao: "Força ancestral, resistência dos que não desistem.", link: "#", tipo: "entidade", id: "caboclo-tupinamba" },
+  { titulo: "🏹 Caboclo Arariboia", descricao: "Força da liderança, proteção do povo.", link: "#", tipo: "entidade", id: "caboclo-arariboia" },
+  { titulo: "🏹 Caboclo Juremeiro", descricao: "Conexão com a Jurema, força das raízes.", link: "#", tipo: "entidade", id: "caboclo-juremeiro" },
+  { titulo: "🏹 Caboclo Guarani", descricao: "Sabedoria dos ventos, liberdade sem fronteiras.", link: "#", tipo: "entidade", id: "caboclo-guarani" },
+  { titulo: "🏹 Caboclo Tupi", descricao: "Força da união, proteção da comunidade.", link: "#", tipo: "entidade", id: "caboclo-tupi" },
+  { titulo: "🏹 Caboclo Aimore", descricao: "Coragem de lutar, força de persistir.", link: "#", tipo: "entidade", id: "caboclo-aimore" },
+  { titulo: "🏹 Caboclo Caeté", descricao: "A mata que cura, a floresta que protege.", link: "#", tipo: "entidade", id: "caboclo-caete" },
+  { titulo: "🏹 Caboclo Tamoio", descricao: "Força da resistência, sabedoria da aliança.", link: "#", tipo: "entidade", id: "caboclo-tamoio" },
+  { titulo: "🏹 Caboclo Goitacá", descricao: "Força da resistência costeira, proteção dos mares.", link: "#", tipo: "entidade", id: "caboclo-goitaca" },
+  { titulo: "🏹 Caboclo Aimbé", descricao: "Sabedoria dos ventos, leveza da alma.", link: "#", tipo: "entidade", id: "caboclo-aimbe" },
+  { titulo: "🏹 Caboclo Carijó", descricao: "Mensageiro da paz, união entre os povos.", link: "#", tipo: "entidade", id: "caboclo-carijo" },
+  { titulo: "🏹 Caboclo Tabajara", descricao: "Força da tradição, resistência cultural.", link: "#", tipo: "entidade", id: "caboclo-tabajara" },
+  { titulo: "🏹 Caboclo Potiguara", descricao: "Senhor das águas doces, proteção dos pescadores.", link: "#", tipo: "entidade", id: "caboclo-potiguara" }
+];
 
   function realizarBusca() {
     const termo = searchInput.value.toLowerCase().trim();

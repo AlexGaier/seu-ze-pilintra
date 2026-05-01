@@ -560,7 +560,9 @@
   </style>
 </head>
 <body>
-
+<button id="modoNoturnoBtn" style="position: fixed; top: 20px; right: 20px; background: #8B0000; color: white; border: none; border-radius: 50px; padding: 10px 15px; cursor: pointer; z-index: 999; display: flex; align-items: center; gap: 8px;">
+  <i class="fas fa-moon"></i> Modo Noturno
+</button>
 <div class="domain-banner">
   🔒 Site Oficial · <strong>seuzepilintra.com</strong> · Histórias completas de Exus e Pombogiras
 </div>
@@ -5648,6 +5650,73 @@ async function atualizarContador() {
 }
 
 atualizarContador();
+  /* ========== MODO NOTURNO ========== */
+body.modo-noturno {
+  background: #1a1a1a;
+  color: #f0f0f0;
+}
+
+body.modo-noturno .domain-banner,
+body.modo-noturno .motivation-banner,
+body.modo-noturno header,
+body.modo-noturno .sidebar,
+body.modo-noturno .sidebar-header,
+body.modo-noturno .submenu {
+  background: #2a2a2a !important;
+  color: #f0f0f0;
+}
+
+body.modo-noturno .artigo-card,
+body.modo-noturno .support-section,
+body.modo-noturno .comments-area,
+body.modo-noturno .pix-card {
+  background: rgba(30, 30, 30, 0.9) !important;
+  border-color: #8B0000;
+}
+
+body.modo-noturno .artigo-card h3,
+body.modo-noturno .artigo-card p,
+body.modo-noturno .support-section p,
+body.modo-noturno .support-section h3 {
+  color: #f0f0f0;
+}
+
+body.modo-noturno .btn-copy-pix,
+body.modo-noturno .comment-btn-submit {
+  background: #8B0000;
+  color: white;
+}
+
+body.modo-noturno footer {
+  background: #0d0d0d;
+}
+
+body.modo-noturno a {
+  color: #FFD966;
+}
+
+body.modo-noturno .sidebar a,
+body.modo-noturno .submenu a {
+  color: #f0f0f0;
+}
+
+body.modo-noturno .sidebar a:hover,
+body.modo-noturno .submenu a:hover {
+  background: #8B0000;
+}
+
+body.modo-noturno .pix-card .pix-key {
+  background: #1a1a1a;
+  color: #FFD966;
+}
+
+body.modo-noturno .security-badge {
+  background: #1a1a1a;
+}
+
+body.modo-noturno .comments-area h4 {
+  color: #f0f0f0;
+}
 </script>
 </body>
 </html>

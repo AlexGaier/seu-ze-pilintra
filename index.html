@@ -629,6 +629,50 @@ body.modo-noturno .security-badge {
 body.modo-noturno .comments-area h4 {
   color: #f0f0f0;
 }
+    /* ========== ANIMAÇÕES AO ROLAR (SCROLL REVEAL) ========== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-zoom {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.6s ease-out;
+}
+
+.reveal-zoom.active {
+  opacity: 1;
+  transform: scale(1);
+}
   </style>
 </head>
 <body>
@@ -809,19 +853,13 @@ body.modo-noturno .comments-area h4 {
 
   <!-- ARTIGOS LADO A LADO -->
   <div class="artigos-container">
-    <div class="artigo-card">
-      <div class="badge">📖 NOVO ARTIGO</div>
-      <h3>⚡ Diferença entre Zé Pilintra e Exu</h3>
-      <p>Entenda de uma vez por todas as diferenças entre o Malandro de Luz e os Guardiões da Lei.</p>
-      <a href="diferenca-ze-pilintra-exu.html">📚 Ler artigo →</a>
-    </div>
-    <div class="artigo-card">
-      <div class="badge">📖 NOVO ARTIGO</div>
-      <h3>🙏 Orações para Seu Zé Pilintra</h3>
-      <p>Orações poderosas para abrir caminhos, amor, dinheiro, saúde e proteção.</p>
-      <a href="oracao-ze-pilintra-diversos-pedidos.html">📚 Ler orações →</a>
-    </div>
+  <div class="artigo-card reveal-left">
+    ... conteúdo do primeiro artigo ...
   </div>
+  <div class="artigo-card reveal-right">
+    ... conteúdo do segundo artigo ...
+  </div>
+</div>
 
   <div id="dynamicContent" class="dynamic-content">
     <div style="text-align: center; padding: 40px;">
@@ -830,7 +868,7 @@ body.modo-noturno .comments-area h4 {
     </div>
   </div>
 
-  <div class="support-section">
+  <div class="support-section reveal-zoom">
     <div class="heart-icon">🙏✨</div>
     <h3>Ajude a manter este portal!</h3>
     <p>Se este conteúdo tocou seu coração e você deseja contribuir para que possamos continuar compartilhando histórias, conhecimento e axé, qualquer valor é bem-vindo.</p>
@@ -844,7 +882,7 @@ body.modo-noturno .comments-area h4 {
     <p class="support-note">✨ Axé e gratidão por sua generosidade! Que Seu Zé Pilintra ilumine seus caminhos. ✨</p>
   </div>
 
-  <div class="comments-area" id="commentsArea">
+  <div class="comments-area reveal" id="comentsArea">
     <h4 style="display: flex; align-items: center; gap: 12px; margin-bottom: 25px; color: #8B0000;">
       <i class="fas fa-comment-dots" style="font-size: 1.8rem;"></i> 
       💬 Comentários
@@ -859,7 +897,7 @@ body.modo-noturno .comments-area h4 {
     </script>
   </div>
 
-  <footer id="contato">
+  <footer id="contato" class="reveal">
     <p>🌹 Axé a todos os guardiões! Salve Seu Zé Pilintra! 🌹</p>
     <div><strong>Alex Gaier</strong> - São Pedro do Sul, RS</div>
     <div>Contato: <a href="mailto:alexgaier93@gmail.com">alexgaier93@gmail.com</a></div>
@@ -5745,6 +5783,23 @@ modoNoturnoBtn.addEventListener('click', () => {
     modoNoturnoBtn.innerHTML = '<i class="fas fa-moon"></i> Modo Noturno';
   }
 });
+  // ==================== ANIMAÇÕES AO ROLAR ====================
+function revealElements() {
+  const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-zoom');
+  
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
+    const elementVisible = 100;
+    
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add('active');
+    }
+  }
+}
+
+window.addEventListener('load', revealElements);
+window.addEventListener('scroll', revealElements);
 </script>
 </body>
 </html>

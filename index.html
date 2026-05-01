@@ -781,6 +781,25 @@ body.modo-noturno .comments-area h4 {
 </ul>
   </ul>
   <li><a href="sobre.html">🙏 Sobre Mim</a></li>
+    <li class="menu-toggle-item" id="candombleToggle"><a href="#">🔶 CANDOMBLÉ <span class="arrow">▶</span></a></li>
+<ul class="submenu" id="candombleSubmenu">
+  <li><a href="#" onclick="loadStory('orixa-oxala'); closeMenu(); return false;">🌀 Oxalá</a></li>
+  <li><a href="#" onclick="loadStory('orixa-ogum'); closeMenu(); return false;">🗡️ Ogum</a></li>
+  <li><a href="#" onclick="loadStory('orixa-oxossi'); closeMenu(); return false;">🏹 Oxóssi</a></li>
+  <li><a href="#" onclick="loadStory('orixa-xango'); closeMenu(); return false;">⚡ Xangô</a></li>
+  <li><a href="#" onclick="loadStory('orixa-iansa'); closeMenu(); return false;">🌪️ Iansã (Oiá)</a></li>
+  <li><a href="#" onclick="loadStory('orixa-iemanja'); closeMenu(); return false;">🌊 Iemanjá</a></li>
+  <li><a href="#" onclick="loadStory('orixa-oxum'); closeMenu(); return false;">💧 Oxum</a></li>
+  <li><a href="#" onclick="loadStory('orixa-nana'); closeMenu(); return false;">🌺 Nanã</a></li>
+  <li><a href="#" onclick="loadStory('orixa-obaluae'); closeMenu(); return false;">🌀 Obaluaê</a></li>
+  <li><a href="#" onclick="loadStory('orixa-oxumare'); closeMenu(); return false;">🌈 Oxumaré</a></li>
+  <li><a href="#" onclick="loadStory('orixa-logunede'); closeMenu(); return false;">🎣 Logunedé</a></li>
+  <li><a href="#" onclick="loadStory('orixa-ibeji'); closeMenu(); return false;">👶 Ibeji</a></li>
+  <li><a href="#" onclick="loadStory('orixa-ewa'); closeMenu(); return false;">🌸 Ewá</a></li>
+  <li><a href="#" onclick="loadStory('orixa-oba'); closeMenu(); return false;">⚔️ Obá</a></li>
+  <li><a href="#" onclick="loadStory('orixa-ossain'); closeMenu(); return false;">🌿 Ossain</a></li>
+  <li><a href="#" onclick="loadStory('orixa-ayra'); closeMenu(); return false;">⌛ Ayrá</a></li>
+</ul>
   <li><a href="#contato">📞 Contato</a></li>
 </ul>
 </div>
@@ -856,6 +875,17 @@ body.modo-noturno .comments-area h4 {
             theme="github-light"
             crossorigin="anonymous"
             async>
+      // ========== CANDOMBLÉ ==========
+const candombleToggle = document.getElementById('candombleToggle');
+const candombleSubmenu = document.getElementById('candombleSubmenu');
+if (candombleToggle && candombleSubmenu) {
+  const arrow = candombleToggle.querySelector('.arrow');
+  candombleToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    candombleSubmenu.classList.toggle('show');
+    if (arrow) arrow.classList.toggle('rotated');
+  });
+}
     </script>
   </div>
 
@@ -5222,6 +5252,232 @@ Flores: Estrelícias, lírios, rosas brancas, violetas, margaridas<br>
 Saudação: "Salve Marinheiro Estrela do Mar!"</p>
 
 <p>🌊 <strong>Salve Marinheiro Estrela do Mar!</strong></p>`
+  },
+    // ==================== ORIXÁS (CANDOMBLÉ) ====================
+  "orixa-oxala": {
+    titulo: "🌀 Oxalá | O Grande Pai da Criação",
+    badge: "Orixá",
+    frase: "A paz e a criação são minhas marcas. Pai de todos, trago a harmonia e a luz.",
+    texto: `<p>🌀 <strong>Oxalá</strong> é o mais respeitado dos Orixás, associado à criação do mundo, à paz, à pureza e à sabedoria. É o pai de todos os Orixás e dos seres humanos. Sua energia é tranquila, mas firme, como o sol nascente.</p>
+<p>🎨 <strong>Cores:</strong> Branco (principal), prata, transparente.<br>
+📅 <strong>Dia da semana:</strong> Sexta-feira.<br>
+🌿 <strong>Elemento:</strong> Ar, a própria criação.<br>
+🍚 <strong>Oferendas:</strong> Canjica branca (sem sal), inhame cozido, água de coco, algodão, flores brancas (lírio, rosa branca).<br>
+📿 <strong>Saudação:</strong> "Epa Babá!"<br>
+🤝 <strong>Sincretismo:</strong> Senhor do Bonfim (Jesus Cristo).<br>
+🙏 <strong>Oração:</strong> "Pai Oxalá, que a paz reine em meu coração e eu possa seguir seus passos de mansidão. Abençoa meu caminho com luz e harmonia."</p>
+<p>📖 <strong>História:</strong> Oxalá recebeu de Olorum a tarefa de criar o mundo. Tentou usar um saco de barro, mas falhou. Depois, com o tempo, aprendeu a modelar a terra e deu origem à humanidade. Seu símbolo é o pássaro (opá) e o cetro de prata. É um Orixá muito respeitado, que não aceita oferendas com dendê ou sangue. Sua qualidade principal é Oxalufã (o velho) e também Oxaguiã (o jovem guerreiro).</p>`
+  },
+  "orixa-ogum": {
+    titulo: "🗡️ Ogum | O Senhor da Guerra e do Trabalho",
+    badge: "Orixá",
+    frase: "Com minha espada, abro caminhos e protejo os guerreiros. A coragem e o trabalho são meus domínios.",
+    texto: `<p>🗡️ <strong>Ogum</strong> é o Orixá da guerra, da tecnologia, do trabalho, do ferro e das estradas. É um grande guerreiro, mas também é quem abre caminhos, pois antes de qualquer outro Orixá, ele desbrava a mata com seu facão.</p>
+<p>🔴 <strong>Cores:</strong> Azul escuro, verde, vermelho.<br>
+📅 <strong>Dia da semana:</strong> Terça-feira.<br>
+🌿 <strong>Elemento:</strong> Fogo, metal, terra.<br>
+🍚 <strong>Oferendas:</strong> Feijão preto, azeite de dendê, inhame, carne de porco (em algumas casas), vinho tinto.<br>
+📿 <strong>Saudação:</strong> "Ogunhê! Ogunhê!".<br>
+🤝 <strong>Sincretismo:</strong> Santo Antônio (em algumas regiões) ou São Jorge (no Rio de Janeiro).<br>
+🙏 <strong>Oração:</strong> "Ogum, abra meus caminhos, proteja meu trabalho e me dê coragem para vencer os desafios."</p>
+<p>📖 <strong>História:</strong> Ogum é filho de Iemanjá e irmão de Oxóssi. Viveu muitas batalhas e, após um período afastado, retornou para ajudar os outros Orixás. É evocado sempre que se começa um trabalho, para quebrar as demandas. Possui várias qualidades: Ogum Megê, Ogum de Ronda, Ogum Beira-Mar, etc.</p>`
+  },
+  "orixa-oxossi": {
+    titulo: "🏹 Oxóssi | O Caçador da Floresta",
+    badge: "Orixá",
+    frase: "Na mata eu caço, na fartura eu abençôo. Sou o senhor da abundância.",
+    texto: `<p>🏹 <strong>Oxóssi</strong> é o Orixá da caça, da fartura, das florestas e da alimentação. É um rei que vive na floresta, senhor da sabedoria e da riqueza, pois ele conhece todos os segredos da mata.</p>
+<p>🟢 <strong>Cores:</strong> Verde, azul claro, dourado.<br>
+📅 <strong>Dia da semana:</strong> Quinta-feira.<br>
+🌿 <strong>Elemento:</strong> Terra, florestas.<br>
+🍚 <strong>Oferendas:</strong> Milho (cozido ou em pamonha), feijão fradinho, mel, frutas silvestres, caça (carne de caça).<br>
+📿 <strong>Saudação:</strong> "Okê Arô!".<br>
+🤝 <strong>Sincretismo:</strong> São Sebastião.<br>
+🙏 <strong>Oração:</strong> "Okê Arô, Oxóssi! Abençoa minha casa com fartura e protege minha família contra a fome e a inveja."</p>
+<p>📖 <strong>História:</strong> Oxóssi é filho de Iemanjá e irmão de Ogum. Foi criado na floresta e aprendeu a caçar e a sobreviver. Tornou-se rei da cidade de Keto e casou-se com Oxum e também com outras Orixás. Seus símbolos são o arco e flecha (orô) e o cabo de caça. Possui qualidades como Oxóssi Apará, Oxóssi Otim, etc.</p>`
+  },
+  "orixa-xango": {
+    titulo: "⚡ Xangô | O Senhor da Justiça e dos Raios",
+    badge: "Orixá",
+    frase: "Com meu machado de dois gumes, faço justiça. Quem erra, colhe o que plantou.",
+    texto: `<p>⚡ <strong>Xangô</strong> é o Orixá da justiça, dos raios, do fogo e do trovão. É um rei poderoso, senhor dos palácios e da ordem. Não tolera mentiras e age com equilíbrio.</p>
+<p>🤎 <strong>Cores:</strong> Marrom, vermelho, dourado, branco.<br>
+📅 <strong>Dia da semana:</strong> Quarta-feira.<br>
+🌿 <strong>Elemento:</strong> Fogo, pedreira.<br>
+🍚 <strong>Oferendas:</strong> Amalá (quiabo com azeite de dendê e camarão seco), feijão fradinho, vinho tinto, frutas como maçã e uva.<br>
+📿 <strong>Saudação:</strong> "Kaô Kabecilê!".<br>
+🤝 <strong>Sincretismo:</strong> São Jerônimo (em alguns lugares), São João Batista (em outros).<br>
+🙏 <strong>Oração:</strong> "Kaô Kabecilê, Xangô! Que a justiça prevaleça na minha vida e eu tenha clareza para separar o certo do errado."</p>
+<p>📖 <strong>História:</strong> Xangô foi o quarto rei de Oyó. Após sua morte, foi divinizado. Usa o machado de dois gumes (Oxê) e carrega o fogo nas mãos. Possui três esposas: Oxum, Obá e Iansã. Suas qualidades incluem Xangô Aganju, Xangô Alafim, etc.</p>`
+  },
+  "orixa-iansa": {
+    titulo: "🌪️ Iansã | A Rainha dos Ventos e das Tempestades",
+    badge: "Orixá",
+    frase: "Com meu vento, limpo o ar e trago renovação. Sou a força das mudanças.",
+    texto: `<p>🌪️ <strong>Iansã (Oiá)</strong> é a senhora dos ventos, das tempestades, dos raios e também das almas dos mortos (Eguns). É uma Orixá guerreira, dona do fogo e da transformação.</p>
+<p>❤️ <strong>Cores:</strong> Vermelho, rosa, marrom, laranja.<br>
+📅 <strong>Dia da semana:</strong> Quarta-feira.<br>
+🌿 <strong>Elemento:</strong> Ar, fogo.<br>
+🍚 <strong>Oferendas:</strong> Acarajé (com pimenta), pimenta, farofa de dendê, vinho tinto, frutas como melão.<br>
+📿 <strong>Saudação:</strong> "Eparrêi!".<br>
+🤝 <strong>Sincretismo:</strong> Santa Bárbara.<br>
+🙏 <strong>Oração:</strong> "Eparrêi, Iansã! Limpa meus caminhos com teus ventos, renova minha energia e protege minha alma."</p>
+<p>📖 <strong>História:</strong> Iansã é filha de Iemanjá e esposa de Xangô. É muito corajosa e acompanha Xangô nas batalhas. Seu símbolo é o Eruexim (rabo de animal) que ela usa para afastar os maus espíritos. Tem o poder de se transformar em água e vento.</p>`
+  },
+  "orixa-iemanja": {
+    titulo: "🌊 Iemanjá | A Rainha do Mar",
+    badge: "Orixá",
+    frase: "Mãe das águas salgadas, acolho a todos. Minhas ondas trazem paz e conforto.",
+    texto: `<p>🌊 <strong>Iemanjá</strong> é a Orixá dos mares, da maternidade, da fertilidade e da proteção familiar. É a mãe de muitos Orixás, como Ogum, Oxóssi, Xangô (em algumas narrativas), e outras. Seu poder é imenso e ela acolhe todos os seus filhos.</p>
+<p>💙 <strong>Cores:</strong> Azul claro, azul-celeste, branco, prata.<br>
+📅 <strong>Dia da semana:</strong> Sábado.<br>
+🌿 <strong>Elemento:</strong> Água salgada.<br>
+🍚 <strong>Oferendas:</strong> Flocos de milho, flores brancas, perfume, espelhos, champanhe, peixes, arroz doce.<br>
+📿 <strong>Saudação:</strong> "Odôyá!".<br>
+🤝 <strong>Sincretismo:</strong> Nossa Senhora da Conceição (ou Nossa Senhora das Candeias).<br>
+🙏 <strong>Oração:</strong> "Odôyá, Mãe Iemanjá! Cubra minha família com seu manto de águas, proteja meus filhos e traga tranquilidade ao meu lar."</p>
+<p>📖 <strong>História:</strong> Iemanjá vivia nas águas profundas e casou-se com Olodumarê. Tiveram muitos filhos, mas em certo momento, ela se sentiu sufocada e fugiu para o mar. Seu símbolo é o Abebé (leque) e suas jóias. É muito cultuada por pescadores e por aqueles que buscam conforto emocional.</p>`
+  },
+  "orixa-oxum": {
+    titulo: "💧 Oxum | A Senhora das Águas Doces e do Amor",
+    badge: "Orixá",
+    frase: "Em minhas águas, o amor floresce. A beleza, a riqueza e a fertilidade me pertencem.",
+    texto: `<p>💧 <strong>Oxum</strong> é a Orixá das águas doces (rios, cachoeiras), do amor, da beleza, da riqueza e da prosperidade. É a grande esposa de Xangô e uma das mais queridas. Muito relacionada com a vaidade, a feminilidade e a gestação.</p>
+<p>💛 <strong>Cores:</strong> Amarelo, dourado, cor-de-rosa, coral.<br>
+📅 <strong>Dia da semana:</strong> Sábado.<br>
+🌿 <strong>Elemento:</strong> Água doce.<br>
+🍚 <strong>Oferendas:</strong> Mel, frutas amarelas (manga, caju, banana), peixe, inhame, feijão fradinho, doces.<br>
+📿 <strong>Saudação:</strong> "Ora iê iê ô!".<br>
+🤝 <strong>Sincretismo:</strong> Nossa Senhora das Candeias, Nossa Senhora da Conceição (em algumas regiões).<br>
+🙏 <strong>Oração:</strong> "Ora iê iê ô, Oxum! Derrame suas águas doces sobre minha vida, traga amor, abundância e realize meus desejos com graça."</p>
+<p>📖 <strong>História:</strong> Oxum foi a última esposa de Xangô e é extremamente vaidosa. Certa vez, escondeu os documentos do reino para testar sua influência. Seu símbolo é o abebê (leque) e o espelho. Ela cuida das gestantes e das parteiras. Possui várias qualidades, como Oxum Ipondá, Oxum Akessan, etc.</p>`
+  },
+  "orixa-nana": {
+    titulo: "🌺 Nanã | A Senhora das Águas Paradas e da Morte",
+    badge: "Orixá",
+    frase: "Nas águas paradas, mora a sabedoria do fim e do recomeço. Não tenham medo da passagem.",
+    texto: `<p>🌺 <strong>Nanã</strong> é a Orixá das águas paradas (lama, pântanos), da morte, do renascimento e da sabedoria ancestral. É uma das mais antigas, mãe de Obaluaê e Oxumaré. Sua energia é calma, mas profunda.</p>
+<p>💜 <strong>Cores:</strong> Lilás, roxo, violeta, branco.<br>
+📅 <strong>Dia da semana:</strong> Segunda-feira.<br>
+🌿 <strong>Elemento:</strong> Água parada, lama.<br>
+🍚 <strong>Oferendas:</strong> Arroz com feijão fradinho, inhame, azeite de dendê, vinho tinto, frutas escuras (jabuticaba, amora).<br>
+📿 <strong>Saudação:</strong> "Saluba Nanã!".<br>
+🤝 <strong>Sincretismo:</strong> Santana, Nossa Senhora da Piedade.<br>
+🙏 <strong>Oração:</strong> "Saluba Nanã, avó da humanidade! Acolha meus antepassados e dê-me coragem para enfrentar as transformações necessárias."</p>
+<p>📖 <strong>História:</strong> Nanã vive no fundo das águas paradas, levando o cetro de ibiri (feixe de vime). É quem determina o momento da morte e do renascimento. Sua energia é muito ligada à calma e à sabedoria dos mais velhos.</p>`
+  }
+};
+"orixa-obaluae": {
+    titulo: "🌀 Obaluaê | O Senhor da Cura e das Doenças",
+    badge: "Orixá",
+    frase: "Curo as feridas do corpo e da alma. Minhas palhas escondem a verdade que liberta.",
+    texto: `<p>🌀 <strong>Obaluaê (Omolu)</strong> é o Orixá das doenças, da cura, da transformação e da morte. É filho de Nanã e Iemanjá (em algumas versões). Vive nos cemitérios e usa um xaxará (feixe de palhas) para varrer as impurezas.</p>
+<p>⚫ <strong>Cores:</strong> Preto, branco, vermelho, prata.<br>
+📅 <strong>Dia da semana:</strong> Segunda-feira.<br>
+🌿 <strong>Elemento:</strong> Terra, fogo (calor).<br>
+🍚 <strong>Oferendas:</strong> Pipoca estourada sem óleo, farofa de dendê, milho, roupas de mendigo, feijão preto, vinho tinto.<br>
+📿 <strong>Saudação:</strong> "Atotô!".<br>
+🤝 <strong>Sincretismo:</strong> São Lázaro, São Roque.<br>
+🙏 <strong>Oração:</strong> "Atotô, Obaluaê! Cura minhas dores físicas e espirituais, livra-me de doenças e renova minha saúde."</p>
+<p>📖 <strong>História:</strong> Obaluaê nasceu coberto de chagas, mas foi curado por suas próprias artes. Usa palhas para esconder suas marcas. É um Orixá muito temido, mas também muito procurado para pedidos de cura. Seu xaxará varre as energias negativas.</p>`
+  },
+"orixa-oxumare": {
+    titulo: "🌈 Oxumaré | O Arco-Íris e a Renovação",
+    badge: "Orixá",
+    frase: "Entre o céu e a terra, trago a esperança. O arco-íris anuncia novos ciclos.",
+    texto: `<p>🌈 <strong>Oxumaré</strong> é o Orixá do arco-íris, da riqueza, da renovação e da continuidade. É filho de Nanã, irmão de Obaluaê. Tem uma forte ligação com o movimento cíclico da vida.</p>
+<p>💚 <strong>Cores:</strong> Amarelo, verde, azul, rosa, todas as cores.<br>
+📅 <strong>Dia da semana:</strong> Terça-feira.<br>
+🌿 <strong>Elemento:</strong> Arco-íris, água.<br>
+🍚 <strong>Oferendas:</strong> Milho de pipoca, frutas variadas (manga, abacaxi, melancia), mel, farofa de dendê, vinho tinto.<br>
+📿 <strong>Saudação:</strong> "Arroboboi!".<br>
+🤝 <strong>Sincretismo:</strong> São Bartolomeu.<br>
+🙏 <strong>Oração:</strong> "Arroboboi, Oxumaré! Renove minhas energias com seu arco-íris, traga prosperidade e paz para minha vida."</p>
+<p>📖 <strong>História:</strong> Oxumaré é uma serpente que sustenta o céu e a terra. Quando se transforma em arco-íris, anuncia a fartura. É muito importante nos ciclos da natureza e da economia.</p>`
+  },
+"orixa-logunede": {
+    titulo: "🎣 Logunedé | O Jovem Caçador e Pescador",
+    badge: "Orixá",
+    frase: "Sou caçador como meu pai Oxóssi e pescador como minha mãe Oxum. Levo leveza e alegria.",
+    texto: `<p>🎣 <strong>Logunedé</strong> é o Orixá jovem, filho de Oxóssi e Oxum. É a força da fartura, da esperança e da flexibilidade. Vive metade do ano na terra (caçando) e metade na água (pescando).</p>
+<p>💚 <strong>Cores:</strong> Azul claro, verde claro, amarelo, rosa.<br>
+📅 <strong>Dia da semana:</strong> Quinta-feira.<br>
+🌿 <strong>Elemento:</strong> Terra e água.<br>
+🍚 <strong>Oferendas:</strong> Peixe, mel, feijão fradinho, milho, frutas amarelas, broa de milho.<br>
+📿 <strong>Saudação:</strong> "Logunn!".<br>
+🤝 <strong>Sincretismo:</strong> São João (em algumas regiões).<br>
+🙏 <strong>Oração:</strong> "Logunn, Logunedé! Traga leveza à minha vida, fartura à minha mesa e alegria ao meu coração."</p>
+<p>📖 <strong>História:</strong> Logunedé é muito bonito e educado. Aprendeu com o pai a caçar e com a mãe a pescar. É um Orixá muito querido por trazer a esperança e a juventude.</p>`
+  },
+"orixa-ibeji": {
+    titulo: "👶 Ibeji | As Crianças Sagradas",
+    badge: "Orixá",
+    frase: "Somos a alegria e a pureza. Cuidamos das crianças e dos que mantêm o coração infantil.",
+    texto: `<p>👶 <strong>Ibeji</strong> são os Orixás gêmeos, representam a infância, a alegria, a fertilidade e a inocência. São muito cultuados pelas crianças e por aqueles que buscam proteção para os pequenos.</p>
+<p>🎨 <strong>Cores:</strong> Branco, rosa, azul claro, todas as cores alegres.<br>
+📅 <strong>Dia da semana:</strong> Domingo.<br>
+🌿 <strong>Elemento:</strong> Terra, ar.<br>
+🍚 <strong>Oferendas:</strong> Doces, pirulitos, brinquedos, frutas, bolo simples, refrigerante.<br>
+📿 <strong>Saudação:</strong> "Eró, Ibejis!".<br>
+🤝 <strong>Sincretismo:</strong> Cosme e Damião.<br>
+🙏 <strong>Oração:</strong> "Eró, Ibejis! Protejam as crianças de minha família e tragam leveza ao meu espírito com sua alegria."</p>
+<p>📖 <strong>História:</strong> Ibeji são filhos de Iemanjá ou de Xangô (conforme a lenda). São sempre invocados para abençoar a fertilidade e curar as crianças. É comum dar doces e brinquedos como oferendas.</p>`
+  },
+"orixa-oia": {
+    titulo: "🌪️ Oiá | A Senhora dos Ventos e das Almas",
+    badge: "Orixá",
+    frase: "Com meu vento, levo as almas e trago a renovação. Sou a força das mudanças e do fogo.",
+    texto: `<p>🌪️ <strong>Oiá (também chamada Iansã)</strong> é a Orixá dos ventos, das tempestades, dos raios e das almas dos mortos (Eguns). É uma guerreira poderosa, esposa de Xangô e dona do fogo.</p>
+<p>❤️ <strong>Cores:</strong> Vermelho, rosa, laranja, marrom.<br>
+📅 <strong>Dia da semana:</strong> Quarta-feira.<br>
+🌿 <strong>Elemento:</strong> Ar, fogo.<br>
+🍚 <strong>Oferendas:</strong> Acarajé com pimenta, farofa de dendê, vinho tinto, frutas como melão, rapadura.<br>
+📿 <strong>Saudação:</strong> "Eparrêi, Oiá!".<br>
+🤝 <strong>Sincretismo:</strong> Santa Bárbara.<br>
+🙏 <strong>Oração:</strong> "Eparrêi, Oiá! Limpa minha vida com teus ventos, protege minha casa com teu fogo e guia os espíritos que me cercam."</p>
+<p>📖 <strong>História:</strong> Oiá é filha de Iemanjá, irmã de Oxum e Obá. Ela possui o poder de comandar os ventos e as tempestades. Seu símbolo é o Eruexim (rabo de animal). É muito reverenciada por sua coragem e força.</p>`
+  },
+"orixa-ewa": {
+    titulo: "🌸 Ewá | A Vidente da Beleza",
+    badge: "Orixá",
+    frase: "Enxergo além do que os olhos veem. Trago a clarividência e a intuição feminina.",
+    texto: `<p>🌸 <strong>Ewá</strong> é a Orixá da clarividência, da beleza, do mistério e da vidência. É irmã de Oxum e Obá, e também esposa de Xangô (em algumas narrativas). Seu poder está em ver o futuro e revelar segredos.</p>
+<p>💕 <strong>Cores:</strong> Rosa, roxo, claro, lilás, branco.<br>
+📅 <strong>Dia da semana:</strong> Sexta-feira.<br>
+🌿 <strong>Elemento:</strong> Água doce, luz.<br>
+🍚 <strong>Oferendas:</strong> Frutas perfumadas (morango, maçã, ameixa), mel, flores cor-de-rosa, tecidos leves, vinho branco.<br>
+📿 <strong>Saudação:</strong> "Ewá Ewá!".<br>
+🤝 <strong>Sincretismo:</strong> Nossa Senhora da Glória ou Santa Luzia.<br>
+🙏 <strong>Oração:</strong> "Ewá, desperte minha intuição e mostre-me os caminhos ocultos. Dê-me clareza para tomar as decisões certas."</p>
+<p>📖 <strong>História:</strong> Ewá vive em uma gruta e possui um rabo de peixe. Conhece todos os segredos do universo. É muito invocada por quem desenvolve mediunidade ou precisa de orientação espiritual profunda.</p>`
+  },
+"orixa-oba": {
+    titulo: "⚔️ Obá | A Guerreira do Rio",
+    badge: "Orixá",
+    frase: "Com minha espada, protejo os rios e as mulheres. Sou força e coragem.",
+    texto: `<p>⚔️ <strong>Obá</strong> é a Orixá guerreira, esposa de Xangô e irmã de Oxum. Representa a força feminina, a luta por respeito e a proteção das águas revoltas. É uma grande guerreira, mas também é conhecida por sua história de ciúmes e sacrifício.</p>
+<p>❤️ <strong>Cores:</strong> Vermelho, branco, prata, marrom.<br>
+📅 <strong>Dia da semana:</strong> Quarta-feira.<br>
+🌿 <strong>Elemento:</strong> Água (cachoeira), fogo.<br>
+🍚 <strong>Oferendas:</strong> Carne de bode, feijão preto com dendê, cebola roxa, pimenta, vinho tinto.<br>
+📿 <strong>Saudação:</strong> "Obá Xirê!".<br>
+🤝 <strong>Sincretismo:</strong> Santa Joana D'Arc (em alguns locais).<br>
+🙏 <strong>Oração:</strong> "Obá, dê-me força para lutar por meus direitos e para defender a justiça onde quer que eu vá."</p>
+<p>📖 <strong>História:</strong> Obá cortou a própria orelha para provar amor a Xangô, mas foi rejeitada por Oxum que a havia enganado. Ela é muito respeitada e invocada por mulheres que enfrentam violência ou injustiças.</p>`
+  },
+"orixa-ossain": {
+    titulo: "🌿 Ossain | O Senhor das Ervas",
+    badge: "Orixá",
+    frase: "Uma folha pode curar ou transformar. Conheço os segredos de todas elas.",
+    texto: `<p>🌿 <strong>Ossain</strong> é o Orixá das folhas sagradas, da cura, da alquimia vegetal e dos segredos medicinais. É um sábio que vive na floresta e conhece todas as plantas, seus poderes e suas magias.</p>
+<p>💚 <strong>Cores:</strong> Verde, marrom, dourado, branco.<br>
+📅 <strong>Dia da semana:</strong> Quinta-feira.<br>
+🌿 <strong>Elemento:</strong> Terra, floresta.<br>
+🍚 <strong>Oferendas:</strong> Folhas diversas (sem veneno), mel, farofa de dendê, frutas silvestres, vinho tinto.<br>
+📿 <strong>Saudação:</strong> "Ewê, Ossain!".<br>
+🤝 <strong>Sincretismo:</strong> São Francisco de Assis.<br>
+🙏 <strong>Oração:</strong> "Ewê, Ossain! Ensina-me o poder curativo das plantas e me dê saúde através da natureza."</p>
+<p>📖 <strong>História:</strong> Ossain é filho de Iemanjá e um dos mais velhos Orixás. Ele conhece o segredo de cada erva e as usa para fazer poções mágicas. Certa vez, Olóòkùn roubou suas ervas, mas ele conseguiu recuperar parte delas. Seu símbolo é o pássaro (opá) ou um galho com diversas folhas.</p>`
   },
   };
 

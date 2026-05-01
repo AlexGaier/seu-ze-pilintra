@@ -794,6 +794,9 @@
   É proibida a reprodução total ou parcial sem autorização prévia.<br>
   <a href="privacidade.html" style="color: #FFD966;">🔒 Política de Privacidade</a>
 </div>
+    <div class="contador-visitas" style="text-align: center; margin-top: 15px; font-size: 0.85rem; color: #FFD966;">
+  <i class="fas fa-eye"></i> Visitantes: <span id="contador">0</span>
+</div>
   </footer>
 </div>
 
@@ -5627,6 +5630,24 @@ if (marinheirosToggle && marinheirosSubmenu) {
     if (arrow) arrow.classList.toggle('rotated');
   });
 }
+  // ==================== CONTADOR DE VISITAS ====================
+async function atualizarContador() {
+  const contadorElemento = document.getElementById('contador');
+  if (!contadorElemento) return;
+  
+  const url = 'https://api.countapi.xyz/hit/alexgaier-seu-ze-pilintra/visitas';
+  
+  try {
+    const resposta = await fetch(url);
+    const dados = await resposta.json();
+    contadorElemento.innerText = dados.value;
+  } catch (erro) {
+    console.log('Erro ao carregar contador:', erro);
+    contadorElemento.innerText = '?';
+  }
+}
+
+atualizarContador();
 </script>
 </body>
 </html>

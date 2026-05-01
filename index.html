@@ -550,6 +550,13 @@
     #resultsList .result-card a:hover {
       text-decoration: underline;
     }
+    .submenu {
+  display: none;
+}
+
+.submenu.show {
+  display: block;
+}
   </style>
 </head>
 <body>
@@ -638,7 +645,23 @@
 </ul>
     
     <li class="menu-toggle-item" id="caboclasToggle"><a href="#">🏹 CABOCLAS (15) <span class="arrow">▶</span></a></li>
-    <ul class="submenu" id="caboclasSubmenu"></ul>
+    <ul class="submenu" id="caboclasSubmenu">
+  <li><a href="#" onclick="loadStory('cabocla-jurema'); closeMenu(); return false;">🏹 Cabocla Jurema</a></li>
+  <li><a href="#" onclick="loadStory('cabocla-tupa'); closeMenu(); return false;">🏹 Cabocla Tupã</a></li>
+  <li><a href="#" onclick="loadStory('cabocla-da-mata'); closeMenu(); return false;">🏹 Cabocla da Mata</a></li>
+  <li><a href="#" onclick="loadStory('cabocla-flecheira'); closeMenu(); return false;">🏹 Cabocla Flecheira</a></li>
+  <li><a href="#" onclick="loadStory('cabocla-icamiaba'); closeMenu(); return false;">🏹 Cabocla Icamiaba</a></li>
+  <li><a href="#" onclick="loadStory('cabocla-potira'); closeMenu(); return false;">🏹 Cabocla Potira</a></li>
+  <li><a href="#" onclick="loadStory('cabocla-jaci'); closeMenu(); return false;">🏹 Cabocla Jaci</a></li>
+  <li><a href="#" onclick="loadStory('cabocla-uba'); closeMenu(); return false;">🏹 Cabocla Uba</a></li>
+  <li><a href="#" onclick="loadStory('cabocla-iracema'); closeMenu(); return false;">🏹 Cabocla Iracema</a></li>
+  <li><a href="#" onclick="loadStory('cabocla-moema'); closeMenu(); return false;">🏹 Cabocla Moema</a></li>
+  <li><a href="#" onclick="loadStory('cabocla-cacica'); closeMenu(); return false;">🏹 Cabocla Cacica</a></li>
+  <li><a href="#" onclick="loadStory('cabocla-taina'); closeMenu(); return false;">🏹 Cabocla Tainá</a></li>
+  <li><a href="#" onclick="loadStory('cabocla-jandira'); closeMenu(); return false;">🏹 Cabocla Jandira</a></li>
+  <li><a href="#" onclick="loadStory('cabocla-cataguases'); closeMenu(); return false;">🏹 Cabocla Cataguases</a></li>
+  <li><a href="#" onclick="loadStory('cabocla-aracy'); closeMenu(); return false;">🏹 Cabocla Araci</a></li>
+</ul>
     
     <li class="menu-toggle-item" id="eresToggle"><a href="#">🌿 ERÊS (10) <span class="arrow">▶</span></a></li>
     <ul class="submenu" id="eresSubmenu"></ul>

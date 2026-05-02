@@ -21,8 +21,8 @@
     gtag('config', 'G-L0YWGMD7Q7');
   </script>
   
-  <title>Seu Zé Pilintra | Exus e Pombogiras | Alex Gaier</title>
-  
+  <title>Seu Zé Pilintra – História, Orações, Exus e Pombagiras</title>
+  <meta name="description" content="Conheça a verdadeira história de Seu Zé Pilintra. Acesse orações poderosas, pontos cantados e ensinamentos sobre Exus, Pombagiras e Umbanda.">
   <style>
     .badge {
   display: none;
@@ -809,7 +809,7 @@ body.modo-noturno .comments-area h4 {
 </div>
 
 <header>
-  <h1>⚡ Seu Zé Pilintra ⚡</h1>
+  <h1>Seu Zé Pilintra – Guardião da Lei e Malandro de Luz</h1>
   <div class="subtitle">Guardião da Lei · Malandro de Luz · Histórias de Exus e Pombogiras</div>
 </header>
 
@@ -6005,5 +6005,282 @@ if (candombleToggle && candombleSubmenu) {
   });
 }
 </script>
+// ==================================================
+// HISTORY API - URLs amigáveis para SEO
+// ==================================================
+
+// 1. Mapeamento de URLs amigáveis para IDs das entidades
+const urlToIdMap = {
+  // Entidade principal
+  '': 'ze-pilintra',
+  '/': 'ze-pilintra',
+  'ze-pilintra': 'ze-pilintra',
+
+  // Exus (15)
+  'exu/tranca-rua': 'tranca-rua',
+  'exu/marabo': 'marabo',
+  'exu/caveira': 'caveira',
+  'exu/capa-preta': 'capa-preta',
+  'exu/morcego': 'morcego',
+  'exu/sete-encruzilhadas': 'sete-encruzilhadas',
+  'exu/veludo': 'veludo',
+  'exu/meia-noite': 'meia-noite',
+  'exu/do-lodo': 'do-lodo',
+  'exu/tiriri': 'tiriri',
+  'exu/gira-mundo': 'gira-mundo',
+  'exu/brasa': 'brasa',
+  'exu/pimenta': 'pimenta',
+  'exu/7-facas': '7-facas',
+  'exu/pingue-fogo': 'pingue-fogo',
+
+  // Pombagiras (15)
+  'pombagira/maria-padilha': 'maria-padilha',
+  'pombagira/sete-saias': 'sete-saias',
+  'pombagira/maria-mulambo': 'maria-mulambo',
+  'pombagira/dama-da-noite': 'dama-da-noite',
+  'pombagira/rosa-caveira': 'rosa-caveira',
+  'pombagira/menina': 'menina',
+  'pombagira/figueira': 'figueira',
+  'pombagira/cigana': 'cigana',
+  'pombagira/maria-quiteria': 'maria-quiteria',
+  'pombagira/navalha': 'navalha',
+  'pombagira/do-cemiterio': 'do-cemiterio',
+  'pombagira/das-almas': 'das-almas',
+  'pombagira/7-cravos': '7-cravos',
+  'pombagira/rosa-vermelha': 'rosa-vermelha',
+  'pombagira/cigana-das-almas': 'cigana-das-almas',
+
+  // Pretos-Velhos (15)
+  'preto-velho/pai-joao': 'pai-joao',
+  'preto-velho/pai-benedito': 'pai-benedito',
+  'preto-velho/pai-jose': 'pai-jose',
+  'preto-velho/pai-tome': 'pai-tome',
+  'preto-velho/pai-antonio': 'pai-antonio',
+  'preto-velho/pai-francisco': 'pai-francisco',
+  'preto-velho/pai-manuel': 'pai-manuel',
+  'preto-velho/pai-joaquim': 'pai-joaquim',
+  'preto-velho/pai-sebastiao': 'pai-sebastiao',
+  'preto-velho/pai-geronimo': 'pai-geronimo',
+  'preto-velho/pai-luiz': 'pai-luiz',
+  'preto-velho/pai-carlos': 'pai-carlos',
+  'preto-velho/pai-miguel': 'pai-miguel',
+  'preto-velho/pai-pedro': 'pai-pedro',
+  'preto-velho/pai-andre': 'pai-andre',
+
+  // Pretas-Velhas (15)
+  'preta-velha/vovo-maria-conga': 'vovo-maria-conga',
+  'preta-velha/vovo-cambina': 'vovo-cambina',
+  'preta-velha/vovo-maria-redonda': 'vovo-maria-redonda',
+  'preta-velha/vovo-benedita': 'vovo-benedita',
+  'preta-velha/vovo-maria-joaquina': 'vovo-maria-joaquina',
+  'preta-velha/vovo-catarina': 'vovo-catarina',
+  'preta-velha/vovo-rita': 'vovo-rita',
+  'preta-velha/vovo-joana': 'vovo-joana',
+  'preta-velha/vovo-clara': 'vovo-clara',
+  'preta-velha/vovo-beatriz': 'vovo-beatriz',
+  'preta-velha/vovo-luzia': 'vovo-luzia',
+  'preta-velha/vovo-marta': 'vovo-marta',
+  'preta-velha/vovo-tereza': 'vovo-tereza',
+  'preta-velha/vovo-ana': 'vovo-ana',
+  'preta-velha/vovo-sofia': 'vovo-sofia',
+
+  // Caboclos (15)
+  'caboclo/sete-flechas': 'caboclo-sete-flechas',
+  'caboclo/pena-branca': 'caboclo-pena-branca',
+  'caboclo/tupinamba': 'caboclo-tupinamba',
+  'caboclo/arariboia': 'caboclo-arariboia',
+  'caboclo/juremeiro': 'caboclo-juremeiro',
+  'caboclo/guarani': 'caboclo-guarani',
+  'caboclo/tupi': 'caboclo-tupi',
+  'caboclo/aimore': 'caboclo-aimore',
+  'caboclo/caete': 'caboclo-caete',
+  'caboclo/tamoio': 'caboclo-tamoio',
+  'caboclo/goitaca': 'caboclo-goitaca',
+  'caboclo/aimbe': 'caboclo-aimbe',
+  'caboclo/carijo': 'caboclo-carijo',
+  'caboclo/tabajara': 'caboclo-tabajara',
+  'caboclo/potiguara': 'caboclo-potiguara',
+
+  // Caboclas (15)
+  'cabocla/jurema': 'cabocla-jurema',
+  'cabocla/tupa': 'cabocla-tupa',
+  'cabocla/da-mata': 'cabocla-da-mata',
+  'cabocla/flecheira': 'cabocla-flecheira',
+  'cabocla/icamiaba': 'cabocla-icamiaba',
+  'cabocla/potira': 'cabocla-potira',
+  'cabocla/jaci': 'cabocla-jaci',
+  'cabocla/uba': 'cabocla-uba',
+  'cabocla/iracema': 'cabocla-iracema',
+  'cabocla/moema': 'cabocla-moema',
+  'cabocla/cacica': 'cabocla-cacica',
+  'cabocla/taina': 'cabocla-taina',
+  'cabocla/jandira': 'cabocla-jandira',
+  'cabocla/cataguases': 'cabocla-cataguases',
+  'cabocla/aracy': 'cabocla-aracy',
+
+  // Erês (10)
+  'ere/joaozinho': 'ere-joaozinho',
+  'ere/mariazinha': 'ere-mariazinha',
+  'ere/pedrinho': 'ere-pedrinho',
+  'ere/luizinho': 'ere-luizinho',
+  'ere/joana': 'ere-joana',
+  'ere/ana-beatriz': 'ere-ana-beatriz',
+  'ere/carlos': 'ere-carlos',
+  'ere/maria': 'ere-maria',
+  'ere/francisco': 'ere-francisco',
+  'ere/antonio': 'ere-antonio',
+
+  // Boiadeiros (10)
+  'boiadeiro/lampiao': 'boiadeiro-lampiao',
+  'boiadeiro/meia-noite': 'boiadeiro-meia-noite',
+  'boiadeiro/velho-chico': 'boiadeiro-velho-chico',
+  'boiadeiro/ze-rua': 'boiadeiro-ze-rua',
+  'boiadeiro/sete-estradas': 'boiadeiro-sete-estradas',
+  'boiadeiro/tiao': 'boiadeiro-tiao',
+  'boiadeiro/joaquim': 'boiadeiro-joaquim',
+  'boiadeiro/miguel': 'boiadeiro-miguel',
+  'boiadeiro/sebastiao': 'boiadeiro-sebastiao',
+  'boiadeiro/caboco': 'boiadeiro-caboco',
+
+  // Marinheiros (10)
+  'marinheiro/joao-ondas': 'marinheiro-joao-ondas',
+  'marinheiro/sete-mares': 'marinheiro-sete-mares',
+  'marinheiro/do-mar': 'marinheiro-do-mar',
+  'marinheiro/araguaia': 'marinheiro-araguaia',
+  'marinheiro/paraiba': 'marinheiro-paraiba',
+  'marinheiro/sao-pedro': 'marinheiro-sao-pedro',
+  'marinheiro/almirante': 'marinheiro-almirante',
+  'marinheiro/vento-bom': 'marinheiro-vento-bom',
+  'marinheiro/mar-calmo': 'marinheiro-mar-calmo',
+  'marinheiro/estrela-mar': 'marinheiro-estrela-mar',
+
+  // Orixás (16)
+  'orixa/oxala': 'orixa-oxala',
+  'orixa/ogum': 'orixa-ogum',
+  'orixa/oxossi': 'orixa-oxossi',
+  'orixa/xango': 'orixa-xango',
+  'orixa/iansa': 'orixa-iansa',
+  'orixa/iemanja': 'orixa-iemanja',
+  'orixa/oxum': 'orixa-oxum',
+  'orixa/nana': 'orixa-nana',
+  'orixa/obaluae': 'orixa-obaluae',
+  'orixa/oxumare': 'orixa-oxumare',
+  'orixa/logunede': 'orixa-logunede',
+  'orixa/ibeji': 'orixa-ibeji',
+  'orixa/ewa': 'orixa-ewa',
+  'orixa/oba': 'orixa-oba',
+  'orixa/ossain': 'orixa-ossain',
+  'orixa/oia': 'orixa-oia'
+};
+
+// 2. Função para carregar conteúdo baseado na URL
+function loadFromURL() {
+  let path = window.location.pathname;
+  path = path.replace(/^\/|\/$/g, ''); // remove barras no início/fim
+  // Remove possíveis extensões ou parâmetros
+  path = path.split('?')[0].split('.html')[0];
+  
+  const storyId = urlToIdMap[path];
+  if (storyId && typeof loadStory === 'function') {
+    loadStory(storyId);
+  } else if (path === '' || path === 'index.html') {
+    // Página inicial
+    loadStory('ze-pilintra');
+  }
+}
+
+// 3. Função para navegar sem recarregar página, atualizando URL
+function navigateTo(storyId, urlPath) {
+  if (typeof loadStory === 'function') {
+    loadStory(storyId);
+  }
+  history.pushState(null, '', urlPath);
+  document.title = (bancoDados[storyId]?.titulo || 'Seu Zé Pilintra') + ' | Portal da Malandragem';
+  if (typeof closeMenu === 'function') closeMenu();
+}
+
+// 4. Modificar todos os links com onclick para usarem navigateTo
+function upgradeLinksToSeo() {
+  // Links dos Exus e Pombagiras gerados dinamicamente (já estão com addEventListener)
+  // Vamos capturar os links estáticos do menu (Pretos-Velhos, Caboclos, etc.)
+  const allLinks = document.querySelectorAll('#sidebar a[onclick*="loadStory"]');
+  allLinks.forEach(link => {
+    const onclickAttr = link.getAttribute('onclick');
+    const match = onclickAttr.match(/loadStory\(['"]([^'"]+)['"]/);
+    if (match) {
+      const storyId = match[1];
+      // Encontrar a URL amigável correspondente
+      let urlPath = '';
+      for (let [path, id] of Object.entries(urlToIdMap)) {
+        if (id === storyId) {
+          urlPath = '/' + path;
+          break;
+        }
+      }
+      if (urlPath) {
+        link.setAttribute('href', urlPath);
+        link.removeAttribute('onclick');
+        // clonar para remover event listeners antigos
+        const newLink = link.cloneNode(true);
+        link.parentNode.replaceChild(newLink, link);
+        newLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          navigateTo(storyId, urlPath);
+        });
+      }
+    }
+  });
+  
+  // Tratar também os links dinâmicos do menu de Exus/Pombagiras (criados via JS)
+  const dynamicExus = document.querySelectorAll('#exusSubmenu a, #pomboSubmenu a');
+  dynamicExus.forEach(link => {
+    const entity = link.getAttribute('data-entity');
+    if (entity) {
+      let urlPath = '';
+      for (let [path, id] of Object.entries(urlToIdMap)) {
+        if (id === entity) {
+          urlPath = '/' + path;
+          break;
+        }
+      }
+      if (urlPath) {
+        link.setAttribute('href', urlPath);
+        link.removeEventListener('click', link._listener);
+        const newLink = link.cloneNode(true);
+        link.parentNode.replaceChild(newLink, link);
+        newLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          navigateTo(entity, urlPath);
+        });
+      }
+    }
+  });
+}
+
+// 5. Interceptar navegação pelo botão Voltar/Avançar
+window.addEventListener('popstate', function() {
+  loadFromURL();
+});
+
+// 6. Inicializar
+document.addEventListener('DOMContentLoaded', function() {
+  loadFromURL();
+  upgradeLinksToSeo();
+});
+
+// 7. Atualizar o array de busca para usar as novas URLs (opcional, mas recomendado)
+// Isso fará com que os resultados da busca também usem URLs amigáveis
+if (typeof conteudosBusca !== 'undefined' && conteudosBusca) {
+  conteudosBusca.forEach(item => {
+    if (item.tipo === 'entidade' && item.id) {
+      for (let [path, id] of Object.entries(urlToIdMap)) {
+        if (id === item.id) {
+          item.link = '/' + path;
+          break;
+        }
+      }
+    }
+  });
+}
 </body>
 </html>

@@ -629,6 +629,71 @@ body.modo-noturno .security-badge {
 body.modo-noturno .comments-area h4 {
   color: #f0f0f0;
 }
+    /* Seção Entidades em Destaque */
+.destaques-section {
+  margin: 60px 0 40px;
+}
+.destaques-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #FFD966;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #FFD966;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+.destaques-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+.destaque-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 28px;
+  padding: 20px;
+  border-left: 5px solid #FFD966;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.destaque-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.destaque-card h3 {
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+  color: #FFD966;
+}
+.destaque-card p {
+  font-size: 0.9rem;
+  color: #f0f0f0;
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+.destaque-card .ver-mais {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #FFD966;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.destaque-card .ver-mais i {
+  transition: transform 0.2s;
+}
+.destaque-card:hover .ver-mais i {
+  transform: translateX(5px);
+}
+@media (max-width: 600px) {
+  .destaques-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 <body>
@@ -838,6 +903,99 @@ body.modo-noturno .comments-area h4 {
       <p>Entenda de uma vez por todas as diferenças entre o Malandro de Luz e os Guardiões da Lei.</p>
       <a href="diferenca-ze-pilintra-exu.html">📚 Ler artigo →</a>
     </div>
+    <!-- SEÇÃO ENTIDADES EM DESTAQUE -->
+<div class="destaques-section">
+  <div style="text-align: center;">
+    <h2>🌿 Entidades em Destaque</h2>
+  </div>
+  <div class="destaques-grid">
+    
+    <!-- Exu Tranca Rua -->
+    <a href="/exu/tranca-rua" class="destaque-card">
+      <h3>🔥 Exu Tranca Rua</h3>
+      <p>Fechador de demandas, engenheiro da ordem espiritual.</p>
+      <div class="ver-mais">Ver história →</div>
+    </a>
+    
+    <!-- Maria Padilha -->
+    <a href="/pombagira/maria-padilha" class="destaque-card">
+      <h3>🌹 Maria Padilha</h3>
+      <p>Rainha das Encruzilhadas, protetora das mulheres.</p>
+      <div class="ver-mais">Ver história →</div>
+    </a>
+    
+    <!-- Pai João de Aruanda -->
+    <a href="/preto-velho/pai-joao" class="destaque-card">
+      <h3>🙏 Pai João de Aruanda</h3>
+      <p>Sabedoria da humildade e caridade.</p>
+      <div class="ver-mais">Ver história →</div>
+    </a>
+    
+    <!-- Caboclo das Sete Flechas -->
+    <a href="/caboclo/sete-flechas" class="destaque-card">
+      <h3>🏹 Caboclo das Sete Flechas</h3>
+      <p>Guerreiro da luz, protege com precisão.</p>
+      <div class="ver-mais">Ver história →</div>
+    </a>
+    
+    <!-- Oxalá -->
+    <a href="/orixa/oxala" class="destaque-card">
+      <h3>🌀 Oxalá</h3>
+      <p>O Grande Pai da Criação, paz e harmonia.</p>
+      <div class="ver-mais">Ver história →</div>
+    </a>
+    
+    <!-- Erê Joãozinho -->
+    <a href="/ere/joaozinho" class="destaque-card">
+      <h3>🌿 Erê Joãozinho</h3>
+      <p>A alegria que cura e a leveza da infância.</p>
+      <div class="ver-mais">Ver história →</div>
+    </a>
+    
+    <!-- Exu Marabô -->
+    <a href="/exu/marabo" class="destaque-card">
+      <h3>🔥 Exu Marabô</h3>
+      <p>Senhor das folhas, guardião das matas.</p>
+      <div class="ver-mais">Ver história →</div>
+    </a>
+    
+    <!-- Pombogira Sete Saias -->
+    <a href="/pombagira/sete-saias" class="destaque-card">
+      <h3>🌪️ Sete Saias</h3>
+      <p>A dança dos ventos, transformação e alegria.</p>
+      <div class="ver-mais">Ver história →</div>
+    </a>
+    
+    <!-- Vovó Maria Conga -->
+    <a href="/preta-velha/vovo-maria-conga" class="destaque-card">
+      <h3>🙏 Vovó Maria Conga</h3>
+      <p>Mansidão que cura e sabedoria que acolhe.</p>
+      <div class="ver-mais">Ver história →</div>
+    </a>
+    
+    <!-- Cabocla Jurema -->
+    <a href="/cabocla/jurema" class="destaque-card">
+      <h3>🌿 Cabocla Jurema</h3>
+      <p>Guardiã da árvore sagrada, cura pelas raízes.</p>
+      <div class="ver-mais">Ver história →</div>
+    </a>
+    
+    <!-- Iemanjá -->
+    <a href="/orixa/iemanja" class="destaque-card">
+      <h3>🌊 Iemanjá</h3>
+      <p>Rainha do mar, mãe da humanidade.</p>
+      <div class="ver-mais">Ver história →</div>
+    </a>
+    
+    <!-- Boiadeiro Lampião -->
+    <a href="/boiadeiro/lampiao" class="destaque-card">
+      <h3>🤠 Boiadeiro Lampião</h3>
+      <p>Guerreiro do sertão, justiça e coragem.</p>
+      <div class="ver-mais">Ver história →</div>
+    </a>
+    
+  </div>
+</div>
     <div class="artigo-card">
       <div class="badge">📖 NOVO ARTIGO</div>
       <h3>🙏 Orações para Seu Zé Pilintra</h3>

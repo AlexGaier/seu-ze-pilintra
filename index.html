@@ -5890,9 +5890,11 @@ Saudação: "Salve Marinheiro Estrela do Mar!"</p>
   const submitCommentBtn = document.getElementById('submitComment');
   if (submitCommentBtn) submitCommentBtn.addEventListener('click', addComment);
   
+  document.addEventListener('DOMContentLoaded', function() {
   carregarMenu();
   loadStory('ze-pilintra');
   loadComments();
+});
 
   // ==================== SISTEMA DE BUSCA ====================
   const searchInput = document.getElementById('searchInput');

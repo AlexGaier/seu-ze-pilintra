@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <meta name="color-scheme" content="light dark">
   
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -25,46 +24,9 @@
   <title>Seu Zé Pilintra – História, Orações, Exus e Pombagiras</title>
   <meta name="description" content="Conheça a verdadeira história de Seu Zé Pilintra. Acesse orações poderosas, pontos cantados e ensinamentos sobre Exus, Pombagiras e Umbanda.">
   <style>
-    /* ========== CSS CUSTOM PROPERTIES PARA TEMA ========== */
-    :root {
-      /* Tema Claro */
-      --bg-primary: #faf7f2;
-      --bg-secondary: rgba(255, 255, 255, 0.95);
-      --bg-tertiary: rgba(255, 255, 255, 0.1);
-      --text-primary: #2c1810;
-      --text-secondary: #f0f0f0;
-      --text-light: #a1816b;
-      --accent-dark: #8B0000;
-      --accent-light: #FFD966;
-      --border-color: #f0e0d0;
-      --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      --banner-bg: linear-gradient(90deg, #0a0a0a 0%, #1a0f0a 100%);
-      --header-bg: linear-gradient(115deg, #1a0a05 0%, #3a1410 50%, #8B0000 100%);
-      --transition: all 0.3s ease;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        /* Tema Escuro */
-        --bg-primary: #0f0f0f;
-        --bg-secondary: #1a1a1a;
-        --bg-tertiary: rgba(30, 30, 30, 0.9);
-        --text-primary: #f0f0f0;
-        --text-secondary: #f0f0f0;
-        --text-light: #b0a090;
-        --accent-dark: #a52a2a;
-        --accent-light: #FFD966;
-        --border-color: #2a2a2a;
-        --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        --banner-bg: linear-gradient(90deg, #1a1a1a 0%, #2a1a15 100%);
-        --header-bg: linear-gradient(115deg, #2a1a0f 0%, #3a2010 50%, #8B0000 100%);
-      }
-    }
-
     .badge {
-      display: none;
-    }
-
+  display: none;
+}
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     
@@ -74,30 +36,28 @@
       background-attachment: fixed;
       background-position: center center;
       background-repeat: no-repeat;
-      background-color: var(--bg-primary);
-      color: var(--text-primary);
+      background-color: #faf7f2;
+      color: #2c1810; 
       font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; 
       line-height: 1.7;
-      transition: var(--transition);
     }
     
     @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap');
     
     .domain-banner {
-      background: var(--banner-bg);
-      color: var(--accent-light);
+      background: linear-gradient(90deg, #0a0a0a 0%, #1a0f0a 100%);
+      color: #FFD966;
       text-align: center;
       padding: 8px 16px;
       font-size: 0.85rem;
       font-weight: 500;
-      border-bottom: 1px solid var(--accent-dark);
+      border-bottom: 1px solid #8B0000;
       z-index: 1002;
-      transition: var(--transition);
     }
     
     .motivation-banner {
-      background: linear-gradient(90deg, var(--accent-dark) 0%, #a52a2a 50%, var(--accent-dark) 100%);
-      color: var(--accent-light);
+      background: linear-gradient(90deg, #8B0000 0%, #a52a2a 50%, #8B0000 100%);
+      color: #FFD966;
       text-align: center;
       padding: 12px 20px;
       font-size: 1rem;
@@ -106,7 +66,6 @@
       z-index: 1001;
       position: relative;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      transition: var(--transition);
     }
     
     .motivation-banner .frase-motivacao {
@@ -120,98 +79,58 @@
       100% { opacity: 0; transform: translateY(5px); }
     }
     
-    .theme-toggle-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: var(--accent-dark);
-      color: white;
-      border: none;
-      border-radius: 50px;
-      padding: 10px 15px;
-      cursor: pointer;
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 600;
-      transition: var(--transition);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .theme-toggle-btn:hover {
-      transform: scale(1.05);
-      background: #a52a2a;
-    }
-
-    .theme-toggle-btn i {
-      font-size: 18px;
-      transition: transform 0.3s ease;
-    }
-
-    .theme-toggle-btn:hover i {
-      transform: rotate(20deg);
-    }
-    
     .menu-btn { 
       position: fixed; top: 76px; left: 24px; width: 52px; height: 52px; 
       background: rgba(139, 0, 0, 0.95); backdrop-filter: blur(8px); border-radius: 16px; 
       display: flex; align-items: center; justify-content: center; cursor: pointer; 
       z-index: 1001; box-shadow: 0 4px 20px rgba(0,0,0,0.15);
       border: 1px solid rgba(255,255,255,0.2);
-      transition: var(--transition);
     }
     
     .menu-btn span { font-size: 26px; color: white; }
     
     .sidebar { 
-      position: fixed; top: 0; left: -340px; width: 320px; height: 100%; 
-      background: var(--bg-secondary);
-      backdrop-filter: blur(15px);
-      z-index: 1000; transition: 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1); 
-      overflow-y: auto; box-shadow: 8px 0 30px rgba(0,0,0,0.15);
-    }
+  position: fixed; top: 0; left: -340px; width: 320px; height: 100%; 
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
+  z-index: 1000; transition: 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1); 
+  overflow-y: auto; box-shadow: 8px 0 30px rgba(0,0,0,0.15);
+}
     
     .sidebar.open { left: 0; }
     
     .sidebar-header { 
-      background: linear-gradient(135deg, var(--accent-dark) 0%, #a52a2a 100%);
+      background: linear-gradient(135deg, #8B0000 0%, #a52a2a 100%);
       padding: 32px 24px; text-align: center; color: white;
-      transition: var(--transition);
     }
     
-    .sidebar-header h3 { color: var(--accent-light); margin-bottom: 8px; font-size: 1.6rem; }
+    .sidebar-header h3 { color: #FFD966; margin-bottom: 8px; font-size: 1.6rem; }
     
     .sidebar-menu { list-style: none; padding: 16px 0; }
-    .sidebar-menu li { border-bottom: 1px solid var(--border-color); }
-    .sidebar-menu li a { display: block; padding: 14px 24px; color: var(--text-primary); text-decoration: none; font-weight: 500; transition: 0.2s; cursor: pointer; }
-    .sidebar-menu li a:hover { background: var(--accent-dark); color: white; padding-left: 28px; }
+    .sidebar-menu li { border-bottom: 1px solid #f0e0d0; }
+    .sidebar-menu li a { display: block; padding: 14px 24px; color: #2c1810; text-decoration: none; font-weight: 500; transition: 0.2s; cursor: pointer; }
+    .sidebar-menu li a:hover { background: #8B0000; color: white; padding-left: 28px; }
     
     .submenu { list-style: none; padding-left: 32px; background-color: #fef8f0; display: none; }
     .submenu.show { display: block; }
     .submenu li a { padding: 10px 24px !important; font-size: 0.9rem; }
     
-    @media (prefers-color-scheme: dark) {
-      .submenu { background-color: #252525; }
-    }
-    
     .menu-toggle-item { cursor: pointer; }
     .menu-toggle-item > a { display: flex; justify-content: space-between; }
-    .arrow { font-size: 12px; transition: 0.2s; color: var(--accent-dark); }
+    .arrow { font-size: 12px; transition: 0.2s; color: #8B0000; }
     .arrow.rotated { transform: rotate(90deg); }
     
     .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.4); backdrop-filter: blur(3px); z-index: 999; display: none; }
     .overlay.show { display: block; }
     
     header { 
-      background: var(--header-bg);
+      background: linear-gradient(115deg, #1a0a05 0%, #3a1410 50%, #8B0000 100%);
       padding: 60px 20px 60px 80px;
       text-align: center;
       position: relative;
-      transition: var(--transition);
     }
     
-    h1 { color: var(--accent-light); font-size: 3.2rem; letter-spacing: -1px; }
+    h1 { color: #FFD966; font-size: 3.2rem; letter-spacing: -1px; }
     .subtitle { font-size: 1.2rem; color: #ffccaa; margin-top: 12px; }
     
     .container { max-width: 1280px; margin: 0 auto; padding: 50px 30px; }
@@ -224,16 +143,16 @@
     }
     
     .artigo-card {
-      flex: 1;
-      min-width: 250px;
-      background: var(--bg-tertiary);
-      backdrop-filter: blur(10px);
-      border-radius: 32px;
-      padding: 22px 25px;
-      border-left: 6px solid var(--accent-light);
-      transition: var(--transition);
-      box-shadow: var(--shadow);
-    }
+  flex: 1;
+  min-width: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 32px;
+  padding: 22px 25px;
+  border-left: 6px solid #FFD966;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
     
     .artigo-card:hover { transform: translateY(-3px); }
     
@@ -241,11 +160,11 @@
       display: none;
     }
     
-    .artigo-card h3 { color: var(--text-secondary); margin: 0 0 5px; font-size: 1.2rem; }
-    .artigo-card p { color: var(--text-secondary); margin: 0 0 12px; font-size: 0.9rem; }
+    .artigo-card h3 { color: white; margin: 0 0 5px; font-size: 1.2rem; }
+    .artigo-card p { color: white; margin: 0 0 12px; font-size: 0.9rem; }
     
     .artigo-card a {
-      background: var(--accent-dark);
+      background: #8B0000;
       color: white;
       text-decoration: none;
       padding: 8px 18px;
@@ -259,20 +178,20 @@
     .artigo-card a:hover { background: #5a1e1e; }
     
     .dynamic-content {
-      background: var(--bg-secondary);
+      background: rgba(255, 255, 255, 0.95);
       border-radius: 48px;
       padding: 48px;
       margin-bottom: 50px;
       border: 1px solid rgba(139, 0, 0, 0.2);
-      box-shadow: var(--shadow);
-      transition: var(--transition);
+      box-shadow: 0 25px 45px -12px rgba(0,0,0,0.15);
+      transition: all 0.3s;
     }
     
     .dynamic-content h2 {
-      color: var(--accent-dark);
+      color: #8B0000;
       font-size: 2.2rem;
       margin-bottom: 20px;
-      border-left: 6px solid var(--accent-dark);
+      border-left: 6px solid #8B0000;
       padding-left: 20px;
     }
     
@@ -285,7 +204,6 @@
     .dynamic-content p {
       margin-bottom: 16px;
       text-align: justify;
-      color: var(--text-primary);
     }
     
     .dynamic-content img {
@@ -294,13 +212,13 @@
       border-radius: 24px;
       margin: 20px auto;
       display: block;
-      border: 3px solid var(--accent-dark);
+      border: 3px solid #8B0000;
     }
     
     .entity-badge {
       display: inline-block;
-      background: var(--accent-dark);
-      color: var(--accent-light);
+      background: #8B0000;
+      color: #FFD966;
       padding: 6px 16px;
       border-radius: 50px;
       font-size: 0.8rem;
@@ -308,7 +226,7 @@
     }
     
     .frase-entidade {
-      background: linear-gradient(115deg, var(--accent-dark) 0%, #a6120f 100%);
+      background: linear-gradient(115deg, #8B0000 0%, #a6120f 100%);
       color: #FFE0B5;
       padding: 30px 25px;
       border-radius: 32px;
@@ -318,8 +236,8 @@
     
     .back-to-ze {
       display: inline-block;
-      background: var(--text-primary);
-      color: var(--accent-light);
+      background: #2c1810;
+      color: #FFD966;
       padding: 10px 24px;
       border-radius: 40px;
       text-decoration: none;
@@ -328,50 +246,33 @@
       transition: 0.2s;
     }
     
-    .back-to-ze:hover { background: var(--accent-dark); color: white; }
+    .back-to-ze:hover { background: #8B0000; color: white; }
     
     .comments-area {
-      background: var(--bg-tertiary);
-      backdrop-filter: blur(10px);
-      border-radius: 48px;
-      padding: 32px;
-      margin-top: 30px;
-      border: 1px solid var(--accent-light);
-      transition: var(--transition);
-    }
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 48px;
+  padding: 32px;
+  margin-top: 30px;
+  border: 1px solid #FFD966;
+}
     
-    .comments-area h4 { color: var(--text-secondary); }
+    .comments-area h4 { color: white; }
     
     .comment-input-group input {
-      background: var(--bg-secondary);
+      background: rgba(255, 255, 255, 0.9);
       border: 1px solid #ddd;
-      color: var(--text-primary);
-      padding: 10px 15px;
-      border-radius: 8px;
-      transition: var(--transition);
-    }
-
-    .comment-input-group input:focus {
-      border-color: var(--accent-light);
-      outline: none;
+      color: #2c1810;
     }
     
     #commentText {
-      background: var(--bg-secondary);
+      background: rgba(255, 255, 255, 0.9);
       border: 1px solid #ddd;
-      color: var(--text-primary);
-      padding: 10px 15px;
-      border-radius: 8px;
-      transition: var(--transition);
-    }
-
-    #commentText:focus {
-      border-color: var(--accent-light);
-      outline: none;
+      color: #2c1810;
     }
     
     .comment-btn-submit {
-      background: var(--accent-dark);
+      background: #8B0000;
       color: white;
       border: none;
       padding: 12px 28px;
@@ -407,18 +308,11 @@
       padding: 16px 20px;
       border-radius: 28px;
       margin-bottom: 14px;
-      border-left: 5px solid var(--accent-dark);
+      border-left: 5px solid #8B0000;
       display: flex;
       gap: 12px;
       align-items: flex-start;
       transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .comment-list li {
-        background: #2a2a2a;
-        color: var(--text-secondary);
-      }
     }
     
     .comment-list li:hover {
@@ -428,12 +322,12 @@
     
     .comment-name {
       font-weight: 700;
-      color: var(--accent-dark);
+      color: #8B0000;
     }
     
     .comment-date { 
       font-size: 0.7rem; 
-      color: var(--text-light);
+      color: #a1816b; 
       display: block; 
       margin-top: 8px;
     }
@@ -458,14 +352,14 @@
       font-weight: 600;
       cursor: pointer;
       background: #f2ece4;
-      color: var(--text-primary);
+      color: #2c1810;
       transition: 0.2s;
       display: inline-flex;
       align-items: center;
       gap: 8px;
     }
     
-    .social-btn.like-btn.liked { background: var(--accent-dark); color: white; }
+    .social-btn.like-btn.liked { background: #8B0000; color: white; }
     .social-btn.like-btn.liked i { color: #ff9999; }
     .social-btn.share-btn { background: #1DA462; color: white; }
     .social-btn:hover { transform: translateY(-3px); }
@@ -481,46 +375,44 @@
     }
     
     .support-section {
-      background: var(--bg-tertiary);
-      backdrop-filter: blur(10px);
-      border-radius: 40px;
-      padding: 40px 32px;
-      margin: 40px 0 30px;
-      text-align: center;
-      border: 2px solid var(--accent-light);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      transition: var(--transition);
-    }
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 40px;
+  padding: 40px 32px;
+  margin: 40px 0 30px;
+  text-align: center;
+  border: 2px solid #FFD966;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
     
     .support-section h3 {
-      color: var(--text-secondary);
+      color: white;
       font-size: 1.8rem;
       margin-bottom: 15px;
     }
     
     .support-section .heart-icon {
       font-size: 2rem;
-      color: var(--accent-light);
+      color: #FFD966;
       margin-bottom: 10px;
     }
     
     .support-section p {
-      color: var(--text-secondary);
+      color: white;
       margin-bottom: 20px;
       font-size: 1.1rem;
     }
     
     .pix-card {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(12px);
-      border-radius: 30px;
-      padding: 25px;
-      max-width: 400px;
-      margin: 0 auto;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      border: 1px solid rgba(255,255,255,0.3);
-      transition: var(--transition);
-    }
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 30px;
+  padding: 25px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+}
     
     .pix-card .pix-label {
       background: #32BCAD;
@@ -535,21 +427,20 @@
     
     .pix-card .pix-key {
       background: rgba(0, 0, 0, 0.6);
-      color: var(--accent-light);
+      color: #FFD966;
       padding: 15px;
       border-radius: 20px;
       font-family: monospace;
       font-size: 1.1rem;
       word-break: break-all;
       margin: 15px 0;
-      border: 1px dashed var(--accent-light);
-      transition: var(--transition);
+      border: 1px dashed #FFD966;
     }
     
-    .pix-card .pix-key i { color: var(--accent-light); }
+    .pix-card .pix-key i { color: #FFD966; }
     
     .btn-copy-pix {
-      background: var(--accent-dark);
+      background: #8B0000;
       color: white;
       border: none;
       padding: 12px 25px;
@@ -569,7 +460,7 @@
     
     .support-note {
       font-size: 0.85rem;
-      color: var(--accent-light);
+      color: #FFD966;
       margin-top: 20px;
     }
     
@@ -578,14 +469,13 @@
       padding: 50px 20px;
       margin-top: 60px;
       text-align: center;
-      color: var(--accent-light);
+      color: #FFD966;
       border-radius: 40px 40px 0 0;
       backdrop-filter: blur(5px);
-      transition: var(--transition);
     }
     
     footer a {
-      color: var(--accent-light);
+      color: #FFD966;
       text-decoration: none;
     }
     
@@ -608,19 +498,12 @@
       .motivation-banner { font-size: 0.85rem; padding: 10px 15px; }
       .artigo-card { min-width: 100%; }
       .comment-list li { flex-wrap: wrap; }
-      .theme-toggle-btn { padding: 8px 12px; font-size: 0.85rem; }
     }
     
     .voltar-topo {
-      position: fixed; bottom: 30px; right: 25px; background: var(--accent-dark); color: white;
+      position: fixed; bottom: 30px; right: 25px; background: #8B0000; color: white;
       width: 52px; height: 52px; border-radius: 30px; display: flex; align-items: center;
       justify-content: center; text-decoration: none; font-size: 24px; z-index: 998;
-      transition: var(--transition);
-    }
-
-    .voltar-topo:hover {
-      background: #a52a2a;
-      transform: scale(1.1);
     }
     
     .security-badge {
@@ -635,7 +518,7 @@
     }
     
     .search-container input:focus {
-      border-color: var(--accent-light);
+      border-color: #FFD966;
     }
     
     #resultsList .result-card {
@@ -644,7 +527,7 @@
       padding: 15px 20px;
       flex: 1;
       min-width: 200px;
-      border-left: 4px solid var(--accent-light);
+      border-left: 4px solid #FFD966;
       transition: transform 0.2s;
     }
     
@@ -653,18 +536,18 @@
     }
     
     #resultsList .result-card h4 {
-      color: var(--accent-light);
+      color: #FFD966;
       margin-bottom: 8px;
     }
     
     #resultsList .result-card p {
-      color: var(--text-secondary);
+      color: white;
       font-size: 0.85rem;
       margin-bottom: 12px;
     }
     
     #resultsList .result-card a {
-      color: var(--accent-light);
+      color: #FFD966;
       text-decoration: none;
       font-size: 0.8rem;
     }
@@ -672,90 +555,151 @@
     #resultsList .result-card a:hover {
       text-decoration: underline;
     }
+    .submenu {
+  display: none;
+}
 
+.submenu.show {
+  display: block;
+}
+/* ========== MODO NOTURNO ========== */
+body.modo-noturno {
+  background: #1a1a1a;
+  color: #f0f0f0;
+}
+
+body.modo-noturno .domain-banner,
+body.modo-noturno .motivation-banner,
+body.modo-noturno header,
+body.modo-noturno .sidebar,
+body.modo-noturno .sidebar-header,
+body.modo-noturno .submenu {
+  background: #2a2a2a !important;
+  color: #f0f0f0;
+}
+
+body.modo-noturno .artigo-card,
+body.modo-noturno .support-section,
+body.modo-noturno .comments-area,
+body.modo-noturno .pix-card {
+  background: rgba(30, 30, 30, 0.9) !important;
+  border-color: #8B0000;
+}
+
+body.modo-noturno .artigo-card h3,
+body.modo-noturno .artigo-card p,
+body.modo-noturno .support-section p,
+body.modo-noturno .support-section h3 {
+  color: #f0f0f0;
+}
+
+body.modo-noturno .btn-copy-pix,
+body.modo-noturno .comment-btn-submit {
+  background: #8B0000;
+  color: white;
+}
+
+body.modo-noturno footer {
+  background: #0d0d0d;
+}
+
+body.modo-noturno a {
+  color: #FFD966;
+}
+
+body.modo-noturno .sidebar a,
+body.modo-noturno .submenu a {
+  color: #f0f0f0;
+}
+
+body.modo-noturno .sidebar a:hover,
+body.modo-noturno .submenu a:hover {
+  background: #8B0000;
+}
+
+body.modo-noturno .pix-card .pix-key {
+  background: #1a1a1a;
+  color: #FFD966;
+}
+
+body.modo-noturno .security-badge {
+  background: #1a1a1a;
+}
+
+body.modo-noturno .comments-area h4 {
+  color: #f0f0f0;
+}
     /* Seção Entidades em Destaque - Versão compacta */
-    .destaques-section {
-      margin: 40px 0 30px;
-    }
-
-    .destaques-section h2 {
-      text-align: center;
-      font-size: 1.8rem;
-      color: var(--accent-light);
-      margin-bottom: 25px;
-      border-bottom: 2px solid var(--accent-light);
-      display: inline-block;
-      padding-bottom: 6px;
-    }
-
-    .destaques-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 15px;
-      margin-top: 15px;
-    }
-
-    .destaque-card {
-      background: var(--bg-tertiary);
-      backdrop-filter: blur(8px);
-      border-radius: 20px;
-      padding: 12px 15px;
-      border-left: 4px solid var(--accent-light);
-      transition: var(--transition);
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-
-    .destaque-card:hover {
-      transform: translateY(-3px);
-      background: rgba(255, 255, 255, 0.2);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-
-    .destaque-card h3 {
-      font-size: 1.1rem;
-      margin: 0 0 6px;
-      color: var(--accent-light);
-    }
-
-    .destaque-card p {
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      margin: 0 0 8px;
-      line-height: 1.3;
-    }
-
-    .destaque-card .ver-mais {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--accent-light);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .destaque-card .ver-mais i {
-      transition: transform 0.2s;
-    }
-
-    .destaque-card:hover .ver-mais i {
-      transform: translateX(3px);
-    }
-
-    @media (max-width: 600px) {
-      .destaques-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+.destaques-section {
+  margin: 40px 0 30px;
+}
+.destaques-section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #FFD966;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #FFD966;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+.destaques-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+.destaque-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 12px 15px;
+  border-left: 4px solid #FFD966;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.destaque-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.destaque-card h3 {
+  font-size: 1.1rem;
+  margin: 0 0 6px;
+  color: #FFD966;
+}
+.destaque-card p {
+  font-size: 0.8rem;
+  color: #f0f0f0;
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+.destaque-card .ver-mais {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #FFD966;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.destaque-card .ver-mais i {
+  transition: transform 0.2s;
+}
+.destaque-card:hover .ver-mais i {
+  transform: translateX(3px);
+}
+@media (max-width: 600px) {
+  .destaques-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 <body>
-  <!-- BOTÃO DE ALTERNÂNCIA DE TEMA -->
-  <button id="themeToggleBtn" class="theme-toggle-btn" title="Alternar tema">
-    <i class="fas fa-circle-half-stroke"></i>
-    <span id="themeText">Escuro</span>
-  </button>
+  <button id="modoNoturnoBtn" style="position: fixed; top: 20px; right: 20px; background: #8B0000; color: white; border: none; border-radius: 50px; padding: 10px 15px; cursor: pointer; z-index: 999; display: flex; align-items: center; gap: 8px; font-weight: 600;">
+  <i class="fas fa-moon"></i> Modo Noturno
+</button>
 
 <div class="domain-banner">
   🔒 Site Oficial · <strong>seuzepilintra.com</strong> · Histórias completas de Exus e Pombogiras
@@ -774,159 +718,159 @@
     <p>Seu Zé Pilintra • Exus • Pombogiras</p>
   </div>
   <ul class="sidebar-menu">
-    <li><a href="#" id="menuZe">🏠 Seu Zé Pilintra (História Principal)</a></li>
-    
-    <li class="menu-toggle-item" id="exusToggle"><a href="#">🔴 EXUS (15) <span class="arrow">▶</span></a></li>
-    <ul class="submenu" id="exusSubmenu"></ul>
-    
-    <li class="menu-toggle-item" id="pomboToggle"><a href="#">🌹 POMBOGIRAS (15) <span class="arrow">▶</span></a></li>
-    <ul class="submenu" id="pomboSubmenu"></ul>
-    
-    <!-- ========== UMBANDA ========== -->
-    <li class="menu-toggle-item" id="umbandaToggle"><a href="#">🌿 UMBANDA <span class="arrow">▶</span></a></li>
-    <ul class="submenu" id="umbandaSubmenu">
-      <li class="menu-toggle-item" id="pretosVelhosToggle"><a href="#">🙏 PRETOS-VELHOS (15) <span class="arrow">▶</span></a></li>
-      <ul class="submenu" id="pretosVelhosSubmenu">
-        <li><a href="#" onclick="loadStory('pai-joao'); closeMenu(); return false;">🙏 Pai João de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('pai-benedito'); closeMenu(); return false;">🙏 Pai Benedito de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('pai-jose'); closeMenu(); return false;">🙏 Pai José de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('pai-tome'); closeMenu(); return false;">🙏 Pai Tomé de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('pai-antonio'); closeMenu(); return false;">🙏 Pai Antônio de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('pai-francisco'); closeMenu(); return false;">🙏 Pai Francisco de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('pai-manuel'); closeMenu(); return false;">🙏 Pai Manuel de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('pai-joaquim'); closeMenu(); return false;">🙏 Pai Joaquim de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('pai-sebastiao'); closeMenu(); return false;">🙏 Pai Sebastião de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('pai-geronimo'); closeMenu(); return false;">🙏 Pai Gerônimo de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('pai-luiz'); closeMenu(); return false;">🙏 Pai Luiz de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('pai-carlos'); closeMenu(); return false;">🙏 Pai Carlos de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('pai-miguel'); closeMenu(); return false;">🙏 Pai Miguel de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('pai-pedro'); closeMenu(); return false;">🙏 Pai Pedro de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('pai-andre'); closeMenu(); return false;">🙏 Pai André de Aruanda</a></li>
-      </ul>
-      
-      <li class="menu-toggle-item" id="pretasVelhasToggle"><a href="#">🙏 PRETAS-VELHAS (15) <span class="arrow">▶</span></a></li>
-      <ul class="submenu" id="pretasVelhasSubmenu">
-        <li><a href="#" onclick="loadStory('vovo-maria-conga'); closeMenu(); return false;">🙏 Vovó Maria Conga de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('vovo-cambina'); closeMenu(); return false;">🙏 Vovó Cambina de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('vovo-maria-redonda'); closeMenu(); return false;">🙏 Vovó Maria Redonda de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('vovo-benedita'); closeMenu(); return false;">🙏 Vovó Benedita de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('vovo-maria-joaquina'); closeMenu(); return false;">🙏 Vovó Maria Joaquina de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('vovo-catarina'); closeMenu(); return false;">🙏 Vovó Catarina de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('vovo-rita'); closeMenu(); return false;">🙏 Vovó Rita de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('vovo-joana'); closeMenu(); return false;">🙏 Vovó Joana de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('vovo-clara'); closeMenu(); return false;">🙏 Vovó Clara de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('vovo-beatriz'); closeMenu(); return false;">🙏 Vovó Beatriz de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('vovo-luzia'); closeMenu(); return false;">🙏 Vovó Luzia de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('vovo-marta'); closeMenu(); return false;">🙏 Vovó Marta de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('vovo-tereza'); closeMenu(); return false;">🙏 Vovó Tereza de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('vovo-ana'); closeMenu(); return false;">🙏 Vovó Ana de Aruanda</a></li>
-        <li><a href="#" onclick="loadStory('vovo-sofia'); closeMenu(); return false;">🙏 Vovó Sofia de Aruanda</a></li>
-      </ul>
-      
-      <li class="menu-toggle-item" id="caboclosToggle"><a href="#">🏹 CABOCLOS (15) <span class="arrow">▶</span></a></li>
-      <ul class="submenu" id="caboclosSubmenu">
-        <li><a href="#" onclick="loadStory('caboclo-sete-flechas'); closeMenu(); return false;">🏹 Caboclo das Sete Flechas</a></li>
-        <li><a href="#" onclick="loadStory('caboclo-pena-branca'); closeMenu(); return false;">🏹 Caboclo Pena Branca</a></li>
-        <li><a href="#" onclick="loadStory('caboclo-tupinamba'); closeMenu(); return false;">🏹 Caboclo Tupinambá</a></li>
-        <li><a href="#" onclick="loadStory('caboclo-arariboia'); closeMenu(); return false;">🏹 Caboclo Arariboia</a></li>
-        <li><a href="#" onclick="loadStory('caboclo-juremeiro'); closeMenu(); return false;">🏹 Caboclo Juremeiro</a></li>
-        <li><a href="#" onclick="loadStory('caboclo-guarani'); closeMenu(); return false;">🏹 Caboclo Guarani</a></li>
-        <li><a href="#" onclick="loadStory('caboclo-tupi'); closeMenu(); return false;">🏹 Caboclo Tupi</a></li>
-        <li><a href="#" onclick="loadStory('caboclo-aimore'); closeMenu(); return false;">🏹 Caboclo Aimore</a></li>
-        <li><a href="#" onclick="loadStory('caboclo-caete'); closeMenu(); return false;">🏹 Caboclo Caeté</a></li>
-        <li><a href="#" onclick="loadStory('caboclo-tamoio'); closeMenu(); return false;">🏹 Caboclo Tamoio</a></li>
-        <li><a href="#" onclick="loadStory('caboclo-goitaca'); closeMenu(); return false;">🏹 Caboclo Goitacá</a></li>
-        <li><a href="#" onclick="loadStory('caboclo-aimbe'); closeMenu(); return false;">🏹 Caboclo Aimbé</a></li>
-        <li><a href="#" onclick="loadStory('caboclo-carijo'); closeMenu(); return false;">🏹 Caboclo Carijó</a></li>
-        <li><a href="#" onclick="loadStory('caboclo-tabajara'); closeMenu(); return false;">🏹 Caboclo Tabajara</a></li>
-        <li><a href="#" onclick="loadStory('caboclo-potiguara'); closeMenu(); return false;">🏹 Caboclo Potiguara</a></li>
-      </ul>
-      
-      <li class="menu-toggle-item" id="caboclasToggle"><a href="#">🏹 CABOCLAS (15) <span class="arrow">▶</span></a></li>
-      <ul class="submenu" id="caboclasSubmenu">
-        <li><a href="#" onclick="loadStory('cabocla-jurema'); closeMenu(); return false;">🏹 Cabocla Jurema</a></li>
-        <li><a href="#" onclick="loadStory('cabocla-tupa'); closeMenu(); return false;">🏹 Cabocla Tupã</a></li>
-        <li><a href="#" onclick="loadStory('cabocla-da-mata'); closeMenu(); return false;">🏹 Cabocla da Mata</a></li>
-        <li><a href="#" onclick="loadStory('cabocla-flecheira'); closeMenu(); return false;">🏹 Cabocla Flecheira</a></li>
-        <li><a href="#" onclick="loadStory('cabocla-icamiaba'); closeMenu(); return false;">🏹 Cabocla Icamiaba</a></li>
-        <li><a href="#" onclick="loadStory('cabocla-potira'); closeMenu(); return false;">🏹 Cabocla Potira</a></li>
-        <li><a href="#" onclick="loadStory('cabocla-jaci'); closeMenu(); return false;">🏹 Cabocla Jaci</a></li>
-        <li><a href="#" onclick="loadStory('cabocla-uba'); closeMenu(); return false;">🏹 Cabocla Uba</a></li>
-        <li><a href="#" onclick="loadStory('cabocla-iracema'); closeMenu(); return false;">🏹 Cabocla Iracema</a></li>
-        <li><a href="#" onclick="loadStory('cabocla-moema'); closeMenu(); return false;">🏹 Cabocla Moema</a></li>
-        <li><a href="#" onclick="loadStory('cabocla-cacica'); closeMenu(); return false;">🏹 Cabocla Cacica</a></li>
-        <li><a href="#" onclick="loadStory('cabocla-taina'); closeMenu(); return false;">🏹 Cabocla Tainá</a></li>
-        <li><a href="#" onclick="loadStory('cabocla-jandira'); closeMenu(); return false;">🏹 Cabocla Jandira</a></li>
-        <li><a href="#" onclick="loadStory('cabocla-cataguases'); closeMenu(); return false;">🏹 Cabocla Cataguases</a></li>
-        <li><a href="#" onclick="loadStory('cabocla-aracy'); closeMenu(); return false;">🏹 Cabocla Araci</a></li>
-      </ul>
-      
-      <li class="menu-toggle-item" id="eresToggle"><a href="#">🌿 ERÊS (10) <span class="arrow">▶</span></a></li>
-      <ul class="submenu" id="eresSubmenu">
-        <li><a href="#" onclick="loadStory('ere-joaozinho'); closeMenu(); return false;">🌿 Erê Joãozinho</a></li>
-        <li><a href="#" onclick="loadStory('ere-mariazinha'); closeMenu(); return false;">🌿 Erê Mariazinha</a></li>
-        <li><a href="#" onclick="loadStory('ere-pedrinho'); closeMenu(); return false;">🌿 Erê Pedrinho</a></li>
-        <li><a href="#" onclick="loadStory('ere-luizinho'); closeMenu(); return false;">🌿 Erê Luizinho</a></li>
-        <li><a href="#" onclick="loadStory('ere-joana'); closeMenu(); return false;">🌿 Erê Joana</a></li>
-        <li><a href="#" onclick="loadStory('ere-ana-beatriz'); closeMenu(); return false;">🌿 Erê Ana Beatriz</a></li>
-        <li><a href="#" onclick="loadStory('ere-carlos'); closeMenu(); return false;">🌿 Erê Carlos</a></li>
-        <li><a href="#" onclick="loadStory('ere-maria'); closeMenu(); return false;">🌿 Erê Maria</a></li>
-        <li><a href="#" onclick="loadStory('ere-francisco'); closeMenu(); return false;">🌿 Erê Francisco</a></li>
-        <li><a href="#" onclick="loadStory('ere-antonio'); closeMenu(); return false;">🌿 Erê Antônio</a></li>
-      </ul>
-      
-      <li class="menu-toggle-item" id="boiadeirosToggle"><a href="#">🤠 BOIADEIROS (10) <span class="arrow">▶</span></a></li>
-      <ul class="submenu" id="boiadeirosSubmenu">
-        <li><a href="#" onclick="loadStory('boiadeiro-lampiao'); closeMenu(); return false;">🤠 Boiadeiro Lampião</a></li>
-        <li><a href="#" onclick="loadStory('boiadeiro-meia-noite'); closeMenu(); return false;">🤠 Boiadeiro Meia-Noite</a></li>
-        <li><a href="#" onclick="loadStory('boiadeiro-velho-chico'); closeMenu(); return false;">🤠 Boiadeiro Velho Chico</a></li>
-        <li><a href="#" onclick="loadStory('boiadeiro-ze-rua'); closeMenu(); return false;">🤠 Boiadeiro Zé da Rua</a></li>
-        <li><a href="#" onclick="loadStory('boiadeiro-sete-estradas'); closeMenu(); return false;">🤠 Boiadeiro Sete Estradas</a></li>
-        <li><a href="#" onclick="loadStory('boiadeiro-tiao'); closeMenu(); return false;">🤠 Boiadeiro Tião</a></li>
-        <li><a href="#" onclick="loadStory('boiadeiro-joaquim'); closeMenu(); return false;">🤠 Boiadeiro Joaquim</a></li>
-        <li><a href="#" onclick="loadStory('boiadeiro-miguel'); closeMenu(); return false;">🤠 Boiadeiro Miguel</a></li>
-        <li><a href="#" onclick="loadStory('boiadeiro-sebastiao'); closeMenu(); return false;">🤠 Boiadeiro Sebastião</a></li>
-        <li><a href="#" onclick="loadStory('boiadeiro-caboco'); closeMenu(); return false;">🤠 Boiadeiro Caboco</a></li>
-      </ul>
-      
-      <li class="menu-toggle-item" id="marinheirosToggle"><a href="#">⚓ MARINHEIROS (10) <span class="arrow">▶</span></a></li>
-      <ul class="submenu" id="marinheirosSubmenu">
-        <li><a href="#" onclick="loadStory('marinheiro-joao-ondas'); closeMenu(); return false;">⚓ Marinheiro João das Ondas</a></li>
-        <li><a href="#" onclick="loadStory('marinheiro-sete-mares'); closeMenu(); return false;">⚓ Marinheiro Sete Mares</a></li>
-        <li><a href="#" onclick="loadStory('marinheiro-do-mar'); closeMenu(); return false;">⚓ Marinheiro do Mar</a></li>
-        <li><a href="#" onclick="loadStory('marinheiro-araguaia'); closeMenu(); return false;">⚓ Marinheiro Araguaia</a></li>
-        <li><a href="#" onclick="loadStory('marinheiro-paraiba'); closeMenu(); return false;">⚓ Marinheiro Paraíba</a></li>
-        <li><a href="#" onclick="loadStory('marinheiro-sao-pedro'); closeMenu(); return false;">⚓ Marinheiro São Pedro</a></li>
-        <li><a href="#" onclick="loadStory('marinheiro-almirante'); closeMenu(); return false;">⚓ Marinheiro Almirante</a></li>
-        <li><a href="#" onclick="loadStory('marinheiro-vento-bom'); closeMenu(); return false;">⚓ Marinheiro Vento Bom</a></li>
-        <li><a href="#" onclick="loadStory('marinheiro-mar-calmo'); closeMenu(); return false;">⚓ Marinheiro Mar Calmo</a></li>
-        <li><a href="#" onclick="loadStory('marinheiro-estrela-mar'); closeMenu(); return false;">⚓ Marinheiro Estrela do Mar</a></li>
-      </ul>
+  <li><a href="#" id="menuZe">🏠 Seu Zé Pilintra (História Principal)</a></li>
+  
+  <li class="menu-toggle-item" id="exusToggle"><a href="#">🔴 EXUS (15) <span class="arrow">▶</span></a></li>
+  <ul class="submenu" id="exusSubmenu"></ul>
+  
+  <li class="menu-toggle-item" id="pomboToggle"><a href="#">🌹 POMBOGIRAS (15) <span class="arrow">▶</span></a></li>
+  <ul class="submenu" id="pomboSubmenu"></ul>
+  
+  <!-- ========== UMBANDA ========== -->
+  <li class="menu-toggle-item" id="umbandaToggle"><a href="#">🌿 UMBANDA <span class="arrow">▶</span></a></li>
+  <ul class="submenu" id="umbandaSubmenu">
+    <li class="menu-toggle-item" id="pretosVelhosToggle"><a href="#">🙏 PRETOS-VELHOS (15) <span class="arrow">▶</span></a></li>
+    <ul class="submenu" id="pretosVelhosSubmenu">
+      <li><a href="#" onclick="loadStory('pai-joao'); closeMenu(); return false;">🙏 Pai João de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-benedito'); closeMenu(); return false;">🙏 Pai Benedito de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-jose'); closeMenu(); return false;">🙏 Pai José de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-tome'); closeMenu(); return false;">🙏 Pai Tomé de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-antonio'); closeMenu(); return false;">🙏 Pai Antônio de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-francisco'); closeMenu(); return false;">🙏 Pai Francisco de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-manuel'); closeMenu(); return false;">🙏 Pai Manuel de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-joaquim'); closeMenu(); return false;">🙏 Pai Joaquim de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-sebastiao'); closeMenu(); return false;">🙏 Pai Sebastião de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-geronimo'); closeMenu(); return false;">🙏 Pai Gerônimo de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-luiz'); closeMenu(); return false;">🙏 Pai Luiz de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-carlos'); closeMenu(); return false;">🙏 Pai Carlos de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-miguel'); closeMenu(); return false;">🙏 Pai Miguel de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-pedro'); closeMenu(); return false;">🙏 Pai Pedro de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-andre'); closeMenu(); return false;">🙏 Pai André de Aruanda</a></li>
     </ul>
-
-    <!-- ========== CANDOMBLÉ (dentro do menu) ========== -->
-    <li class="menu-toggle-item" id="candombleToggle"><a href="#">🔶 CANDOMBLÉ <span class="arrow">▶</span></a></li>
-    <ul class="submenu" id="candombleSubmenu">
-      <li><a href="#" onclick="loadStory('orixa-oxala'); closeMenu(); return false;">🌀 Oxalá</a></li>
-      <li><a href="#" onclick="loadStory('orixa-ogum'); closeMenu(); return false;">🗡️ Ogum</a></li>
-      <li><a href="#" onclick="loadStory('orixa-oxossi'); closeMenu(); return false;">🏹 Oxóssi</a></li>
-      <li><a href="#" onclick="loadStory('orixa-xango'); closeMenu(); return false;">⚡ Xangô</a></li>
-      <li><a href="#" onclick="loadStory('orixa-iansa'); closeMenu(); return false;">🌪️ Iansã (Oiá)</a></li>
-      <li><a href="#" onclick="loadStory('orixa-iemanja'); closeMenu(); return false;">🌊 Iemanjá</a></li>
-      <li><a href="#" onclick="loadStory('orixa-oxum'); closeMenu(); return false;">💧 Oxum</a></li>
-      <li><a href="#" onclick="loadStory('orixa-nana'); closeMenu(); return false;">🌺 Nanã</a></li>
-      <li><a href="#" onclick="loadStory('orixa-obaluae'); closeMenu(); return false;">🌀 Obaluaê (Omulu)</a></li>
-      <li><a href="#" onclick="loadStory('orixa-oxumare'); closeMenu(); return false;">🌈 Oxumaré</a></li>
-      <li><a href="#" onclick="loadStory('orixa-logunede'); closeMenu(); return false;">🎣 Logunedé</a></li>
-      <li><a href="#" onclick="loadStory('orixa-ibeji'); closeMenu(); return false;">👶 Ibeji</a></li>
-      <li><a href="#" onclick="loadStory('orixa-ewa'); closeMenu(); return false;">🌸 Ewá</a></li>
-      <li><a href="#" onclick="loadStory('orixa-oba'); closeMenu(); return false;">⚔️ Obá</a></li>
-      <li><a href="#" onclick="loadStory('orixa-ossain'); closeMenu(); return false;">🌿 Ossain</a></li>
+    
+    <li class="menu-toggle-item" id="pretasVelhasToggle"><a href="#">🙏 PRETAS-VELHAS (15) <span class="arrow">▶</span></a></li>
+    <ul class="submenu" id="pretasVelhasSubmenu">
+      <li><a href="#" onclick="loadStory('vovo-maria-conga'); closeMenu(); return false;">🙏 Vovó Maria Conga de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-cambina'); closeMenu(); return false;">🙏 Vovó Cambina de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-maria-redonda'); closeMenu(); return false;">🙏 Vovó Maria Redonda de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-benedita'); closeMenu(); return false;">🙏 Vovó Benedita de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-maria-joaquina'); closeMenu(); return false;">🙏 Vovó Maria Joaquina de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-catarina'); closeMenu(); return false;">🙏 Vovó Catarina de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-rita'); closeMenu(); return false;">🙏 Vovó Rita de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-joana'); closeMenu(); return false;">🙏 Vovó Joana de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-clara'); closeMenu(); return false;">🙏 Vovó Clara de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-beatriz'); closeMenu(); return false;">🙏 Vovó Beatriz de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-luzia'); closeMenu(); return false;">🙏 Vovó Luzia de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-marta'); closeMenu(); return false;">🙏 Vovó Marta de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-tereza'); closeMenu(); return false;">🙏 Vovó Tereza de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-ana'); closeMenu(); return false;">🙏 Vovó Ana de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-sofia'); closeMenu(); return false;">🙏 Vovó Sofia de Aruanda</a></li>
     </ul>
+    
+    <li class="menu-toggle-item" id="caboclosToggle"><a href="#">🏹 CABOCLOS (15) <span class="arrow">▶</span></a></li>
+    <ul class="submenu" id="caboclosSubmenu">
+      <li><a href="#" onclick="loadStory('caboclo-sete-flechas'); closeMenu(); return false;">🏹 Caboclo das Sete Flechas</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-pena-branca'); closeMenu(); return false;">🏹 Caboclo Pena Branca</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-tupinamba'); closeMenu(); return false;">🏹 Caboclo Tupinambá</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-arariboia'); closeMenu(); return false;">🏹 Caboclo Arariboia</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-juremeiro'); closeMenu(); return false;">🏹 Caboclo Juremeiro</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-guarani'); closeMenu(); return false;">🏹 Caboclo Guarani</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-tupi'); closeMenu(); return false;">🏹 Caboclo Tupi</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-aimore'); closeMenu(); return false;">🏹 Caboclo Aimore</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-caete'); closeMenu(); return false;">🏹 Caboclo Caeté</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-tamoio'); closeMenu(); return false;">🏹 Caboclo Tamoio</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-goitaca'); closeMenu(); return false;">🏹 Caboclo Goitacá</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-aimbe'); closeMenu(); return false;">🏹 Caboclo Aimbé</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-carijo'); closeMenu(); return false;">🏹 Caboclo Carijó</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-tabajara'); closeMenu(); return false;">🏹 Caboclo Tabajara</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-potiguara'); closeMenu(); return false;">🏹 Caboclo Potiguara</a></li>
+    </ul>
+    
+    <li class="menu-toggle-item" id="caboclasToggle"><a href="#">🏹 CABOCLAS (15) <span class="arrow">▶</span></a></li>
+    <ul class="submenu" id="caboclasSubmenu">
+      <li><a href="#" onclick="loadStory('cabocla-jurema'); closeMenu(); return false;">🏹 Cabocla Jurema</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-tupa'); closeMenu(); return false;">🏹 Cabocla Tupã</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-da-mata'); closeMenu(); return false;">🏹 Cabocla da Mata</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-flecheira'); closeMenu(); return false;">🏹 Cabocla Flecheira</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-icamiaba'); closeMenu(); return false;">🏹 Cabocla Icamiaba</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-potira'); closeMenu(); return false;">🏹 Cabocla Potira</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-jaci'); closeMenu(); return false;">🏹 Cabocla Jaci</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-uba'); closeMenu(); return false;">🏹 Cabocla Uba</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-iracema'); closeMenu(); return false;">🏹 Cabocla Iracema</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-moema'); closeMenu(); return false;">🏹 Cabocla Moema</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-cacica'); closeMenu(); return false;">🏹 Cabocla Cacica</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-taina'); closeMenu(); return false;">🏹 Cabocla Tainá</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-jandira'); closeMenu(); return false;">🏹 Cabocla Jandira</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-cataguases'); closeMenu(); return false;">🏹 Cabocla Cataguases</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-aracy'); closeMenu(); return false;">🏹 Cabocla Araci</a></li>
+    </ul>
+    
+    <li class="menu-toggle-item" id="eresToggle"><a href="#">🌿 ERÊS (10) <span class="arrow">▶</span></a></li>
+    <ul class="submenu" id="eresSubmenu">
+      <li><a href="#" onclick="loadStory('ere-joaozinho'); closeMenu(); return false;">🌿 Erê Joãozinho</a></li>
+      <li><a href="#" onclick="loadStory('ere-mariazinha'); closeMenu(); return false;">🌿 Erê Mariazinha</a></li>
+      <li><a href="#" onclick="loadStory('ere-pedrinho'); closeMenu(); return false;">🌿 Erê Pedrinho</a></li>
+      <li><a href="#" onclick="loadStory('ere-luizinho'); closeMenu(); return false;">🌿 Erê Luizinho</a></li>
+      <li><a href="#" onclick="loadStory('ere-joana'); closeMenu(); return false;">🌿 Erê Joana</a></li>
+      <li><a href="#" onclick="loadStory('ere-ana-beatriz'); closeMenu(); return false;">🌿 Erê Ana Beatriz</a></li>
+      <li><a href="#" onclick="loadStory('ere-carlos'); closeMenu(); return false;">🌿 Erê Carlos</a></li>
+      <li><a href="#" onclick="loadStory('ere-maria'); closeMenu(); return false;">🌿 Erê Maria</a></li>
+      <li><a href="#" onclick="loadStory('ere-francisco'); closeMenu(); return false;">🌿 Erê Francisco</a></li>
+      <li><a href="#" onclick="loadStory('ere-antonio'); closeMenu(); return false;">🌿 Erê Antônio</a></li>
+    </ul>
+    
+    <li class="menu-toggle-item" id="boiadeirosToggle"><a href="#">🤠 BOIADEIROS (10) <span class="arrow">▶</span></a></li>
+    <ul class="submenu" id="boiadeirosSubmenu">
+      <li><a href="#" onclick="loadStory('boiadeiro-lampiao'); closeMenu(); return false;">🤠 Boiadeiro Lampião</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-meia-noite'); closeMenu(); return false;">🤠 Boiadeiro Meia-Noite</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-velho-chico'); closeMenu(); return false;">🤠 Boiadeiro Velho Chico</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-ze-rua'); closeMenu(); return false;">🤠 Boiadeiro Zé da Rua</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-sete-estradas'); closeMenu(); return false;">🤠 Boiadeiro Sete Estradas</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-tiao'); closeMenu(); return false;">🤠 Boiadeiro Tião</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-joaquim'); closeMenu(); return false;">🤠 Boiadeiro Joaquim</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-miguel'); closeMenu(); return false;">🤠 Boiadeiro Miguel</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-sebastiao'); closeMenu(); return false;">🤠 Boiadeiro Sebastião</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-caboco'); closeMenu(); return false;">🤠 Boiadeiro Caboco</a></li>
+    </ul>
+    
+    <li class="menu-toggle-item" id="marinheirosToggle"><a href="#">⚓ MARINHEIROS (10) <span class="arrow">▶</span></a></li>
+    <ul class="submenu" id="marinheirosSubmenu">
+      <li><a href="#" onclick="loadStory('marinheiro-joao-ondas'); closeMenu(); return false;">⚓ Marinheiro João das Ondas</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-sete-mares'); closeMenu(); return false;">⚓ Marinheiro Sete Mares</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-do-mar'); closeMenu(); return false;">⚓ Marinheiro do Mar</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-araguaia'); closeMenu(); return false;">⚓ Marinheiro Araguaia</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-paraiba'); closeMenu(); return false;">⚓ Marinheiro Paraíba</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-sao-pedro'); closeMenu(); return false;">⚓ Marinheiro São Pedro</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-almirante'); closeMenu(); return false;">⚓ Marinheiro Almirante</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-vento-bom'); closeMenu(); return false;">⚓ Marinheiro Vento Bom</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-mar-calmo'); closeMenu(); return false;">⚓ Marinheiro Mar Calmo</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-estrela-mar'); closeMenu(); return false;">⚓ Marinheiro Estrela do Mar</a></li>
+    </ul>
+  </ul> <!-- FIM DA UMBANDA -->
 
-    <li><a href="sobre.html">🙏 Sobre Mim</a></li>
-    <li><a href="#contato">📞 Contato</a></li>
+  <!-- ========== CANDOMBLÉ (fora da Umbanda) ========== -->
+  <li class="menu-toggle-item" id="candombleToggle"><a href="#">🔶 CANDOMBLÉ <span class="arrow">▶</span></a></li>
+  <ul class="submenu" id="candombleSubmenu">
+    <li><a href="#" onclick="loadStory('orixa-oxala'); closeMenu(); return false;">🌀 Oxalá</a></li>
+    <li><a href="#" onclick="loadStory('orixa-ogum'); closeMenu(); return false;">🗡️ Ogum</a></li>
+    <li><a href="#" onclick="loadStory('orixa-oxossi'); closeMenu(); return false;">🏹 Oxóssi</a></li>
+    <li><a href="#" onclick="loadStory('orixa-xango'); closeMenu(); return false;">⚡ Xangô</a></li>
+    <li><a href="#" onclick="loadStory('orixa-iansa'); closeMenu(); return false;">🌪️ Iansã (Oiá)</a></li>
+    <li><a href="#" onclick="loadStory('orixa-iemanja'); closeMenu(); return false;">🌊 Iemanjá</a></li>
+    <li><a href="#" onclick="loadStory('orixa-oxum'); closeMenu(); return false;">💧 Oxum</a></li>
+    <li><a href="#" onclick="loadStory('orixa-nana'); closeMenu(); return false;">🌺 Nanã</a></li>
+    <li><a href="#" onclick="loadStory('orixa-obaluae'); closeMenu(); return false;">🌀 Obaluaê (Omulu)</a></li>
+    <li><a href="#" onclick="loadStory('orixa-oxumare'); closeMenu(); return false;">🌈 Oxumaré</a></li>
+    <li><a href="#" onclick="loadStory('orixa-logunede'); closeMenu(); return false;">🎣 Logunedé</a></li>
+    <li><a href="#" onclick="loadStory('orixa-ibeji'); closeMenu(); return false;">👶 Ibeji</a></li>
+    <li><a href="#" onclick="loadStory('orixa-ewa'); closeMenu(); return false;">🌸 Ewá</a></li>
+    <li><a href="#" onclick="loadStory('orixa-oba'); closeMenu(); return false;">⚔️ Obá</a></li>
+    <li><a href="#" onclick="loadStory('orixa-ossain'); closeMenu(); return false;">🌿 Ossain</a></li>
   </ul>
+
+  <li><a href="sobre.html">🙏 Sobre Mim</a></li>
+  <li><a href="#contato">📞 Contato</a></li>
+</ul>
 </div>
 
 <header>
@@ -1007,17 +951,17 @@
     </div>
 
     <!-- BARRA DE PESQUISA -->
-    <div class="search-container" style="margin-bottom: 30px; text-align: center; margin-top: 30px;">
+    <div class="search-container" style="margin-bottom: 30px; text-align: center;">
       <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.5); border-radius: 50px; padding: 5px 15px; border: 1px solid #FFD966;">
         <i class="fas fa-search" style="color: #FFD966;"></i>
         <input type="text" id="searchInput" placeholder="Buscar... Ex: Zé Pilintra, Maria Padilha, oração" style="background: transparent; border: none; color: white; padding: 12px; width: 250px; outline: none;" />
-        <button id="searchButton" style="background: #8B0000; color: white; border: none; border-radius: 40px; padding: 8px 20px; cursor: pointer; font-weight: 600;">Buscar</button>
+        <button id="searchButton" style="background: #8B0000; color: white; border: none; border-radius: 40px; padding: 8px 20px; cursor: pointer;">Buscar</button>
       </div>
     </div>
 
     <!-- RESULTADOS DA PESQUISA (inicialmente escondido) -->
     <div id="searchResults" style="display: none; margin-bottom: 30px;">
-      <h4 style="color: var(--text-primary); border-left: 4px solid #FFD966; padding-left: 15px;">🔍 Resultados da busca:</h4>
+      <h4 style="color: white; border-left: 4px solid #FFD966; padding-left: 15px;">🔍 Resultados da busca:</h4>
       <div id="resultsList" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px;"></div>
       <hr style="border-color: rgba(255,255,255,0.2); margin: 20px 0;">
     </div>
@@ -1038,6 +982,8 @@
       <a href="oracao-ze-pilintra-diversos-pedidos.html">📚 Ler orações →</a>
     </div>
   </div>
+
+  <!-- (O restante do seu conteúdo: dynamicContent, support-section, comments, footer, etc. deve vir aqui) -->
 
 </div>
 
@@ -1068,8 +1014,8 @@
   <div class="comments-area">
     <h4>💬 Deixe seu Comentário</h4>
     <div class="comment-input-group" style="margin-top: 20px;">
-      <input type="text" id="commentName" placeholder="Seu nome" style="width: 100%; margin-bottom: 10px;" />
-      <textarea id="commentText" placeholder="Seu comentário..." style="width: 100%; height: 80px; border: 1px solid #ddd; border-radius: 8px; padding: 10px; margin-bottom: 10px;"></textarea>
+      <input type="text" id="commentName" placeholder="Seu nome" style="width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 8px;" />
+      <textarea id="commentText" placeholder="Seu comentário..." style="width: 100%; height: 80px; margin-bottom: 10px; border-radius: 8px;"></textarea>
       <button class="comment-btn-submit" onclick="addComment()">
         <i class="fas fa-paper-plane"></i> Enviar
       </button>
@@ -1105,50 +1051,25 @@
 
 <!-- SCRIPT JAVASCRIPT -->
 <script>
-  // ========== SISTEMA DE TEMA AUTOMÁTICO ==========
-  const themeToggleBtn = document.getElementById('themeToggleBtn');
-  const themeText = document.getElementById('themeText');
-  const html = document.documentElement;
+  // ========== MODO NOTURNO ==========
+  const modoNoturnoBtn = document.getElementById('modoNoturnoBtn');
+  const body = document.body;
 
-  // Detectar preferência do sistema
-  function detectSystemTheme() {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  // Carregar preferência salva
+  if (localStorage.getItem('modoNoturno') === 'ativo') {
+    body.classList.add('modo-noturno');
+    modoNoturnoBtn.textContent = '☀️ Modo Claro';
   }
 
-  // Obter tema salvo ou usar padrão do sistema
-  function getTheme() {
-    const saved = localStorage.getItem('theme');
-    return saved ? saved : detectSystemTheme();
-  }
-
-  // Aplicar tema
-  function applyTheme(theme) {
-    if (theme === 'dark') {
-      html.style.colorScheme = 'dark';
-      themeText.textContent = 'Claro';
-      themeToggleBtn.title = 'Alternar para tema claro';
+  modoNoturnoBtn.addEventListener('click', () => {
+    body.classList.toggle('modo-noturno');
+    if (body.classList.contains('modo-noturno')) {
+      localStorage.setItem('modoNoturno', 'ativo');
+      modoNoturnoBtn.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
     } else {
-      html.style.colorScheme = 'light';
-      themeText.textContent = 'Escuro';
-      themeToggleBtn.title = 'Alternar para tema escuro';
+      localStorage.setItem('modoNoturno', 'inativo');
+      modoNoturnoBtn.innerHTML = '<i class="fas fa-moon"></i> Modo Noturno';
     }
-    localStorage.setItem('theme', theme);
-  }
-
-  // Toggle tema
-  themeToggleBtn.addEventListener('click', () => {
-    const current = getTheme();
-    const newTheme = current === 'dark' ? 'light' : 'dark';
-    applyTheme(newTheme);
-  });
-
-  // Aplicar tema ao carregar
-  applyTheme(getTheme());
-
-  // Monitorar mudanças do sistema
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    const newTheme = e.matches ? 'dark' : 'light';
-    applyTheme(newTheme);
   });
 
   // ========== FUNÇÕES DO MENU ==========

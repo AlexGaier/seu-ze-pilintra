@@ -698,227 +698,396 @@ body.modo-noturno .comments-area h4 {
 </head>
 <body>
   <button id="modoNoturnoBtn" style="position: fixed; top: 20px; right: 20px; background: #8B0000; color: white; border: none; border-radius: 50px; padding: 10px 15px; cursor: pointer; z-index: 999; display: flex; align-items: center; gap: 8px;">
-    <i class="fas fa-moon"></i> Modo Noturno
-  </button>
+  <i class="fas fa-moon"></i> Modo Noturno
+</button>
 
-  <div class="domain-banner">
-    🔒 Site Oficial · <strong>seuzepilintra.com</strong> · Histórias completas de Exus e Pombogiras
+<div class="domain-banner">
+  🔒 Site Oficial · <strong>seuzepilintra.com</strong> · Histórias completas de Exus e Pombogiras
+</div>
+
+<div class="motivation-banner" id="motivationBanner">
+  <span class="frase-motivacao" id="fraseMotivacao">✨ Axé! Acredite na força que existe dentro de você. ✨</span>
+</div>
+
+<div class="menu-btn" id="menuBtn"><span>☰</span></div>
+<div class="overlay" id="overlay"></div>
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <h3>⚡ Guardiões da Lei</h3>
+    <p>Seu Zé Pilintra • Exus • Pombogiras</p>
   </div>
-
-  <div class="motivation-banner" id="motivationBanner">
-    <span class="frase-motivacao" id="fraseMotivacao">✨ Axé! Acredite na força que existe dentro de você. ✨</span>
-  </div>
-
-  <div class="menu-btn" id="menuBtn"><span>☰</span></div>
-  <div class="overlay" id="overlay"></div>
-
-  <div class="sidebar" id="sidebar">
-    <div class="sidebar-header">
-      <h3>⚡ Guardiões da Lei</h3>
-      <p>Seu Zé Pilintra • Exus • Pombogiras</p>
-    </div>
-    <ul class="sidebar-menu">
-      <li><a href="#" id="menuZe">🏠 Seu Zé Pilintra (História Principal)</a></li>
-      <li class="menu-toggle-item" id="exusToggle"><a href="#">🔴 EXUS (15) <span class="arrow">▶️</span></a></li>
-      <ul class="submenu" id="exusSubmenu"></ul>
-      <li class="menu-toggle-item" id="pomboToggle"><a href="#">🌹 POMBOGIRAS (15) <span class="arrow">▶️</span></a></li>
-      <ul class="submenu" id="pomboSubmenu"></ul>
-      <!-- ========== UMBANDA ========== -->
-      <li class="menu-toggle-item" id="umbandaToggle"><a href="#">🌿 UMBANDA <span class="arrow">▶️</span></a></li>
-      <ul class="submenu" id="umbandaSubmenu">
-        <li class="menu-toggle-item" id="pretosVelhosToggle"><a href="#">🙏 PRETOS-VELHOS (15) <span class="arrow">▶️</span></a></li>
-        <ul class="submenu" id="pretosVelhosSubmenu">
-          <!-- mantenha aqui os 15 itens (Pai João, Pai Benedito, etc.) -->
-        </ul>
-        <li class="menu-toggle-item" id="pretasVelhasToggle"><a href="#">🙏 PRETAS-VELHAS (15) <span class="arrow">▶️</span></a></li>
-        <ul class="submenu" id="pretasVelhasSubmenu">
-          <!-- mantenha aqui as 15 Vovós -->
-        </ul>
-        <!-- e assim por diante, o restante do submenu Umbanda -->
-      </ul>
-      <!-- ========== CANDOMBLÉ ========== -->
-      <li class="menu-toggle-item" id="candombleToggle"><a href="#">🔶 CANDOMBLÉ <span class="arrow">▶️</span></a></li>
-      <ul class="submenu" id="candombleSubmenu">
-        <!-- mantenha aqui os orixás -->
-      </ul>
-      <li><a href="sobre.html">🙏 Sobre Mim</a></li>
-      <li><a href="#contato">📞 Contato</a></li>
+  <ul class="sidebar-menu">
+  <li><a href="#" id="menuZe">🏠 Seu Zé Pilintra (História Principal)</a></li>
+  
+  <li class="menu-toggle-item" id="exusToggle"><a href="#">🔴 EXUS (15) <span class="arrow">▶</span></a></li>
+  <ul class="submenu" id="exusSubmenu"></ul>
+  
+  <li class="menu-toggle-item" id="pomboToggle"><a href="#">🌹 POMBOGIRAS (15) <span class="arrow">▶</span></a></li>
+  <ul class="submenu" id="pomboSubmenu"></ul>
+  
+  <!-- ========== UMBANDA ========== -->
+  <li class="menu-toggle-item" id="umbandaToggle"><a href="#">🌿 UMBANDA <span class="arrow">▶</span></a></li>
+  <ul class="submenu" id="umbandaSubmenu">
+    <li class="menu-toggle-item" id="pretosVelhosToggle"><a href="#">🙏 PRETOS-VELHOS (15) <span class="arrow">▶</span></a></li>
+    <ul class="submenu" id="pretosVelhosSubmenu">
+      <li><a href="#" onclick="loadStory('pai-joao'); closeMenu(); return false;">🙏 Pai João de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-benedito'); closeMenu(); return false;">🙏 Pai Benedito de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-jose'); closeMenu(); return false;">🙏 Pai José de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-tome'); closeMenu(); return false;">🙏 Pai Tomé de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-antonio'); closeMenu(); return false;">🙏 Pai Antônio de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-francisco'); closeMenu(); return false;">🙏 Pai Francisco de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-manuel'); closeMenu(); return false;">🙏 Pai Manuel de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-joaquim'); closeMenu(); return false;">🙏 Pai Joaquim de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-sebastiao'); closeMenu(); return false;">🙏 Pai Sebastião de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-geronimo'); closeMenu(); return false;">🙏 Pai Gerônimo de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-luiz'); closeMenu(); return false;">🙏 Pai Luiz de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-carlos'); closeMenu(); return false;">🙏 Pai Carlos de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-miguel'); closeMenu(); return false;">🙏 Pai Miguel de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-pedro'); closeMenu(); return false;">🙏 Pai Pedro de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('pai-andre'); closeMenu(); return false;">🙏 Pai André de Aruanda</a></li>
     </ul>
+    
+    <li class="menu-toggle-item" id="pretasVelhasToggle"><a href="#">🙏 PRETAS-VELHAS (15) <span class="arrow">▶</span></a></li>
+    <ul class="submenu" id="pretasVelhasSubmenu">
+      <li><a href="#" onclick="loadStory('vovo-maria-conga'); closeMenu(); return false;">🙏 Vovó Maria Conga de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-cambina'); closeMenu(); return false;">🙏 Vovó Cambina de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-maria-redonda'); closeMenu(); return false;">🙏 Vovó Maria Redonda de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-benedita'); closeMenu(); return false;">🙏 Vovó Benedita de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-maria-joaquina'); closeMenu(); return false;">🙏 Vovó Maria Joaquina de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-catarina'); closeMenu(); return false;">🙏 Vovó Catarina de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-rita'); closeMenu(); return false;">🙏 Vovó Rita de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-joana'); closeMenu(); return false;">🙏 Vovó Joana de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-clara'); closeMenu(); return false;">🙏 Vovó Clara de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-beatriz'); closeMenu(); return false;">🙏 Vovó Beatriz de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-luzia'); closeMenu(); return false;">🙏 Vovó Luzia de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-marta'); closeMenu(); return false;">🙏 Vovó Marta de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-tereza'); closeMenu(); return false;">🙏 Vovó Tereza de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-ana'); closeMenu(); return false;">🙏 Vovó Ana de Aruanda</a></li>
+      <li><a href="#" onclick="loadStory('vovo-sofia'); closeMenu(); return false;">🙏 Vovó Sofia de Aruanda</a></li>
+    </ul>
+    
+    <li class="menu-toggle-item" id="caboclosToggle"><a href="#">🏹 CABOCLOS (15) <span class="arrow">▶</span></a></li>
+    <ul class="submenu" id="caboclosSubmenu">
+      <li><a href="#" onclick="loadStory('caboclo-sete-flechas'); closeMenu(); return false;">🏹 Caboclo das Sete Flechas</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-pena-branca'); closeMenu(); return false;">🏹 Caboclo Pena Branca</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-tupinamba'); closeMenu(); return false;">🏹 Caboclo Tupinambá</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-arariboia'); closeMenu(); return false;">🏹 Caboclo Arariboia</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-juremeiro'); closeMenu(); return false;">🏹 Caboclo Juremeiro</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-guarani'); closeMenu(); return false;">🏹 Caboclo Guarani</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-tupi'); closeMenu(); return false;">🏹 Caboclo Tupi</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-aimore'); closeMenu(); return false;">🏹 Caboclo Aimore</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-caete'); closeMenu(); return false;">🏹 Caboclo Caeté</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-tamoio'); closeMenu(); return false;">🏹 Caboclo Tamoio</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-goitaca'); closeMenu(); return false;">🏹 Caboclo Goitacá</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-aimbe'); closeMenu(); return false;">🏹 Caboclo Aimbé</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-carijo'); closeMenu(); return false;">🏹 Caboclo Carijó</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-tabajara'); closeMenu(); return false;">🏹 Caboclo Tabajara</a></li>
+      <li><a href="#" onclick="loadStory('caboclo-potiguara'); closeMenu(); return false;">🏹 Caboclo Potiguara</a></li>
+    </ul>
+    
+    <li class="menu-toggle-item" id="caboclasToggle"><a href="#">🏹 CABOCLAS (15) <span class="arrow">▶</span></a></li>
+    <ul class="submenu" id="caboclasSubmenu">
+      <li><a href="#" onclick="loadStory('cabocla-jurema'); closeMenu(); return false;">🏹 Cabocla Jurema</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-tupa'); closeMenu(); return false;">🏹 Cabocla Tupã</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-da-mata'); closeMenu(); return false;">🏹 Cabocla da Mata</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-flecheira'); closeMenu(); return false;">🏹 Cabocla Flecheira</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-icamiaba'); closeMenu(); return false;">🏹 Cabocla Icamiaba</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-potira'); closeMenu(); return false;">🏹 Cabocla Potira</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-jaci'); closeMenu(); return false;">🏹 Cabocla Jaci</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-uba'); closeMenu(); return false;">🏹 Cabocla Uba</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-iracema'); closeMenu(); return false;">🏹 Cabocla Iracema</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-moema'); closeMenu(); return false;">🏹 Cabocla Moema</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-cacica'); closeMenu(); return false;">🏹 Cabocla Cacica</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-taina'); closeMenu(); return false;">🏹 Cabocla Tainá</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-jandira'); closeMenu(); return false;">🏹 Cabocla Jandira</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-cataguases'); closeMenu(); return false;">🏹 Cabocla Cataguases</a></li>
+      <li><a href="#" onclick="loadStory('cabocla-aracy'); closeMenu(); return false;">🏹 Cabocla Araci</a></li>
+    </ul>
+    
+    <li class="menu-toggle-item" id="eresToggle"><a href="#">🌿 ERÊS (10) <span class="arrow">▶</span></a></li>
+    <ul class="submenu" id="eresSubmenu">
+      <li><a href="#" onclick="loadStory('ere-joaozinho'); closeMenu(); return false;">🌿 Erê Joãozinho</a></li>
+      <li><a href="#" onclick="loadStory('ere-mariazinha'); closeMenu(); return false;">🌿 Erê Mariazinha</a></li>
+      <li><a href="#" onclick="loadStory('ere-pedrinho'); closeMenu(); return false;">🌿 Erê Pedrinho</a></li>
+      <li><a href="#" onclick="loadStory('ere-luizinho'); closeMenu(); return false;">🌿 Erê Luizinho</a></li>
+      <li><a href="#" onclick="loadStory('ere-joana'); closeMenu(); return false;">🌿 Erê Joana</a></li>
+      <li><a href="#" onclick="loadStory('ere-ana-beatriz'); closeMenu(); return false;">🌿 Erê Ana Beatriz</a></li>
+      <li><a href="#" onclick="loadStory('ere-carlos'); closeMenu(); return false;">🌿 Erê Carlos</a></li>
+      <li><a href="#" onclick="loadStory('ere-maria'); closeMenu(); return false;">🌿 Erê Maria</a></li>
+      <li><a href="#" onclick="loadStory('ere-francisco'); closeMenu(); return false;">🌿 Erê Francisco</a></li>
+      <li><a href="#" onclick="loadStory('ere-antonio'); closeMenu(); return false;">🌿 Erê Antônio</a></li>
+    </ul>
+    
+    <li class="menu-toggle-item" id="boiadeirosToggle"><a href="#">🤠 BOIADEIROS (10) <span class="arrow">▶</span></a></li>
+    <ul class="submenu" id="boiadeirosSubmenu">
+      <li><a href="#" onclick="loadStory('boiadeiro-lampiao'); closeMenu(); return false;">🤠 Boiadeiro Lampião</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-meia-noite'); closeMenu(); return false;">🤠 Boiadeiro Meia-Noite</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-velho-chico'); closeMenu(); return false;">🤠 Boiadeiro Velho Chico</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-ze-rua'); closeMenu(); return false;">🤠 Boiadeiro Zé da Rua</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-sete-estradas'); closeMenu(); return false;">🤠 Boiadeiro Sete Estradas</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-tiao'); closeMenu(); return false;">🤠 Boiadeiro Tião</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-joaquim'); closeMenu(); return false;">🤠 Boiadeiro Joaquim</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-miguel'); closeMenu(); return false;">🤠 Boiadeiro Miguel</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-sebastiao'); closeMenu(); return false;">🤠 Boiadeiro Sebastião</a></li>
+      <li><a href="#" onclick="loadStory('boiadeiro-caboco'); closeMenu(); return false;">🤠 Boiadeiro Caboco</a></li>
+    </ul>
+    
+    <li class="menu-toggle-item" id="marinheirosToggle"><a href="#">⚓ MARINHEIROS (10) <span class="arrow">▶</span></a></li>
+    <ul class="submenu" id="marinheirosSubmenu">
+      <li><a href="#" onclick="loadStory('marinheiro-joao-ondas'); closeMenu(); return false;">⚓ Marinheiro João das Ondas</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-sete-mares'); closeMenu(); return false;">⚓ Marinheiro Sete Mares</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-do-mar'); closeMenu(); return false;">⚓ Marinheiro do Mar</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-araguaia'); closeMenu(); return false;">⚓ Marinheiro Araguaia</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-paraiba'); closeMenu(); return false;">⚓ Marinheiro Paraíba</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-sao-pedro'); closeMenu(); return false;">⚓ Marinheiro São Pedro</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-almirante'); closeMenu(); return false;">⚓ Marinheiro Almirante</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-vento-bom'); closeMenu(); return false;">⚓ Marinheiro Vento Bom</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-mar-calmo'); closeMenu(); return false;">⚓ Marinheiro Mar Calmo</a></li>
+      <li><a href="#" onclick="loadStory('marinheiro-estrela-mar'); closeMenu(); return false;">⚓ Marinheiro Estrela do Mar</a></li>
+    </ul>
+  </ul> <!-- FIM DA UMBANDA -->
+
+  <!-- ========== CANDOMBLÉ (fora da Umbanda) ========== -->
+  <li class="menu-toggle-item" id="candombleToggle"><a href="#">🔶 CANDOMBLÉ <span class="arrow">▶</span></a></li>
+  <ul class="submenu" id="candombleSubmenu">
+    <li><a href="#" onclick="loadStory('orixa-oxala'); closeMenu(); return false;">🌀 Oxalá</a></li>
+    <li><a href="#" onclick="loadStory('orixa-ogum'); closeMenu(); return false;">🗡️ Ogum</a></li>
+    <li><a href="#" onclick="loadStory('orixa-oxossi'); closeMenu(); return false;">🏹 Oxóssi</a></li>
+    <li><a href="#" onclick="loadStory('orixa-xango'); closeMenu(); return false;">⚡ Xangô</a></li>
+    <li><a href="#" onclick="loadStory('orixa-iansa'); closeMenu(); return false;">🌪️ Iansã (Oiá)</a></li>
+    <li><a href="#" onclick="loadStory('orixa-iemanja'); closeMenu(); return false;">🌊 Iemanjá</a></li>
+    <li><a href="#" onclick="loadStory('orixa-oxum'); closeMenu(); return false;">💧 Oxum</a></li>
+    <li><a href="#" onclick="loadStory('orixa-nana'); closeMenu(); return false;">🌺 Nanã</a></li>
+    <li><a href="#" onclick="loadStory('orixa-obaluae'); closeMenu(); return false;">🌀 Obaluaê (Omulu)</a></li>
+    <li><a href="#" onclick="loadStory('orixa-oxumare'); closeMenu(); return false;">🌈 Oxumaré</a></li>
+    <li><a href="#" onclick="loadStory('orixa-logunede'); closeMenu(); return false;">🎣 Logunedé</a></li>
+    <li><a href="#" onclick="loadStory('orixa-ibeji'); closeMenu(); return false;">👶 Ibeji</a></li>
+    <li><a href="#" onclick="loadStory('orixa-ewa'); closeMenu(); return false;">🌸 Ewá</a></li>
+    <li><a href="#" onclick="loadStory('orixa-oba'); closeMenu(); return false;">⚔️ Obá</a></li>
+    <li><a href="#" onclick="loadStory('orixa-ossain'); closeMenu(); return false;">🌿 Ossain</a></li>
+  </ul>
+
+  <li><a href="sobre.html">🙏 Sobre Mim</a></li>
+  <li><a href="#contato">📞 Contato</a></li>
+</ul>
+</div>
+
+<header>
+  <h1>Seu Zé Pilintra – Guardião da Lei e Malandro de Luz</h1>
+  <div class="subtitle">Guardião da Lei · Malandro de Luz · Histórias de Exus e Pombogiras</div>
+</header>
+
+<div class="container">
+
+  <!-- SEÇÃO ENTIDADES EM DESTAQUE -->
+  <div class="destaques-section">
+    <div style="text-align: center;">
+      <h2>🌿 Entidades em Destaque</h2>
+    </div>
+
+    <!-- GRADE DE CARDS (12 entidades) -->
+    <div class="destaques-grid">
+      <a href="/exu/tranca-rua" class="destaque-card">
+        <h3>🔥 Exu Tranca Rua</h3>
+        <p>Fechador de demandas, engenheiro da ordem espiritual.</p>
+        <div class="ver-mais">Ver história →</div>
+      </a>
+      <a href="/pombagira/maria-padilha" class="destaque-card">
+        <h3>🌹 Maria Padilha</h3>
+        <p>Rainha das Encruzilhadas, protetora das mulheres.</p>
+        <div class="ver-mais">Ver história →</div>
+      </a>
+      <a href="/preto-velho/pai-joao" class="destaque-card">
+        <h3>🙏 Pai João de Aruanda</h3>
+        <p>Sabedoria da humildade e caridade.</p>
+        <div class="ver-mais">Ver história →</div>
+      </a>
+      <a href="/caboclo/sete-flechas" class="destaque-card">
+        <h3>🏹 Caboclo das Sete Flechas</h3>
+        <p>Guerreiro da luz, protege com precisão.</p>
+        <div class="ver-mais">Ver história →</div>
+      </a>
+      <a href="/orixa/oxala" class="destaque-card">
+        <h3>🌀 Oxalá</h3>
+        <p>O Grande Pai da Criação, paz e harmonia.</p>
+        <div class="ver-mais">Ver história →</div>
+      </a>
+      <a href="/ere/joaozinho" class="destaque-card">
+        <h3>🌿 Erê Joãozinho</h3>
+        <p>A alegria que cura e a leveza da infância.</p>
+        <div class="ver-mais">Ver história →</div>
+      </a>
+      <a href="/exu/marabo" class="destaque-card">
+        <h3>🔥 Exu Marabô</h3>
+        <p>Senhor das folhas, guardião das matas.</p>
+        <div class="ver-mais">Ver história →</div>
+      </a>
+      <a href="/pombagira/sete-saias" class="destaque-card">
+        <h3>🌪️ Sete Saias</h3>
+        <p>A dança dos ventos, transformação e alegria.</p>
+        <div class="ver-mais">Ver história →</div>
+      </a>
+      <a href="/preta-velha/vovo-maria-conga" class="destaque-card">
+        <h3>🙏 Vovó Maria Conga</h3>
+        <p>Mansidão que cura e sabedoria que acolhe.</p>
+        <div class="ver-mais">Ver história →</div>
+      </a>
+      <a href="/cabocla/jurema" class="destaque-card">
+        <h3>🌿 Cabocla Jurema</h3>
+        <p>Guardiã da árvore sagrada, cura pelas raízes.</p>
+        <div class="ver-mais">Ver história →</div>
+      </a>
+      <a href="/orixa/iemanja" class="destaque-card">
+        <h3>🌊 Iemanjá</h3>
+        <p>Rainha do mar, mãe da humanidade.</p>
+        <div class="ver-mais">Ver história →</div>
+      </a>
+      <a href="/boiadeiro/lampiao" class="destaque-card">
+        <h3>🤠 Boiadeiro Lampião</h3>
+        <p>Guerreiro do sertão, justiça e coragem.</p>
+        <div class="ver-mais">Ver história →</div>
+      </a>
+    </div>
+
+    <!-- BARRA DE PESQUISA -->
+    <div class="search-container" style="margin-bottom: 30px; text-align: center;">
+      <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.5); border-radius: 50px; padding: 5px 15px; border: 1px solid #FFD966;">
+        <i class="fas fa-search" style="color: #FFD966;"></i>
+        <input type="text" id="searchInput" placeholder="Buscar... Ex: Zé Pilintra, Maria Padilha, oração" style="background: transparent; border: none; color: white; padding: 12px; width: 250px; outline: none;">
+        <button id="searchButton" style="background: #8B0000; color: white; border: none; border-radius: 40px; padding: 8px 20px; cursor: pointer;">Buscar</button>
+      </div>
+    </div>
+
+    <!-- RESULTADOS DA PESQUISA (inicialmente escondido) -->
+    <div id="searchResults" style="display: none; margin-bottom: 30px;">
+      <h4 style="color: white; border-left: 4px solid #FFD966; padding-left: 15px;">🔍 Resultados da busca:</h4>
+      <div id="resultsList" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px;"></div>
+      <hr style="border-color: rgba(255,255,255,0.2); margin: 20px 0;">
+    </div>
+  </div> <!-- FECHA DESTAQUES-SECTION -->
+
+  <!-- ARTIGOS LADO A LADO -->
+  <div class="artigos-container">
+    <div class="artigo-card">
+      <div class="badge">📖 NOVO ARTIGO</div>
+      <h3>⚡ Diferença entre Zé Pilintra e Exu</h3>
+      <p>Entenda de uma vez por todas as diferenças entre o Malandro de Luz e os Guardiões da Lei.</p>
+      <a href="diferenca-ze-pilintra-exu.html">📚 Ler artigo →</a>
+    </div>
+    <div class="artigo-card">
+      <div class="badge">📖 NOVO ARTIGO</div>
+      <h3>🙏 Orações para Seu Zé Pilintra</h3>
+      <p>Orações poderosas para abrir caminhos, amor, dinheiro, saúde e proteção.</p>
+      <a href="oracao-ze-pilintra-diversos-pedidos.html">📚 Ler orações →</a>
+    </div>
   </div>
 
-  <header>
-    <h1>Seu Zé Pilintra – Guardião da Lei e Malandro de Luz</h1>
-    <div class="subtitle">Guardião da Lei · Malandro de Luz · Histórias de Exus e Pombogiras</div>
-  </header>
+  <!-- (O restante do seu conteúdo: dynamicContent, support-section, comments, footer, etc. deve vir aqui) -->
 
-  <div class="container">
-    <div class="destaques-section">
-      <div style="text-align: center;">
-        <h2>🌿 Entidades em Destaque</h2>
-      </div>
-      <div class="destaques-grid">
-        <a href="/exu/tranca-rua" class="destaque-card"><h3>🔥 Exu Tranca Rua</h3><p>Fechador de demandas</p><div class="ver-mais">Ver história →</div></a>
-        <a href="/pombagira/maria-padilha" class="destaque-card"><h3>🌹 Maria Padilha</h3><p>Rainha das Encruzilhadas</p><div class="ver-mais">Ver história →</div></a>
-        <a href="/preto-velho/pai-joao" class="destaque-card"><h3>🙏 Pai João de Aruanda</h3><p>Sabedoria da humildade</p><div class="ver-mais">Ver história →</div></a>
-        <a href="/caboclo/sete-flechas" class="destaque-card"><h3>🏹 Caboclo das Sete Flechas</h3><p>Guerreiro da luz</p><div class="ver-mais">Ver história →</div></a>
-        <a href="/orixa/oxala" class="destaque-card"><h3>🌀 Oxalá</h3><p>O Grande Pai da Criação</p><div class="ver-mais">Ver história →</div></a>
-        <a href="/ere/joaozinho" class="destaque-card"><h3>🌿 Erê Joãozinho</h3><p>A alegria que cura</p><div class="ver-mais">Ver história →</div></a>
-        <a href="/exu/marabo" class="destaque-card"><h3>🔥 Exu Marabô</h3><p>Senhor das folhas</p><div class="ver-mais">Ver história →</div></a>
-        <a href="/pombagira/sete-saias" class="destaque-card"><h3>🌪️ Sete Saias</h3><p>Transformação e alegria</p><div class="ver-mais">Ver história →</div></a>
-        <a href="/preta-velha/vovo-maria-conga" class="destaque-card"><h3>🙏 Vovó Maria Conga</h3><p>Mansidão que cura</p><div class="ver-mais">Ver história →</div></a>
-        <a href="/cabocla/jurema" class="destaque-card"><h3>🌿 Cabocla Jurema</h3><p>Cura pelas raízes</p><div class="ver-mais">Ver história →</div></a>
-        <a href="/orixa/iemanja" class="destaque-card"><h3>🌊 Iemanjá</h3><p>Rainha do mar</p><div class="ver-mais">Ver história →</div></a>
-        <a href="/boiadeiro/lampiao" class="destaque-card"><h3>🤠 Boiadeiro Lampião</h3><p>Guerreiro do sertão</p><div class="ver-mais">Ver história →</div></a>
-      </div>
+</div>
 
-      <div class="search-container" style="margin-bottom: 30px; text-align: center;">
-        <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.5); border-radius: 50px; padding: 5px 15px; border: 1px solid #FFD966;">
-          <i class="fas fa-search" style="color: #FFD966;"></i>
-          <input type="text" id="searchInput" placeholder="Buscar... Ex: Zé Pilintra, Maria Padilha, oração" style="background: transparent; border: none; color: white; padding: 12px; width: 250px; outline: none;">
-          <button id="searchButton" style="background: #8B0000; color: white; border: none; border-radius: 40px; padding: 8px 20px; cursor: pointer;">Buscar</button>
-        </div>
-      </div>
-      <div id="searchResults" style="display: none; margin-bottom: 30px;">
-        <h4 style="color: white; border-left: 4px solid #FFD966; padding-left: 15px;">🔍 Resultados da busca:</h4>
-        <div id="resultsList" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px;"></div>
-        <hr style="border-color: rgba(255,255,255,0.2); margin: 20px 0;">
-      </div>
+  <div id="dynamicContent" class="dynamic-content">
+    <div style="text-align: center; padding: 40px;">
+      <div style="font-size: 3rem;">⚡</div>
+      <p style="margin-top: 20px;">Carregando histórias... Selecione uma entidade no menu ao lado ☰</p>
     </div>
+  </div>
 
-    <div class="artigos-container">
-      <div class="artigo-card">
-        <div class="badge">📖 NOVO ARTIGO</div>
-        <h3>⚡ Diferença entre Zé Pilintra e Exu</h3>
-        <p>Entenda de uma vez por todas as diferenças entre o Malandro de Luz e os Guardiões da Lei.</p>
-        <a href="diferenca-ze-pilintra-exu.html">📚 Ler artigo →</a>
-      </div>
-      <div class="artigo-card">
-        <div class="badge">📖 NOVO ARTIGO</div>
-        <h3>🙏 Orações para Seu Zé Pilintra</h3>
-        <p>Orações poderosas para abrir caminhos, amor, dinheiro, saúde e proteção.</p>
-        <a href="oracao-ze-pilintra-diversos-pedidos.html">📚 Ler orações →</a>
-      </div>
+  <div class="support-section">
+    <div class="heart-icon">🙏✨</div>
+    <h3>Ajude a manter este portal!</h3>
+    <p>Se este conteúdo tocou seu coração e você deseja contribuir para que possamos continuar compartilhando histórias, conhecimento e axé, qualquer valor é bem-vindo.</p>
+    
+    <div class="pix-card">
+      <span class="pix-label">💚 PIX</span>
+      <div class="pix-key" id="pixKey">alexgaier93@gmail.com</div>
+      <button class="btn-copy-pix" id="copyPixBtn"><i class="fas fa-copy"></i> Copiar chave PIX</button>
+      <p style="font-size: 0.8rem; margin-top: 12px; color: #666;">Qualquer banco · Transferência instantânea</p>
     </div>
+    <p class="support-note">✨ Axé e gratidão por sua generosidade! Que Seu Zé Pilintra ilumine seus caminhos. ✨</p>
+  </div>
 
-    <div id="dynamicContent" class="dynamic-content">
-      <div style="text-align: center; padding: 40px;">
-        <div style="font-size: 3rem;">⚡</div>
-        <p style="margin-top: 20px;">Carregando histórias... Selecione uma entidade no menu ao lado ☰</p>
-      </div>
-    </div>
+  <div class="comments-area" id="commentsArea">
+    <h4 style="display: flex; align-items: center; gap: 12px; margin-bottom: 25px; color: #8B0000;">
+      <i class="fas fa-comment-dots" style="font-size: 1.8rem;"></i> 
+      💬 Comentários
+    </h4>
+    
+    <script src="https://utteranc.es/client.js"
+            repo="AlexGaier/seu-ze-pilintra"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
 
-    <div class="support-section">
-      <div class="heart-icon">🙏✨</div>
-      <h3>Ajude a manter este portal!</h3>
-      <p>Se este conteúdo tocou seu coração e você deseja contribuir para que possamos continuar compartilhando histórias, conhecimento e axé, qualquer valor é bem-vindo.</p>
-      <div class="pix-card">
-        <span class="pix-label">💚 PIX</span>
-        <div class="pix-key" id="pixKey">alexgaier93@gmail.com</div>
-        <button class="btn-copy-pix" id="copyPixBtn"><i class="fas fa-copy"></i> Copiar chave PIX</button>
-        <p style="font-size: 0.8rem; margin-top: 12px; color: #666;">Qualquer banco · Transferência instantânea</p>
-      </div>
-      <p class="support-note">✨ Axé e gratidão por sua generosidade! Que Seu Zé Pilintra ilumine seus caminhos. ✨</p>
-    </div>
-
-    <div class="comments-area" id="commentsArea">
-      <h4 style="display: flex; align-items: center; gap: 12px; margin-bottom: 25px; color: #8B0000;">
-        <i class="fas fa-comment-dots" style="font-size: 1.8rem;"></i> 
-        💬 Comentários
-      </h4>
-      <script src="https://utteranc.es/client.js"
-              repo="AlexGaier/seu-ze-pilintra"
-              issue-term="pathname"
-              theme="github-light"
-              crossorigin="anonymous"
-              async>
-      </script>
-    </div>
-  </div> <!-- FECHA O CONTAINER -->
+  </div>
 
   <footer id="contato">
     <p>🌹 Axé a todos os guardiões! Salve Seu Zé Pilintra! 🌹</p>
     <div><strong>Alex Gaier</strong> - São Pedro do Sul, RS</div>
     <div>Contato: <a href="mailto:alexgaier93@gmail.com">alexgaier93@gmail.com</a></div>
     <div class="copyright">
-      📚 Conteúdo produzido com dedicação e respeito à cultura de Umbanda e Jurema Sagrada.<br>
-      © 2024-2026 Alex Gaier · seuzepilintra.com · <strong>Todos os direitos reservados</strong><br>
-      É proibida a reprodução total ou parcial sem autorização prévia.<br>
-      <a href="privacidade.html" style="color: #FFD966;">🔒 Política de Privacidade</a>
-    </div>
+  📚 Conteúdo produzido com dedicação e respeito à cultura de Umbanda e Jurema Sagrada.<br>
+  © 2024-2026 Alex Gaier · seuzepilintra.com · <strong>Todos os direitos reservados</strong><br>
+  É proibida a reprodução total ou parcial sem autorização prévia.<br>
+  <a href="privacidade.html" style="color: #FFD966;">🔒 Política de Privacidade</a>
+</div>
     <div class="contador-visitas">
-      <i class="fas fa-eye"></i> Visitantes: <span id="contador">0</span>
-    </div>
+  <i class="fas fa-eye"></i> Visitantes: <span id="contador">0</span>
+</div>
   </footer>
+</div>
 
-  <a href="#" class="voltar-topo" id="backToTop">↑</a>
-  <div class="security-badge">🛡️ Proteção Ativa | Conteúdo Seguro</div>
+<a href="#" class="voltar-topo" id="backToTop">↑</a>
+<div class="security-badge">🛡️ Proteção Ativa | Conteúdo Seguro</div>
 
-  <script>
-    // ==================== FRASES MOTIVACIONAIS ====================
-    const frasesMotivacao = [
-      "✨ Axé! Acredite na força que existe dentro de você. ✨",
-      "🌹 Cada passo dado com fé é um caminho que se abre. 🌹",
-      "⚡ A vida é feita de escolhas; escolha sempre o bem. ⚡",
-      "🙏 Sua fé move montanhas e encruzilhadas se abrem. 🙏",
-      "💫 Não desista: os guardiões estão ao seu lado. 💫",
-      "🍀 A gratidão atrai prosperidade e paz de espírito. 🍀",
-      "🌟 Você é mais forte do que imagina, acredite! 🌟",
-      "🌙 Na escuridão, confie; a luz sempre vai chegar. 🌙",
-      "🔥 A sua energia transforma o mundo ao seu redor. 🔥",
-      "💖 O amor e o respeito são as maiores magias. 💖",
-      "🕯️ Um sorriso sincero ilumina qualquer ambiente. 🕯️",
-      "🌿 A natureza ensina: tudo renasce no tempo certo. 🌿",
-      "⭐ Peça com fé, acredite e receba com gratidão. ⭐",
-      "🌈 Seu amanhã é construído pelas suas ações hoje. 🌈",
-      "🎯 Nunca é tarde para recomeçar com o coração puro. 🎯"
-    ];
-
-    let indiceFrase = 0;
-    const fraseElement = document.getElementById('fraseMotivacao');
-    function trocarFrase() {
-      indiceFrase = (indiceFrase + 1) % frasesMotivacao.length;
-      if (fraseElement) {
-        fraseElement.style.opacity = '0';
-        setTimeout(() => {
-          fraseElement.textContent = frasesMotivacao[indiceFrase];
-          fraseElement.style.opacity = '1';
-        }, 300);
-      }
+<script>
+  const frasesMotivacao = [
+    "✨ Axé! Acredite na força que existe dentro de você. ✨",
+    "🌹 Cada passo dado com fé é um caminho que se abre. 🌹",
+    "⚡ A vida é feita de escolhas; escolha sempre o bem. ⚡",
+    "🙏 Sua fé move montanhas e encruzilhadas se abrem. 🙏",
+    "💫 Não desista: os guardiões estão ao seu lado. 💫",
+    "🍀 A gratidão atrai prosperidade e paz de espírito. 🍀",
+    "🌟 Você é mais forte do que imagina, acredite! 🌟",
+    "🌙 Na escuridão, confie; a luz sempre vai chegar. 🌙",
+    "🔥 A sua energia transforma o mundo ao seu redor. 🔥",
+    "💖 O amor e o respeito são as maiores magias. 💖",
+    "🕯️ Um sorriso sincero ilumina qualquer ambiente. 🕯️",
+    "🌿 A natureza ensina: tudo renasce no tempo certo. 🌿",
+    "⭐ Peça com fé, acredite e receba com gratidão. ⭐",
+    "🌈 Seu amanhã é construído pelas suas ações hoje. 🌈",
+    "🎯 Nunca é tarde para recomeçar com o coração puro. 🎯"
+  ];
+  
+  let indiceFrase = 0;
+  const fraseElement = document.getElementById('fraseMotivacao');
+  
+  function trocarFrase() {
+    indiceFrase = (indiceFrase + 1) % frasesMotivacao.length;
+    if (fraseElement) {
+      fraseElement.style.opacity = '0';
+      setTimeout(() => {
+        fraseElement.textContent = frasesMotivacao[indiceFrase];
+        fraseElement.style.opacity = '1';
+      }, 300);
     }
-    if (fraseElement) setInterval(trocarFrase, 7000);
-
-    // ==================== COPIAR PIX ====================
-    function copiarPix() {
-      const pixKey = document.getElementById('pixKey').innerText;
-      navigator.clipboard.writeText(pixKey).then(() => {
-        const btn = document.getElementById('copyPixBtn');
-        const originalText = btn.innerHTML;
-        btn.innerHTML = '✅ Copiado!';
-        setTimeout(() => { btn.innerHTML = originalText; }, 2000);
-      }).catch(() => alert('Copie manualmente: alexgaier93@gmail.com'));
-    }
-    document.getElementById('copyPixBtn').addEventListener('click', copiarPix);
-
-    // ==================== MODO NOTURNO ====================
-    const modoNoturnoBtn = document.getElementById('modoNoturnoBtn');
-    const body = document.body;
-    const modoAtivo = localStorage.getItem('modoNoturno') === 'true';
-    if (modoAtivo) {
-      body.classList.add('modo-noturno');
-      if (modoNoturnoBtn) modoNoturnoBtn.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
-    }
-    if (modoNoturnoBtn) {
-      modoNoturnoBtn.addEventListener('click', () => {
-        body.classList.toggle('modo-noturno');
-        const isAtivo = body.classList.contains('modo-noturno');
-        localStorage.setItem('modoNoturno', isAtivo);
-        if (isAtivo) {
-          modoNoturnoBtn.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
-        } else {
-          modoNoturnoBtn.innerHTML = '<i class="fas fa-moon"></i> Modo Noturno';
-        }
-      });
-    }
+  }
+  
+  if (fraseElement) setInterval(trocarFrase, 7000);
+  
+  function copiarPix() {
+    const pixKey = document.getElementById('pixKey').innerText;
+    navigator.clipboard.writeText(pixKey).then(() => {
+      const btn = document.getElementById('copyPixBtn');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '✅ Copiado!';
+      setTimeout(() => { btn.innerHTML = originalText; }, 2000);
+    }).catch(() => alert('Copie manualmente: alexgaier93@gmail.com'));
+  }
   
   document.getElementById('copyPixBtn').addEventListener('click', copiarPix);
   

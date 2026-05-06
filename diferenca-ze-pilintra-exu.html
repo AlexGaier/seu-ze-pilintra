@@ -41,22 +41,10 @@
       display: inline-block;
       padding-bottom: 5px;
     }
-    h3 {
-      color: #8B0000;
-      font-size: 1.4rem;
-      margin-top: 25px;
-      margin-bottom: 10px;
-    }
-    p {
-      margin-bottom: 16px;
-      text-align: justify;
-    }
-    ul, ol {
-      margin: 15px 0 20px 35px;
-    }
-    li {
-      margin-bottom: 8px;
-    }
+    h3 { color: #8B0000; font-size: 1.4rem; margin-top: 25px; margin-bottom: 10px; }
+    p { margin-bottom: 16px; text-align: justify; }
+    ul, ol { margin: 15px 0 20px 35px; }
+    li { margin-bottom: 8px; }
     .badge {
       display: inline-block;
       background: #8B0000;
@@ -76,17 +64,8 @@
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-    th {
-      background: #8B0000;
-      color: white;
-      padding: 12px 15px;
-      font-weight: 600;
-    }
-    td {
-      border: 1px solid #ddd;
-      padding: 10px 15px;
-      vertical-align: top;
-    }
+    th { background: #8B0000; color: white; padding: 12px 15px; font-weight: 600; }
+    td { border: 1px solid #ddd; padding: 10px 15px; vertical-align: top; }
     .highlight {
       background: #fff7e8;
       border-left: 4px solid #FFD966;
@@ -94,17 +73,8 @@
       margin: 20px 0;
       border-radius: 20px;
     }
-    .faq-item {
-      background: #fef5ea;
-      padding: 15px 20px;
-      margin: 15px 0;
-      border-radius: 24px;
-    }
-    .faq-question {
-      font-weight: 700;
-      color: #8B0000;
-      font-size: 1.1rem;
-    }
+    .faq-item { background: #fef5ea; padding: 15px 20px; margin: 15px 0; border-radius: 24px; }
+    .faq-question { font-weight: 700; color: #8B0000; font-size: 1.1rem; }
     .back-link {
       display: inline-block;
       margin-top: 35px;
@@ -116,18 +86,12 @@
       font-weight: 600;
       transition: 0.2s;
     }
-    .back-link:hover {
-      background: #5a1e1e;
-      transform: translateY(-2px);
-    }
+    .back-link:hover { background: #5a1e1e; transform: translateY(-2px); }
     .toc {
       background: #f0e2d4;
       padding: 20px 25px;
       border-radius: 32px;
       margin: 30px 0;
-    }
-    .toc h3 {
-      margin-top: 0;
     }
     .toc ul {
       list-style: none;
@@ -145,6 +109,28 @@
       display: inline-block;
       font-size: 0.9rem;
     }
+    .image-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    .image-card {
+      text-align: center;
+      max-width: 220px;
+    }
+    .image-card img {
+      max-width: 100%;
+      border-radius: 20px;
+      border: 3px solid #FFD966;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .image-card .legenda {
+      margin-top: 10px;
+      font-weight: 600;
+      color: #8B0000;
+    }
     @media (max-width: 700px) {
       .container { padding: 25px; }
       h1 { font-size: 1.8rem; }
@@ -159,6 +145,18 @@
   <p><span class="badge">Guia definitivo</span> <span class="badge">Atualizado 2026</span></p>
   <p>Se você já ouviu falar em <strong>Seu Zé Pilintra</strong> e em <strong>Exu</strong>, mas não sabe exatamente como diferenciá-los, está no lugar certo. Ambos são entidades espirituais de enorme respeito na Umbanda, Jurema e Quimbanda, mas <strong>não são a mesma coisa</strong>. Neste guia completo você entenderá as origens, hierarquias, vestimentas, oferendas, formas de atuação e muito mais. Leia até o fim e compartilhe com quem também tem essa dúvida.</p>
 
+  <!-- Imagens lado a lado -->
+  <div class="image-row">
+    <div class="image-card">
+      <img src="seu-ze-pilintra.jpg" alt="Seu Zé Pilintra – Malandro de Luz">
+      <div class="legenda">⚡ Seu Zé Pilintra<br>Malandro de Luz</div>
+    </div>
+    <div class="image-card">
+      <img src="exu-tranca-rua.jpg" alt="Exu Tranca Rua – Guardião da Lei">
+      <div class="legenda">🔴 Exu Tranca Rua<br>Guardião da Lei</div>
+    </div>
+  </div>
+
   <div class="toc">
     <h3>📖 Navegue pelo conteúdo</h3>
     <ul>
@@ -171,7 +169,8 @@
       <li><a href="#pontos">7. Pontos cantados</a></li>
       <li><a href="#quando">8. Quando recorrer a cada um?</a></li>
       <li><a href="#faq">9. Perguntas frequentes</a></li>
-      <li><a href="#conclusao">10. Conclusão</a></li>
+      <li><a href="#bibliografia">10. Bibliografia</a></li>
+      <li><a href="#conclusao">11. Conclusão</a></li>
     </ul>
   </div>
 
@@ -201,9 +200,7 @@
 
   <h2 id="tabela">📊 6. Tabela comparativa completa</h2>
   <table>
-    <thead>
-      <tr><th>Característica</th><th>⚡ Seu Zé Pilintra</th><th>🔴 Exu (falange genérica)</th></tr>
-    </thead>
+    <thead><tr><th>Característica</th><th>⚡ Seu Zé Pilintra</th><th>🔴 Exu (falange genérica)</th></tr></thead>
     <tbody>
       <tr><td>Origem</td><td>Jurema, tradição indígena e popular brasileira</td><td>Candomblé (iorubá) e Quimbanda</td></tr>
       <tr><td>Linha espiritual</td><td>Linha dos Malandros / Linha das Almas</td><td>Linha dos Exus / Lei da Quimbanda</td></tr>
@@ -233,7 +230,17 @@
   <div class="faq-item"><div class="faq-question">Qual entidade é mais forte?</div>Nenhuma – ambas são poderosas em suas funções. A questão é adequar o pedido à natureza da entidade.</div>
   <div class="faq-item"><div class="faq-question">Posso saudar Zé Pilintra e Exu na mesma casa?</div>Sim, muitos terreiros cultuam ambos, desde que com respeito e conhecimento da diferença.</div>
 
-  <h2 id="conclusao">✨ 10. Conclusão final</h2>
+  <h2 id="bibliografia">📚 10. Bibliografia e fontes</h2>
+  <ul>
+    <li>PRANDI, Reginaldo. <em>Os Orixás e o Candomblé</em>. São Paulo: Companhia das Letras, 2005.</li>
+    <li>CARNEIRO, Edison. <em>Religiões Negras</em>. Rio de Janeiro: Civilização Brasileira, 1991.</li>
+    <li>MOTTA, Roberto. <em>Jurema e Umbanda: tradições de cura e encantaria</em>. Recife: Editora Massangana, 2010.</li>
+    <li>SILVA, Vagner Gonçalves da. <em>Orixás da Metrópole</em>. Petrópolis: Vozes, 2016.</li>
+    <li><a href="https://pt.wikipedia.org/wiki/Seu_Z%C3%A9_Pilintra" target="_blank" rel="noopener noreferrer">Wikipédia – Seu Zé Pilintra</a></li>
+    <li><a href="https://pt.wikipedia.org/wiki/Exu" target="_blank" rel="noopener noreferrer">Wikipédia – Exu</a></li>
+  </ul>
+
+  <h2 id="conclusao">✨ 11. Conclusão final</h2>
   <p><strong>Seu Zé Pilintra e Exu não são a mesma coisa.</strong> Enquanto Zé Pilintra é o malandro de luz, cheio de jogo de cintura e diplomacia, Exu é o guardião da lei, firme e hierárquico. Ambos são entidades de grande luz, imprescindíveis para o equilíbrio espiritual. Conhecer a diferença evita desrespeito e potencializa a eficácia dos pedidos.</p>
   <p>Se você quer aprofundar seus conhecimentos, explore as páginas de cada entidade em nosso portal. Axé!</p>
 

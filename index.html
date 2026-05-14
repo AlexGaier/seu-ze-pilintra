@@ -27,8 +27,8 @@
   <meta name="description" content="Conheça a verdadeira história de Seu Zé Pilintra. Acesse orações poderosas, pontos cantados e ensinamentos sobre Exus, Pombagiras e Umbanda.">
   <style>
     .badge {
-  display: none;
-}
+      display: none;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     
@@ -92,12 +92,12 @@
     .menu-btn span { font-size: 26px; color: white; }
     
     .sidebar { 
-  position: fixed; top: 0; left: -340px; width: 320px; height: 100%; 
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(15px);
-  z-index: 1000; transition: 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1); 
-  overflow-y: auto; box-shadow: 8px 0 30px rgba(0,0,0,0.15);
-}
+      position: fixed; top: 0; left: -340px; width: 320px; height: 100%; 
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(15px);
+      z-index: 1000; transition: 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1); 
+      overflow-y: auto; box-shadow: 8px 0 30px rgba(0,0,0,0.15);
+    }
     
     .sidebar.open { left: 0; }
     
@@ -145,16 +145,16 @@
     }
     
     .artigo-card {
-  flex: 1;
-  min-width: 250px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 32px;
-  padding: 22px 25px;
-  border-left: 6px solid #FFD966;
-  transition: transform 0.2s;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
+      flex: 1;
+      min-width: 250px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 32px;
+      padding: 22px 25px;
+      border-left: 6px solid #FFD966;
+      transition: transform 0.2s;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
     
     .artigo-card:hover { transform: translateY(-3px); }
     
@@ -182,7 +182,7 @@
     .dynamic-content {
       background: rgba(255, 255, 255, 0.95);
       border-radius: 48px;
-      padding: 25px;
+      padding: 30px 15px;
       margin-bottom: 50px;
       border: 1px solid rgba(139, 0, 0, 0.2);
       box-shadow: 0 25px 45px -12px rgba(0,0,0,0.15);
@@ -208,13 +208,21 @@
       text-align: justify;
     }
     
+    /* Imagem à esquerda com texto fluindo ao lado */
     .dynamic-content img {
       max-width: 280px;
       width: 100%;
       border-radius: 24px;
-      margin: 15px auto;
-      display: block;
+      margin: 15px 20px 15px 0;
+      float: left;
       border: 3px solid #8B0000;
+    }
+    
+    /* Limpa o float depois da imagem e do texto */
+    .dynamic-content::after {
+      content: "";
+      display: table;
+      clear: both;
     }
     
     .entity-badge {
@@ -228,14 +236,14 @@
     }
     
     .frase-entidade {
-  background: transparent;        /* remove o fundo vermelho */
-  color: #FFD966;                 /* texto dourado para contraste */
-  padding: 0;                     /* remove espaço interno */
-  margin: 10px 0 20px 0;          /* espaço vertical mínimo */
-  text-align: left;               /* alinha à esquerda */
-  border-left: none;
-  font-style: italic;
-}
+      background: transparent;
+      color: #FFD966;
+      padding: 0;
+      margin: 10px 0 20px 0;
+      text-align: left;
+      border-left: none;
+      font-style: italic;
+    }
     
     .back-to-ze {
       display: inline-block;
@@ -252,13 +260,13 @@
     .back-to-ze:hover { background: #8B0000; color: white; }
     
     .comments-area {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 48px;
-  padding: 32px;
-  margin-top: 30px;
-  border: 1px solid #FFD966;
-}
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 48px;
+      padding: 32px;
+      margin-top: 30px;
+      border: 1px solid #FFD966;
+    }
     
     .comments-area h4 { color: white; }
     
@@ -378,15 +386,15 @@
     }
     
     .support-section {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 40px;
-  padding: 40px 32px;
-  margin: 40px 0 30px;
-  text-align: center;
-  border: 2px solid #FFD966;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 40px;
+      padding: 40px 32px;
+      margin: 40px 0 30px;
+      text-align: center;
+      border: 2px solid #FFD966;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
     
     .support-section h3 {
       color: white;
@@ -407,15 +415,15 @@
     }
     
     .pix-card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  border-radius: 30px;
-  padding: 25px;
-  max-width: 400px;
-  margin: 0 auto;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  border: 1px solid rgba(255,255,255,0.3);
-}
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border-radius: 30px;
+      padding: 25px;
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
     
     .pix-card .pix-label {
       background: #32BCAD;
@@ -494,6 +502,12 @@
     
     @media (max-width: 800px) {
       .dynamic-content { padding: 25px; }
+      /* Em celular, desfaz o float e centraliza a imagem */
+      .dynamic-content img {
+        float: none;
+        margin: 15px auto;
+        display: block;
+      }
       h1 { font-size: 2rem; }
       .menu-btn { top: 68px; left: 16px; width: 46px; height: 46px; }
       header { padding: 50px 20px 50px 70px; }
@@ -559,80 +573,79 @@
       text-decoration: underline;
     }
     .submenu {
-  display: none;
-}
-
-.submenu.show {
-  display: block;
-}
-/* ========== MODO NOTURNO ========== */
-body.modo-noturno {
-  background: #1a1a1a;
-  color: #f0f0f0;
-}
-
-body.modo-noturno .domain-banner,
-body.modo-noturno .motivation-banner,
-body.modo-noturno header,
-body.modo-noturno .sidebar,
-body.modo-noturno .sidebar-header,
-body.modo-noturno .submenu {
-  background: #2a2a2a !important;
-  color: #f0f0f0;
-}
-
-body.modo-noturno .artigo-card,
-body.modo-noturno .support-section,
-body.modo-noturno .comments-area,
-body.modo-noturno .pix-card {
-  background: rgba(30, 30, 30, 0.9) !important;
-  border-color: #8B0000;
-}
-
-body.modo-noturno .artigo-card h3,
-body.modo-noturno .artigo-card p,
-body.modo-noturno .support-section p,
-body.modo-noturno .support-section h3 {
-  color: #f0f0f0;
-}
-
-body.modo-noturno .btn-copy-pix,
-body.modo-noturno .comment-btn-submit {
-  background: #8B0000;
-  color: white;
-}
-
-body.modo-noturno footer {
-  background: #0d0d0d;
-}
-
-body.modo-noturno a {
-  color: #FFD966;
-}
-
-body.modo-noturno .sidebar a,
-body.modo-noturno .submenu a {
-  color: #f0f0f0;
-}
-
-body.modo-noturno .sidebar a:hover,
-body.modo-noturno .submenu a:hover {
-  background: #8B0000;
-}
-
-body.modo-noturno .pix-card .pix-key {
-  background: #1a1a1a;
-  color: #FFD966;
-}
-
-body.modo-noturno .security-badge {
-  background: #1a1a1a;
-}
-
-body.modo-noturno .comments-area h4 {
-  color: #f0f0f0;
-}
-}
+      display: none;
+    }
+    
+    .submenu.show {
+      display: block;
+    }
+    /* ========== MODO NOTURNO ========== */
+    body.modo-noturno {
+      background: #1a1a1a;
+      color: #f0f0f0;
+    }
+    
+    body.modo-noturno .domain-banner,
+    body.modo-noturno .motivation-banner,
+    body.modo-noturno header,
+    body.modo-noturno .sidebar,
+    body.modo-noturno .sidebar-header,
+    body.modo-noturno .submenu {
+      background: #2a2a2a !important;
+      color: #f0f0f0;
+    }
+    
+    body.modo-noturno .artigo-card,
+    body.modo-noturno .support-section,
+    body.modo-noturno .comments-area,
+    body.modo-noturno .pix-card {
+      background: rgba(30, 30, 30, 0.9) !important;
+      border-color: #8B0000;
+    }
+    
+    body.modo-noturno .artigo-card h3,
+    body.modo-noturno .artigo-card p,
+    body.modo-noturno .support-section p,
+    body.modo-noturno .support-section h3 {
+      color: #f0f0f0;
+    }
+    
+    body.modo-noturno .btn-copy-pix,
+    body.modo-noturno .comment-btn-submit {
+      background: #8B0000;
+      color: white;
+    }
+    
+    body.modo-noturno footer {
+      background: #0d0d0d;
+    }
+    
+    body.modo-noturno a {
+      color: #FFD966;
+    }
+    
+    body.modo-noturno .sidebar a,
+    body.modo-noturno .submenu a {
+      color: #f0f0f0;
+    }
+    
+    body.modo-noturno .sidebar a:hover,
+    body.modo-noturno .submenu a:hover {
+      background: #8B0000;
+    }
+    
+    body.modo-noturno .pix-card .pix-key {
+      background: #1a1a1a;
+      color: #FFD966;
+    }
+    
+    body.modo-noturno .security-badge {
+      background: #1a1a1a;
+    }
+    
+    body.modo-noturno .comments-area h4 {
+      color: #f0f0f0;
+    }
   </style>
 </head>
 <body>

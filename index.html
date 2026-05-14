@@ -509,6 +509,13 @@
         float: none;
         margin: 15px auto;
         display: block;
+        /* Faz o bloco lateral ocupar toda a largura em celular */
+.dynamic-content > div[style*="float: right"] {
+    float: none !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 20px;
+}
       }
       h1 { font-size: 2rem; }
       .menu-btn { top: 68px; left: 16px; width: 46px; height: 46px; }
@@ -5663,15 +5670,60 @@ Saudação: "Salve Marinheiro Estrela do Mar!"</p>
   function loadStory(entityId) {
     const story = bancoDados[entityId];
     if (!story) return;
+    
+    // Bloco lateral (aparece apenas para a entidade Zé Pilintra)
+    let blocoLateral = '';
+    if (entityId === 'ze-pilintra') {
+        blocoLateral = `
+        <div style="float: right; width: 260px; margin-left: 20px; margin-bottom: 20px; background: rgba(0, 0, 0, 0.3); border-radius: 24px; padding: 12px;">
+            <!-- Bloco 1: Características -->
+            <div style="margin-bottom: 15px;">
+                <h3 style="color: #FFD966; font-size: 1.1rem; margin: 0 0 6px;">✨ Características</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li>👔 Terno branco – pureza</li>
+                    <li>❤️ Gravata vermelha – força</li>
+                    <li>🎩 Chapéu panamá – sabedoria</li>
+                    <li>🤍 Lenço branco – acalento</li>
+                </ul>
+            </div>
+            <!-- Bloco 2: Dias de saudação -->
+            <div style="margin-bottom: 15px;">
+                <h3 style="color: #FFD966; font-size: 1.1rem; margin: 0 0 6px;">📅 Dias de saudação</h3>
+                <p style="margin: 0;"><strong>Sexta-feira</strong> (almas)<br>
+                <strong>Segunda-feira</strong> (abertura)<br>
+                🕯️ Vela branca ou vermelha</p>
+            </div>
+            <!-- Bloco 3: Oferendas -->
+            <div>
+                <h3 style="color: #FFD966; font-size: 1.1rem; margin: 0 0 6px;">🍷 Agrados comuns</h3>
+                <p style="margin: 0;">🍇 Uvas | 🥃 Cachaça | 🌹 Rosas | 🍚 Feijoada | 🍯 Mel</p>
+            </div>
+        </div>
+        `;
+    }
+    
     dynamicDiv.innerHTML = `
       <div style="text-align: center;"><span class="entity-badge">${story.badge || 'Guardião'}</span></div>
       <h2>${story.titulo}</h2>
       ${story.imagem ? `<img src="${story.imagem}" alt="${story.titulo}" onerror="this.src='https://placehold.co/400x400/8B0000/white?text='+encodeURIComponent('${story.titulo}')">` : ''}
+      ${blocoLateral}
       ${story.frase ? `<div class="frase-entidade"><p>"${story.frase}"</p></div>` : ''}
-      <p>${story.texto}</p>
+      <div class="conteudo-texto">${story.texto}</div>
       <div style="text-align: center; margin-top: 30px;">
         <a href="#" class="back-to-ze" data-entity="ze-pilintra">← Voltar para Seu Zé Pilintra</a>
       </div>
+    `;
+    
+    const backBtn = dynamicDiv.querySelector('.back-to-ze');
+    if (backBtn) {
+        backBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            loadStory('ze-pilintra');
+            closeMenu();
+        });
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
     `;
     const backBtn = dynamicDiv.querySelector('.back-to-ze');
     if (backBtn) {

@@ -509,13 +509,6 @@
         float: none;
         margin: 15px auto;
         display: block;
-        /* Faz o bloco lateral ocupar toda a largura em celular */
-.dynamic-content > div[style*="float: right"] {
-    float: none !important;
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-top: 20px;
-}
       }
       h1 { font-size: 2rem; }
       .menu-btn { top: 68px; left: 16px; width: 46px; height: 46px; }
@@ -677,7 +670,6 @@
   </div>
   <ul class="sidebar-menu">
     <li><a href="anuncie.html">📢 Anuncie Aqui</a></li>
-    <li><a href="mitos-e-verdades-ze-pilintra.html">🧠 Mitos e verdades</a></li>
   <li><a href="#" id="menuZe">🏠 Seu Zé Pilintra (História Principal)</a></li>
   
   <li class="menu-toggle-item" id="exusToggle"><a href="#">🔴 EXUS (15) <span class="arrow">▶</span></a></li>
@@ -856,44 +848,6 @@
       </div>
     </div>
 
-  <!-- SEÇÃO: FRASE DO DIA + LINKS RÁPIDOS (CORRIGIDA) -->
-<div style="background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(8px); border-radius: 48px; padding: 20px 25px; margin: 30px 0; text-align: center;">
-  <div id="fraseRapida" style="font-size: 1.2rem; font-style: italic; color: #FFD966; margin-bottom: 15px;">
-    “Carregando frase...”
-  </div>
-  <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
-    <a href="#" onclick="navigateTo('tranca-rua', '/exu/tranca-rua'); return false;" style="background: #8B0000; padding: 8px 18px; border-radius: 40px; color: white; text-decoration: none; display: inline-block;">🔥 Exu Tranca Rua</a>
-    <a href="#" onclick="navigateTo('maria-padilha', '/pombagira/maria-padilha'); return false;" style="background: #8B0000; padding: 8px 18px; border-radius: 40px; color: white; text-decoration: none; display: inline-block;">🌹 Maria Padilha</a>
-    <a href="#" onclick="navigateTo('pai-joao', '/preto-velho/pai-joao'); return false;" style="background: #8B0000; padding: 8px 18px; border-radius: 40px; color: white; text-decoration: none; display: inline-block;">🙏 Pai João</a>
-    <a href="#" onclick="navigateTo('caboclo-sete-flechas', '/caboclo/sete-flechas'); return false;" style="background: #8B0000; padding: 8px 18px; border-radius: 40px; color: white; text-decoration: none; display: inline-block;">🏹 Caboclo 7 Flechas</a>
-    <a href="#" onclick="navigateTo('orixa-oxala', '/orixa/oxala'); return false;" style="background: #8B0000; padding: 8px 18px; border-radius: 40px; color: white; text-decoration: none; display: inline-block;">🌀 Oxalá</a>
-  </div>
-</div>
-
-<script>
-  const frasesRapidas = [
-    "“A fé move montanhas e encruzilhadas se abrem.”",
-    "“Um sorriso sincero é a melhor oferenda.”",
-    "“Agradeça antes de pedir, que a vida já te deu muito.”",
-    "“Paciência e fé: o tempo de cada coisa é perfeito.”",
-    "“Seu Zé Pilintra te convida a andar com fé e alegria.”",
-    "“Não desista: os guardiões estão ao seu lado.”"
-  ];
-  document.getElementById('fraseRapida').innerHTML = frasesRapidas[Math.floor(Math.random() * frasesRapidas.length)];
-</script>
-  // Array de frases curtas e edificantes (pode adicionar quantas quiser)
-  const frasesRapidas = [
-    "“A fé move montanhas e encruzilhadas se abrem.”",
-    "“Um sorriso sincero é a melhor oferenda.”",
-    "“Agradeça antes de pedir, que a vida já te deu muito.”",
-    "“Paciência e fé: o tempo de cada coisa é perfeito.”",
-    "“Seu Zé Pilintra te convida a andar com fé e alegria.”",
-    "“Não desista: os guardiões estão ao seu lado.”"
-  ];
-  
-  // Escolhe uma frase aleatória a cada carregamento da página
-  document.getElementById('fraseRapida').innerHTML = frasesRapidas[Math.floor(Math.random() * frasesRapidas.length)];
-</script>
     <!-- RESULTADOS DA PESQUISA (inicialmente escondido) -->
     <div id="searchResults" style="display: none; margin-bottom: 30px;">
       <h4 style="color: white; border-left: 4px solid #FFD966; padding-left: 15px;">🔍 Resultados da busca:</h4>
@@ -913,7 +867,6 @@
   </ul>
 </div>
 
-  <p style="text-align: center; margin-top: 20px;">📌 <a href="mitos-e-verdades-ze-pilintra.html">Conheça os mitos e verdades sobre Seu Zé Pilintra →</a></p>
   <!-- (O restante do seu conteúdo: dynamicContent, support-section, comments, footer, etc. deve vir aqui) -->
 
 </div>
@@ -957,7 +910,6 @@
   </div>
 
   <footer id="contato">
-    <p style="margin-top: 10px;"><a href="mitos-e-verdades-ze-pilintra.html" style="color: #FFD966;">📖 Leia: Mitos e verdades sobre Seu Zé Pilintra</a></p>
     <p>🌹 Axé a todos os guardiões! Salve Seu Zé Pilintra! 🌹</p>
     <div><strong>Alex Gaier</strong> - São Pedro do Sul, RS</div>
     <div>Contato: <a href="mailto:alexgaier93@gmail.com">alexgaier93@gmail.com</a></div>
@@ -5670,60 +5622,15 @@ Saudação: "Salve Marinheiro Estrela do Mar!"</p>
   function loadStory(entityId) {
     const story = bancoDados[entityId];
     if (!story) return;
-    
-    // Bloco lateral (aparece apenas para a entidade Zé Pilintra)
-    let blocoLateral = '';
-    if (entityId === 'ze-pilintra') {
-        blocoLateral = `
-        <div style="float: right; width: 260px; margin-left: 20px; margin-bottom: 20px; background: rgba(0, 0, 0, 0.3); border-radius: 24px; padding: 12px;">
-            <!-- Bloco 1: Características -->
-            <div style="margin-bottom: 15px;">
-                <h3 style="color: #FFD966; font-size: 1.1rem; margin: 0 0 6px;">✨ Características</h3>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li>👔 Terno branco – pureza</li>
-                    <li>❤️ Gravata vermelha – força</li>
-                    <li>🎩 Chapéu panamá – sabedoria</li>
-                    <li>🤍 Lenço branco – acalento</li>
-                </ul>
-            </div>
-            <!-- Bloco 2: Dias de saudação -->
-            <div style="margin-bottom: 15px;">
-                <h3 style="color: #FFD966; font-size: 1.1rem; margin: 0 0 6px;">📅 Dias de saudação</h3>
-                <p style="margin: 0;"><strong>Sexta-feira</strong> (almas)<br>
-                <strong>Segunda-feira</strong> (abertura)<br>
-                🕯️ Vela branca ou vermelha</p>
-            </div>
-            <!-- Bloco 3: Oferendas -->
-            <div>
-                <h3 style="color: #FFD966; font-size: 1.1rem; margin: 0 0 6px;">🍷 Agrados comuns</h3>
-                <p style="margin: 0;">🍇 Uvas | 🥃 Cachaça | 🌹 Rosas | 🍚 Feijoada | 🍯 Mel</p>
-            </div>
-        </div>
-        `;
-    }
-    
     dynamicDiv.innerHTML = `
       <div style="text-align: center;"><span class="entity-badge">${story.badge || 'Guardião'}</span></div>
       <h2>${story.titulo}</h2>
       ${story.imagem ? `<img src="${story.imagem}" alt="${story.titulo}" onerror="this.src='https://placehold.co/400x400/8B0000/white?text='+encodeURIComponent('${story.titulo}')">` : ''}
-      ${blocoLateral}
       ${story.frase ? `<div class="frase-entidade"><p>"${story.frase}"</p></div>` : ''}
-      <div class="conteudo-texto">${story.texto}</div>
+      <p>${story.texto}</p>
       <div style="text-align: center; margin-top: 30px;">
         <a href="#" class="back-to-ze" data-entity="ze-pilintra">← Voltar para Seu Zé Pilintra</a>
       </div>
-    `;
-    
-    const backBtn = dynamicDiv.querySelector('.back-to-ze');
-    if (backBtn) {
-        backBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            loadStory('ze-pilintra');
-            closeMenu();
-        });
-    }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
     `;
     const backBtn = dynamicDiv.querySelector('.back-to-ze');
     if (backBtn) {

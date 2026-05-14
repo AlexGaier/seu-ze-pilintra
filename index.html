@@ -849,6 +849,38 @@
       </div>
     </div>
 
+  <!-- SEÇÃO: FRASE DO DIA + LINKS RÁPIDOS -->
+<div style="background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(8px); border-radius: 48px; padding: 20px 25px; margin: 30px 0; text-align: center; border: 1px solid rgba(255, 217, 102, 0.3);">
+  
+  <!-- Frase do dia (rotativa) -->
+  <div id="fraseRapida" style="font-size: 1.2rem; font-style: italic; color: #FFD966; margin-bottom: 15px;">
+    “Carregando frase...”
+  </div>
+  
+  <!-- Links rápidos para entidades -->
+  <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+    <a href="/exu/tranca-rua" style="background: #8B0000; padding: 8px 18px; border-radius: 40px; color: white; text-decoration: none; font-weight: 500; transition: 0.2s;">🔥 Exu Tranca Rua</a>
+    <a href="/pombagira/maria-padilha" style="background: #8B0000; padding: 8px 18px; border-radius: 40px; color: white; text-decoration: none; font-weight: 500;">🌹 Maria Padilha</a>
+    <a href="/preto-velho/pai-joao" style="background: #8B0000; padding: 8px 18px; border-radius: 40px; color: white; text-decoration: none;">🙏 Pai João</a>
+    <a href="/caboclo/sete-flechas" style="background: #8B0000; padding: 8px 18px; border-radius: 40px; color: white; text-decoration: none;">🏹 Caboclo 7 Flechas</a>
+    <a href="/orixa/oxala" style="background: #8B0000; padding: 8px 18px; border-radius: 40px; color: white; text-decoration: none;">🌀 Oxalá</a>
+  </div>
+</div>
+
+<script>
+  // Array de frases curtas e edificantes (pode adicionar quantas quiser)
+  const frasesRapidas = [
+    "“A fé move montanhas e encruzilhadas se abrem.”",
+    "“Um sorriso sincero é a melhor oferenda.”",
+    "“Agradeça antes de pedir, que a vida já te deu muito.”",
+    "“Paciência e fé: o tempo de cada coisa é perfeito.”",
+    "“Seu Zé Pilintra te convida a andar com fé e alegria.”",
+    "“Não desista: os guardiões estão ao seu lado.”"
+  ];
+  
+  // Escolhe uma frase aleatória a cada carregamento da página
+  document.getElementById('fraseRapida').innerHTML = frasesRapidas[Math.floor(Math.random() * frasesRapidas.length)];
+</script>
     <!-- RESULTADOS DA PESQUISA (inicialmente escondido) -->
     <div id="searchResults" style="display: none; margin-bottom: 30px;">
       <h4 style="color: white; border-left: 4px solid #FFD966; padding-left: 15px;">🔍 Resultados da busca:</h4>

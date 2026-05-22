@@ -182,11 +182,15 @@
     .dynamic-content {
       background: rgba(255, 255, 255, 0.95);
       border-radius: 48px;
-      padding: 30px 15px;
+      padding: 30px 25px;
       margin-bottom: 50px;
       border: 1px solid rgba(139, 0, 0, 0.2);
       box-shadow: 0 25px 45px -12px rgba(0,0,0,0.15);
       transition: all 0.3s;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 25px
+      align-items: start;
     }
     
     .dynamic-content h2 {
@@ -210,11 +214,11 @@
     
     /* Imagem à esquerda com texto fluindo ao lado */
     .dynamic-content img {
-      max-width: 320px;
+      grid-column:  1;
+      max-width: 280px;
       width: 100%;
       border-radius: 24px;
-      margin: 15px 25px 15px 0;
-      float: left;
+      margin: 0;
       border: 3px solid #8B0000;
     }
     
@@ -233,10 +237,9 @@
       color: #FFE0B5;
       padding: 20px 25px;
       border-radius: 32px;
-      margin: 35px 0;
+      margin: 20px 0;
       text-align: center;
       font-style: italic;
-      clear: both; /* garante que fique abaixo da imagem flutuante */
     }
     
     .back-to-ze {

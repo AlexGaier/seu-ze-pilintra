@@ -236,15 +236,14 @@
     }
     
     .frase-entidade {
-  background: linear-gradient(115deg, #8B0000 0%, #a6120f 100%);
-  color: #FFE0B5;
-  padding: 20px 25px;
-  border-radius: 32px;
-  margin: 35px 0;
-  text-align: center;
-  font-style: italic;
-  clear: both; /* garante que fique abaixo da imagem flutuante */
-}
+      background: linear-gradient(115deg, #8B0000 0%, #a6120f 100%);
+      color: #FFE0B5;
+      padding: 20px 25px;
+      border-radius: 32px;
+      margin: 35px 0;
+      text-align: center;
+      font-style: italic;
+      clear: both; /* garante que fique abaixo da imagem flutuante */
     }
     
     .back-to-ze {
@@ -648,6 +647,71 @@
     body.modo-noturno .comments-area h4 {
       color: #f0f0f0;
     }
+
+    /* ========== SEÇÃO DE PRODUTOS RECOMENDADOS ========== */
+    .produtos-recomendados {
+      margin: 50px 0;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 48px;
+      padding: 25px;
+    }
+    .produtos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .card-produto {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 28px;
+      padding: 15px;
+      width: 220px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card-produto:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .card-produto img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    .card-produto h3 {
+      color: #FFD966;
+      font-size: 1rem;
+      margin: 10px 0 5px;
+    }
+    .card-produto p {
+      color: white;
+      font-size: 0.8rem;
+      margin-bottom: 12px;
+    }
+    .card-produto a {
+      display: inline-block;
+      background: #8B0000;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+    .card-produto a:hover {
+      background: #5a1e1e;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 700px) {
+      .produtos-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card-produto {
+        width: 90% !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -876,9 +940,42 @@
       <div style="font-size: 3rem;">⚡</div>
       <p style="margin-top: 20px;">Carregando histórias... Selecione uma entidade no menu ao lado ☰</p>
     </div>
-  </div>
+</div>
 
-  <div class="support-section">
+<!-- SEÇÃO DE PRODUTOS RECOMENDADOS -->
+<div class="produtos-recomendados">
+  <h2 style="color: #FFD966; text-align: center; margin-top: 0;">🛒 Produtos recomendados para sua jornada</h2>
+  <p style="text-align: center; font-size: 0.9rem;">🔗 Links de afiliado – ao comprar, você ajuda o portal a se manter, sem pagar nada extra.</p>
+  <div class="produtos-grid">
+    
+    <!-- Card: Kit de velas 7 dias -->
+    <div class="card-produto">
+      <img src="https://placehold.co/400x300/8B0000/white?text=Velas+7+dias" alt="Kit 10 velas 7 dias">
+      <h3>Kit 10 velas de 7 dias</h3>
+      <p>Velas brancas/vermelhas para rituais</p>
+      <a href="https://meli.la/1XGb6pk" target="_blank" rel="sponsored">Comprar →</a>
+    </div>
+
+    <!-- Card: Guia 7 fios Zé Pilintra vermelho -->
+    <div class="card-produto">
+      <img src="https://placehold.co/400x300/8B0000/white?text=Guia+7+fios" alt="Guia 7 fios Zé Pilintra vermelho">
+      <h3>Guia 7 fios – Zé Pilintra (vermelho)</h3>
+      <p>Guia para proteção e firmeza</p>
+      <a href="https://meli.la/1CfNn6V" target="_blank" rel="sponsored">Ver oferta →</a>
+    </div>
+
+    <!-- Card: Imagem do Zé Pilintra -->
+    <div class="card-produto">
+      <img src="https://placehold.co/400x300/8B0000/white?text=Imagem+Ze+Pilintra" alt="Imagem de Seu Zé Pilintra">
+      <h3>Imagem de Seu Zé Pilintra</h3>
+      <p>Estátua decorativa para seu altar</p>
+      <a href="https://meli.la/11BKye8" target="_blank" rel="sponsored">Comprar →</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="support-section">
     <div class="heart-icon">🙏✨</div>
     <h3>Ajude a manter este portal!</h3>
     <p>Se este conteúdo tocou seu coração e você deseja contribuir para que possamos continuar compartilhando histórias, conhecimento e axé, qualquer valor é bem-vindo.</p>
@@ -890,7 +987,7 @@
       <p style="font-size: 0.8rem; margin-top: 12px; color: #666;">Qualquer banco · Transferência instantânea</p>
     </div>
     <p class="support-note">✨ Axé e gratidão por sua generosidade! Que Seu Zé Pilintra ilumine seus caminhos. ✨</p>
-  </div>
+</div>
 
   <div class="comments-area" id="commentsArea">
     <h4 style="display: flex; align-items: center; gap: 12px; margin-bottom: 25px; color: #8B0000;">

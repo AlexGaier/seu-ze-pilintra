@@ -5931,23 +5931,43 @@ Saudação: "Salve Marinheiro Estrela do Mar!"</p>
   function loadStory(entityId) {
     const story = bancoDados[entityId];
     if (!story) return;
+
+    // Para a entidade Zé Pilintra, fazemos a separação automática
+    let textoAoLado = '';
+    let textoAbaixo = '';
     
-    // Monta a estrutura com flexbox
+    if (entityId === 'ze-pilintra') {
+        // Procura o marcador ou o início da seção "Hierarquia espiritual"
+        const divisorIndex = story.texto.indexOf('<p>⚡ <strong>Hierarquia espiritual e falanges</strong>');
+        if (divisorIndex !== -1) {
+            textoAoLado = story.texto.substring(0, divisorIndex);
+            textoAbaixo = story.texto.substring(divisorIndex);
+        } else {
+            // Fallback: se não encontrar o marcador, coloca tudo no lado
+            textoAoLado = story.texto;
+            textoAbaixo = '';
+        }
+    } else {
+        // Para outras entidades, não faz separação
+        textoAoLado = story.texto;
+        textoAbaixo = '';
+    }
+
+    // Monta o HTML com a estrutura correta
     dynamicDiv.innerHTML = `
       <div style="text-align: center;"><span class="entity-badge">${story.badge || 'Guardião'}</span></div>
-      <div class="dynamic-flex">
-        ${story.imagem ? `<div class="flex-imagem"><img src="${story.imagem}" alt="${story.titulo}" onerror="this.src='https://placehold.co/400x400/8B0000/white?text='+encodeURIComponent('${story.titulo}')"></div>` : ''}
-        <div class="flex-texto">
-          <h2>${story.titulo}</h2>
-          ${story.frase ? `<div class="frase-entidade"><p>"${story.frase}"</p></div>` : ''}
-          <div class="conteudo-texto">${story.texto}</div>
-          <div style="text-align: center; margin-top: 30px;">
-            <a href="#" class="back-to-ze" data-entity="ze-pilintra">← Voltar para Seu Zé Pilintra</a>
-          </div>
-        </div>
+      ${story.imagem ? `<img src="${story.imagem}" alt="${story.titulo}" onerror="this.src='https://placehold.co/400x400/8B0000/white?text='+encodeURIComponent('${story.titulo}')">` : ''}
+      <div class="texto-ao-lado">
+        <h2>${story.titulo}</h2>
+        ${story.frase ? `<div class="frase-entidade"><p>"${story.frase}"</p></div>` : ''}
+        ${textoAoLado}
+      </div>
+      ${textoAbaixo ? `<div class="texto-abaixo">${textoAbaixo}</div>` : ''}
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="#" class="back-to-ze" data-entity="ze-pilintra">← Voltar para Seu Zé Pilintra</a>
       </div>
     `;
-    
+
     const backBtn = dynamicDiv.querySelector('.back-to-ze');
     if (backBtn) {
         backBtn.addEventListener('click', (e) => {

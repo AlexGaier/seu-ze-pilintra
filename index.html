@@ -214,21 +214,7 @@
       width: 100%;
       border-radius: 24px;
       margin: 15px 25px 15px 0;
-      float: left;
       border: 3px solid #8B0000;
-    }
-
-    /* Garante que parágrafos e listas não deixem espaços vazios ao lado da imagem */
-.dynamic-content p,
-.dynamic-content ul,
-.dynamic-content ol {
-  overflow: hidden;
-}
-    /* Limpa o float depois da imagem e do texto */
-    .dynamic-content::after {
-      content: "";
-      display: table;
-      clear: both;
     }
     
     .entity-badge {
@@ -850,6 +836,48 @@
   margin: 10px auto;
   width: auto;
   font-size: 0.85rem;
+}
+    /* Estrutura flexível para o conteúdo dinâmico */
+.dynamic-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+.flex-imagem {
+  flex: 0 0 300px; /* largura fixa da imagem */
+  max-width: 100%;
+}
+.flex-imagem img {
+  width: 100%;
+  border-radius: 24px;
+  border: 3px solid #8B0000;
+}
+.flex-texto {
+  flex: 1;
+  min-width: 200px;
+}
+/* Remove regras antigas que usavam float */
+.dynamic-content img {
+  float: none;
+  margin: 0;
+}
+.dynamic-content::after {
+  display: none;
+}
+/* Responsividade: em celular, empilha */
+@media (max-width: 700px) {
+  .dynamic-flex {
+    flex-direction: column;
+  }
+  .flex-imagem {
+    flex: 0 0 auto;
+    text-align: center;
+  }
+  .flex-imagem img {
+    max-width: 280px;
+    margin: 0 auto;
+  }
 }
   </style>
 </head>
@@ -5867,26 +5895,33 @@ Saudação: "Salve Marinheiro Estrela do Mar!"</p>
   function loadStory(entityId) {
     const story = bancoDados[entityId];
     if (!story) return;
+    
+    // Monta a estrutura com flexbox
     dynamicDiv.innerHTML = `
       <div style="text-align: center;"><span class="entity-badge">${story.badge || 'Guardião'}</span></div>
-      <h2>${story.titulo}</h2>
-      ${story.imagem ? `<img src="${story.imagem}" alt="${story.titulo}" onerror="this.src='https://placehold.co/400x400/8B0000/white?text='+encodeURIComponent('${story.titulo}')">` : ''}
-      ${story.frase ? `<div class="frase-entidade"><p>"${story.frase}"</p></div>` : ''}
-      <p>${story.texto}</p>
-      <div style="text-align: center; margin-top: 30px;">
-        <a href="#" class="back-to-ze" data-entity="ze-pilintra">← Voltar para Seu Zé Pilintra</a>
+      <div class="dynamic-flex">
+        ${story.imagem ? `<div class="flex-imagem"><img src="${story.imagem}" alt="${story.titulo}" onerror="this.src='https://placehold.co/400x400/8B0000/white?text='+encodeURIComponent('${story.titulo}')"></div>` : ''}
+        <div class="flex-texto">
+          <h2>${story.titulo}</h2>
+          ${story.frase ? `<div class="frase-entidade"><p>"${story.frase}"</p></div>` : ''}
+          <div class="conteudo-texto">${story.texto}</div>
+          <div style="text-align: center; margin-top: 30px;">
+            <a href="#" class="back-to-ze" data-entity="ze-pilintra">← Voltar para Seu Zé Pilintra</a>
+          </div>
+        </div>
       </div>
     `;
+    
     const backBtn = dynamicDiv.querySelector('.back-to-ze');
     if (backBtn) {
-      backBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        loadStory('ze-pilintra');
-        closeMenu();
-      });
+        backBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            loadStory('ze-pilintra');
+            closeMenu();
+        });
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+}
 
   function carregarMenu() {
     const exusSubmenu = document.getElementById('exusSubmenu');
